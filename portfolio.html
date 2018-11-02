@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Ethan Eisenhard | Portfolio</title>
+	<meta name="author" content="Ethan Eisenhard" />
+	<meta name="description" content="A philadelphia potrait photographer and web developer" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="CSS/portfolio.css" />
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+
+	<style>
+		.desc {
+			margin: 10px 30px 30px 30px;
+		}
+		.img_container{
+			display: flex;
+			flex-flow: row;
+		}
+		img{
+			width: 300px;
+			height: auto;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<div id="menu"></div>
+
+	<div class="w3-main" style="margin-left:200px">
+		<div class="w3-white">
+			<button id="TEST" class="w3-button w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
+			<div class="w3-container">
+				<h1 class="work-header">Photography Gallery</h1>
+				<hr style="border-color: #d11141;">
+			</div>
+		</div>
+
+		<div>
+			<p class="desc">Using natural light and urban enviroments, Ethan takes lifestyle, fashion, family, and graduation
+				portraits. Ethan has a keen eye for
+				turning ordinary enviroments into new perspectives and strong detail. Traveling in the Pennsylvanna and New York
+				area, Ethan works with families, artists, models, and
+				companies like American Eagle to create beautiful portraits. Ethan offers a range of services and packages.
+				Checkout his work below.
+			</p>
+
+		</div>
+
+		<div class="img_container">
+			<img src = "Images/P0.jpg">
+			<img src = "Images/P3.jpg">
+			<img src = "Images/P4.jpg">
+			<img src = "Images/P5.jpg">
+			<img src = "Images/P6.jpg">
+			<img src = "Images/P7.jpg">
+			<img src = "Images/P8.jpg">
+			<img src = "Images/P9.jpg">
+			<img src = "Images/P10.jpg">
+			<img src = "Images/P11.jpg">
+			<img src = "Images/P13.jpg">
+			<img src = "Images/P14.jpg">
+			<img src = "Images/P15.jpg">
+			<img src = "Images/P16.jpg">
+			<img src = "Images/P17.jpg">
+			<img src = "Images/P19.jpg">
+			<img src = "Images/P20.jpg">
+			<img src = "Images/P21.jpg">
+			<img src = "Images/P23.jpg">
+			<img src = "Images/P24.jpg">
+			<img src = "Images/P25.jpg">
+			<img src = "Images/P26.jpg">
+			<img src = "Images/P27.jpg">
+			<img src = "Images/P28.jpg">
+			<img src = "Images/P29.jpg">
+			<img src = "Images/P30.jpg">
+			<img src = "Images/P31.jpg">
+			<img src = "Images/P32.jpg">
+		</div>
+
+
+
+		<div id="footerload"></div>
+
+		<script>
+			$(function () {
+				$("#menu").load("menu.html");
+			});
+
+
+			$(function () {
+				$("#footerload").load("footer.html");
+			});
+		</script>
+
+
+		<script src="jquery-3.2.1.min.js"></script>
+		<script src="jquery.lazyload.js"></script>
+		<script>
+			jQuery(document).ready(function ($) {
+				$("img.lazy").lazyload({
+					failure_limit: 999
+				});
+			});
+		</script>
+
+
+
+
+</body>
+
+</html>

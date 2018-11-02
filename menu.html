@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+        <head>
+	    <title>Ethan Eisenhard | Web Developer & Photographer</title>
+            <meta name="author" content="Ethan Eisenhard"/>
+            <meta name="description" content="Check out Ethan's website portfolio here!"/>
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.12/js/all.js" integrity="sha384-Voup2lBiiyZYkRto2XWqbzxHXwzcm4A5RfdfG6466bu5LqjwwrjXCMBQBLMWh7qR" crossorigin="anonymous"></script>
+
+
+
+<style>
+	
+#mySidebar{
+	background:  	#293e6a;
+	
+}
+
+.accordion {
+    background-color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: light-grey;
+}
+
+
+.accordion:after {
+    content: '\002B';
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+/*.panel {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+
+}*/
+
+.sideBarButton{
+font-family: Arial,Helvetica,sans-serif;
+font-weight: 700;
+font-style: italic;
+letter-spacing: 0em;
+line-height: 1.6em;
+font-size: 15px;
+display: block;
+padding: 10px;
+text-decoration: none;
+color: white;
+}
+
+.sideBarButton:hover{
+color: black;
+background-color: #D3D3D3;
+}
+
+.bio{
+font-size: 14px !important;
+}
+
+.home{
+font-size: 24px !important;
+font-style: normal;
+}
+
+
+
+</style>
+	
+        </head>
+	
+
+	
+<body>
+
+<div id="mySidebar" class="panel w3-sidebar w3-bar-block w3-collapse w3-card-2 w3-animate-left" style="width:200px;">
+		
+		<button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
+		
+		<a class = "sideBarButton home" href="/" class="sub-menu1 w3-bar-item w3-button">Ethan Eisenhard</a>
+		
+		<br>
+			
+		<a class = "sideBarButton" href="schedule.html" class="sub-menu1 w3-bar-item w3-button"> <i class="fas fa-calendar-alt"></i> Schedule Photoshoot</a>
+		
+		<a class = "sideBarButton" href="portfolio.php" class="sub-menu1 w3-bar-item w3-button"> <i class="fas fa-camera"></i> Photography Gallery</a>
+		
+		<a class = "sideBarButton" href="webdev.html" class="sub-menu1 w3-bar-item w3-button"> <i class="fas fa-laptop"></i> Web Development</a>
+		
+		<a class = "sideBarButton" href="gear.html" class="sub-menu1 w3-bar-item w3-button"> <i class="fas fa-cog"></i>Tools of the Trade</a>
+		
+		<br>
+			
+		<a class = "sideBarButton bio" href="about.html" class="sub-menu3 w3-bar-item w3-button"> About</a>
+		
+		<a class = "sideBarButton bio" href="contact.html" class="sub-menu3 w3-bar-item w3-button"> Contact</a>
+	
+		
+</div>
+
+<script>
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+
+$("powrMark.text-center.powrMarkHighlight").hide();
+</script>
+        
+        </body>
+
+</html>
+
+
+

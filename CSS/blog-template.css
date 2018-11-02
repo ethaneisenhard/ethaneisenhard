@@ -1,0 +1,33 @@
+ 
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.lazy{
+    width: 100%;
+    height: auto;
+    padding-bottom: 5px;  
+}
+
+.desc{
+    text-align: left;
+}
+
+#summary{
+    margin: auto;
+    text-align: center;
+    
+}
+
+
+#photos {
+margin: auto;   
+-moz-column-count:    1;
+-webkit-column-count: 1;
+column-count:         1;
+width: 60%;
+vertical-align: middle;
+}
+

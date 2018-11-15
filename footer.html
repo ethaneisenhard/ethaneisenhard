@@ -1,95 +1,73 @@
- <div id = "footer">
-                        
-                                
-                        <div class = "social">
-                                
-                       
-     <div id="menu-outer">
-        <div class="table">
-            <ul id="horizontal-list">
-                <li><a target="_blank" href="https://www.instagram.com/ethan.eisenhard/"> <img class = "social-icons" title = "instagram" src="Social/instagram.svg"></img> </a></li>
-                <li><a href="https://medium.com/behind-the-hustle" target="_top"> <img class = "social-icons" title = "medium" src="Social/medium.svg"></img> </a></li>
-                <li><a target="_blank" href="https://www.linkedin.com/in/ethan-eisenhard-6b50a8121/"> <img class = "social-icons" title = "linked-in" src="Social/linkedin.svg"></img> </a></li>
-                <li><a target="_blank" href="https://codepen.io/devbyethan/pens/popular/#"> <img class = "social-icons" title = "codepen" src="Social/codepen.svg"></img> </a></li>
-                <li><a href="mailto:eeisen11@gmail.com?Subject=Hello%20" target="_top"> <img class = "social-icons" title = "mail" src="Social/mail.svg"></img> </a></li>
-            </ul>
-        </div>
-    </div>
-                        
-                        </div>
-            
-            </div>
-
-            
 <style>
-            
-#footer{
-    position: relative;
-    width: 100%;
-    margin: auto;
-    
-    /*border: 3px solid #73AD21;*/
-    
+
+.social-container {
+text-align: center;
 }
 
-#menu-outer {
-    height: 100px;
-    
+.social-icons {
+padding: 0;
+list-style: none;
+margin: 1em;
 }
-
-.table {
-    display: table;   /* Allow the centering to work */
-    margin: 0 auto;
-   
+.social-icons li {
+display: inline-block;
+margin: 0.15em;
+position: relative;
+font-size: 1.2em;
 }
-
-ul#horizontal-list {
-    list-style: none;
+.social-icons i {
+color: #fff;
+position: absolute;
+top: 21px;
+left: 21px;
+transition: all 265ms ease-out;
 }
-ul#horizontal-list li {
-    display: inline;
-    font-weight: 300;
+.social-icons a {
+display: inline-block;
 }
-
-#horizontal-list li a{
- text-decoration: none;
- font-size: 2vw;
-padding-right: 50px;
- color: #000000;
-
+.social-icons a:before {
+transform: scale(1);
+-ms-transform: scale(1);
+-webkit-transform: scale(1);
+content: " ";
+width: 60px;
+height: 60px;
+border-radius: 100%;
+display: block;
+background: linear-gradient(45deg, #857ea5, #293E6A);
+transition: all 265ms ease-out;
 }
-
-#horizontal-list li a:hover{
- opacity: .5;
-
+.social-icons a:hover:before {
+transform: scale(0);
+transition: all 265ms ease-in;
 }
-
-.social{
-    margin-top: 0px;
-/*    border: 1px solid purple;*/
-    height: 40px;
-    width: 100%;
+.social-icons a:hover i {
+transform: scale(2.2);
+-ms-transform: scale(2.2);
+-webkit-transform: scale(2.2);
+color: #00B5F5;
+background: -webkit-linear-gradient(45deg, #857ea5, #293E6A);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+transition: all 265ms ease-in;
 }
-
-.social-icons{
-    height: 30px;
-    width: 30px;
-}
-
-@media only screen and (max-width: 600px) {
-
-    #horizontal-list{
-        padding: 0px !important;
-    }
-
-    #horizontal-list li a{
- text-decoration: none;
- font-size: 2vw;
-padding-right: 20px;
- color: #000000;
-}
-}
-
 
 
 </style>
+ 
+ <div id = "footer">
+                        
+                                
+        <div class="social-container">
+                <ul class="social-icons">
+                    <li><a href="https://www.instagram.com/ethan.eisenhard/"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="https://twitter.com/ethaneisenhard"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/ethan-eisenhard-6b50a8121/"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://codepen.io/devbyethan/"><i class="fa fa-codepen"></i></a></li>
+            </ul>
+
+        </div>
+            
+</div>
+
+            

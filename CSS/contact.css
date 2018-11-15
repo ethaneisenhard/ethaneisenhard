@@ -1,53 +1,102 @@
+.hero-image {
+	background: url("/WebsitesImages/wildfire.jpg");
+	height: 50%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	min-height: 400px;
+	margin-bottom: 10px;
+}
 
-h1
-{
-font-family: 'Oswald', sans-serif;
-font-size: 30px;
-text-align: center;
+.hero-text {
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	text-shadow: 2px 2px black;
+}
+
+.hero-text-style {
+	background-color: #a6a6a6;
+}
+
+.hero-text button {
+	border: none;
+	outline: 0;
+	display: inline-block;
+	padding: 10px 25px;
+	color: black;
+	background-color: #ddd;
+	text-align: center;
+	cursor: pointer;
+}
+
+.hero-text button:hover {
+	background-color: #555;
+	color: white;
+}
+
+.container {
+	display: flex;
+	margin: auto 0;
+	padding: 20px 40px 20px 40px;
+	justify-content: center;
+}
+
+#left-side{
+	padding-right: 30px;
+	width:60%;
+}
+
+#right-side{
+	width:40%;
 }
 
 
-/* Centres the page (this could be container)*/
-
-
-/* Labels are titles for the text fields. You can use a placeholder instead if you like*/
-label 
-{
-    display:block;
-    margin-top:20px;
-    letter-spacing:2px;
+h1 {
+	font-family: 'Oswald', sans-serif;
+	font-size: 30px;
+	text-align: center;
 }
 
-/* Centres the form within the page */
-form 
-{
-    margin:0 auto;
-    width:459px;
+label {
+	display: block;
+	margin-top: 20px;
+	letter-spacing: 2px;
+}
+
+
+form {
+	margin: 0 auto;
+	width: 100%;
 }
 
 /* Styles the text boxes */
-input, textarea, file {
-	width:439px;
-	height:27px;
-	background-color:#efefef;
-	border-radius:5px;
-	-moz-border-radius:5px;
-	-webkit-border-radius:5px;
-	border:1px solid #dedede;
-	padding:10px;
-	margin-top:3px;
-	font-size:0.9em;
-	color:#3a3a3a;
+input,
+textarea {
+	width: 100%;
+	background-color: #efefef;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: 1px solid #dedede;
+	padding: 10px;
+	margin-top: 3px;
+	font-size: 0.9em;
+	color: #3a3a3a;
 }
 
-	input:focus, textarea:focus {
-		border:1px solid #97d6eb;
-	}
+input:focus,
+textarea:focus {
+	border: 1px solid #97d6eb;
+}
 
-/* Styles the text area boxes (message field) */	
-textarea 
-{
-	height:213px;
+/* Styles the text area boxes (message field) */
+textarea {
+	height: 213px;
 	background-color: #efefef;
 }
 
@@ -55,37 +104,41 @@ textarea
 /* Styles the submit button */
 #submit {
 	/* background:url(images/submit.png); */
-	width:127px;
-	height:48px;
+	width: 127px;
+	height: 48px;
 	text-align: center;
 	/* text-indent:-9999px; */
-	border:none;
-	margin-top:20px;
-	cursor:pointer;
-}
-
-/* Styles the submit hover */	
-#submit:hover {
-	color:#fff;
+	border: none;
+	margin-top: 20px;
+	cursor: pointer;
+	color: #fff;
 	background-color: #216182;
-	opacity:0.9;
 }
 
-/* Styles the cancel button*/	
-#cancel {
-	/* background:url(images/cancel.png); */
-	width:127px;
-	height:28px;
-	text-align: center;
-	/* text-indent:-9999px; */
-	border:none;
-	margin-top:20px;
-	cursor:pointer;
+/* Styles the submit hover */
+#submit:hover {
+	color: #fff;
+	background-color: #216182;
+	opacity: 0.9;
 }
 
-/* Styles the cancel hover */
-#cancel:hover {
-	color:#fff;
-	background-color: #000;
-	opacity:0.9;
+
+#footerload {
+	margin-top: 25px;
+}
+
+@media all and (max-width: 800px) {
+	.container {
+		flex-direction: column;
+	}
+
+	#left-side{
+		padding-right: 30px;
+		width:100%;
+	}
+	
+	#right-side{
+		width:100%;
+	}
+	
 }

@@ -46,6 +46,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <meta name="msapplication-TileColor" content="#da532c">
                 <meta name="theme-color" content="#ffffff">
             <link rel="stylesheet" type="text/css" href = "main.css"/>
+            <script src="jquery-3.2.1.min.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
             
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -122,62 +124,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>-->                         
     </div>
             
-    <div id = "footer">
-
-                                
-            <div class = "social">
-                        
-                        <div id="menu-outer">
-                            <div class="table">
-                                <ul id="horizontal-list">
-                                    <li>
-                                        <a target="_blank" href="https://www.instagram.com/ethan.eisenhard/"> 
-                                        <img class = "instagram social-icons" title = "instagram" src="/Social/instagram.svg">
-                                        <span class = "desktop mobile">I often travel and take photos of my journeys.</span>
-                                        </img> 
-                                        </a>
-                                    </li>
-
-                                     <li>
-                                         <a href="https://medium.com/behind-the-hustle" target="_top"> 
-                                         <img class = "social-icons" title = "medium" src="Social/medium.svg"></img> 
-                                         <span class = "desktop mobile">A blog that shares stories and advice from young entrepreneurs.</span>
-                                         </a>
-                                         </li>
-
-                                    </li>
-
-                                    <li>
-                                        <a target="_blank" href="https://www.linkedin.com/in/ethan-eisenhard-6b50a8121/"> 
-                                        <img class = "linkedin social-icons" title = "linked-in" src="/Social/linkedin.svg"></img> 
-                                        <span class = "desktop mobile">My business profile. Lets get connected!</span>
-                                        </a>
-                                    </li>
-
-                                     <li>
-
-                                        <a target="_blank" href="https://codepen.io/devbyethan/pens/popular/#"> 
-                                        <img class = "codepen social-icons" title = "codepen" src="/Social/codepen.svg">
-                                        <span class = "desktop mobile">I love to code! Check out some of my work.</span>
-                                        </img> 
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="mailto:eeisen11@gmail.com?Subject=Hello%20" target="_top"> 
-                                        <img class = "mail social-icons" title = "mail" src="/Social/mail.svg">
-                                        <span class = "desktop mobile">My personal email. Great for business transactions.</span>
-                                        </img> 
-                                        </a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-                        
-            </div>
-            
-    </div>          
+    <div id = "footerload"></div>     
+    
+    <script>
+			$(function () {
+				$("#footerload").load("footer.html");
+			});
+    </script>
    
 
     </body>

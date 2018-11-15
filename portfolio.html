@@ -9,12 +9,37 @@
 	<link rel="stylesheet" type="text/css" href="CSS/portfolio.css" />
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script src="jquery-3.2.1.min.js"></script>
 
 
 	<style>
 		.desc {
 			margin: 10px 30px 30px 30px;
+		}
+
+		.nav_gallery{
+			display: flex;
+			width: auto;
+			justify-content: center;
+		}
+
+		.nav_gallery div{
+			padding: 10px;
+			color: white;
+			background:#d11141;
+			width: 33%;
+			text-align: center;
+			cursor: pointer;
+			
+		}
+
+		.nav_gallery div:nth-child(2){
+			border-left: 2px solid grey;
+			border-right: 2px solid grey;
+		}
+
+		.row.graduation_imgs, .row.landscape_imgs{
+			display:none;
 		}
 
 		.row {
@@ -89,42 +114,95 @@
 
 		</div>
 
-		<div class="row">
+		<div class = "nav_gallery">
+			<div class = "portraits">Portraits</div>
+			<div class = "graduation">Graduation</div>
+			<div class = "landscape">Landscape</div>
+		</div>
+
+		<div class="row portrait_imgs">
 			<div class="column">
 				<img src="Images/P0.jpg">
 				<img src="Images/P3.jpg">
 				<img src="Images/P4.jpg">
 				<img src="Images/P5.jpg">
 				<img src="Images/P6.jpg">
-				<img src="Images/P8.jpg"><img src="Images/P7.jpg">
-
-
-
+				<img src="Images/P8.jpg">
+				<img src="Images/P7.jpg">
 			</div>
 			<div class="column">
 				<img src="Images/P13.jpg">
 				<img src="Images/P14.jpg">
 				<img src="Images/P15.jpg">
-				<img src="Images/P10.jpg"><img src="Images/P16.jpg">
+				<img src="Images/P10.jpg">
+				<img src="Images/P16.jpg">
 				<img src="Images/P17.jpg">
 				<img src="Images/P19.jpg">
-				<img src="Images/P31.jpg"><img src="Images/P20.jpg">
-
-
+				<img src="Images/P31.jpg">
+				<img src="Images/P20.jpg">
 				<img src="Images/P21.jpg"></div>
 			<div class="column">
-				<img src="Images/P23.jpg"><img src="Images/P25.jpg">
-				<img src="Images/P9.jpg"><img src="Images/P26.jpg">
+				<img src="Images/P23.jpg">
+				<img src="Images/P25.jpg">
+				<img src="Images/P9.jpg">
+				<img src="Images/P26.jpg">
 				<img src="Images/P27.jpg">
 				<img src="Images/P28.jpg">
 				<img src="Images/P29.jpg">
 				<img src="Images/P30.jpg">
-
 				<img src="Images/P32.jpg">
 				<img src="Images/P11.jpg">
 			</div>
 		</div>
 
+		<div class="row landscape_imgs">
+				<div class="column">
+					<img src="Landscape/Land1.jpg">
+					<img src="Landscape/Land4.jpg">
+					<img src="Landscape/Land5.jpg">	
+				</div>
+				<div class="column">
+						<img src="Landscape/Land7.jpg">
+						<img src="Landscape/Land8.jpg">
+						<img src="Landscape/Land9.jpg">
+						<img src="Landscape/Land10.jpg">
+				</div>
+				<div class="column">
+						<img src="Landscape/Land6.jpg">
+						<img src="Landscape/Land12.jpg">
+						<img src="Landscape/Land13.jpg">
+						<img src="Landscape/Land14.jpg">
+				</div>
+		</div>
+
+		<div class="row graduation_imgs">
+				<div class="column">
+					<img src="Graduation/Grad1.jpg">
+					<img src="Graduation/Grad2.jpg">
+					<img src="Graduation/Grad3.jpg">
+					<img src="Graduation/Grad4.jpg">
+					<img src="Graduation/Grad22.jpg">
+					<img src="Graduation/Grad23.jpg">
+					<img src="Graduation/Grad28.jpg">
+				</div>
+				<div class="column">
+					<img src="Graduation/Grad7.jpg">
+					<img src="Graduation/Grad8.jpg">
+					<img src="Graduation/Grad9.jpg">
+					<img src="Graduation/Grad6.jpg">
+					<img src="Graduation/Grad24.jpg">
+					<img src="Graduation/Grad25.jpg">
+				</div>
+				<div class="column">
+					<img src="Graduation/Grad11.jpg">
+					<img src="Graduation/Grad19.jpg">
+					<img src="Graduation/Grad21.jpg">
+					<img src="Graduation/Grad5.jpg">
+					<img src="Graduation/Grad26.jpg">
+					<img src="Graduation/Grad27.jpg">
+					
+				</div>
+		</div>
 
 
 		<div id="footerload"></div>
@@ -134,13 +212,32 @@
 				$("#menu").load("menu.html");
 			});
 
-
 			$(function () {
 				$("#footerload").load("footer.html");
 			});
+
+			$(".portraits").on("click", function(){
+				console.log("portrait");
+				$(".row.portrait_imgs").css("display", "flex");
+				$(".row.landscape_imgs").hide();
+				$(".row.graduation_imgs").hide();
+			});
+			
+			$(".landscape").on("click", function(){
+				console.log("landscape");
+				$(".row.landscape_imgs").css("display", "flex");
+				$(".row.graduation_imgs").hide();
+				$(".row.portrait_imgs").hide();
+			});
+
+			$(".graduation").on("click", function(){
+				console.log("graduation");
+				$(".row.graduation_imgs").css("display", "flex");
+				$(".row.landscape_imgs").hide();
+				$(".row.portrait_imgs").hide();
+			});
+			
 		</script>
-
-
 		<script src="jquery-3.2.1.min.js"></script>
 		<script src="jquery.lazyload.js"></script>
 		<script>
@@ -150,7 +247,6 @@
 				});
 			});
 		</script>
-
 
 
 

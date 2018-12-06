@@ -5,8 +5,8 @@
 		<meta name="author" content="Ethan Eisenhard"/>
 		<meta charset="utf-8"/>
 		<meta name="description" content="Ethan Eisenhard Web Development"/>
-		<link rel="canonical" href="http://www.ethaneisenhard.com"/>
-		<link rel="alternate" href="http://www.ethaneisenhard.com" hreflang="en-us" />
+		<link rel="canonical" href="https://www.ethaneisenhard.com"/>
+		<link rel="alternate" href="https://www.ethaneisenhard.com" hreflang="en-us" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
                 <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
                 <meta itemprop="addressLocality" content="State College">

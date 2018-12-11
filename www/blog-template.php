@@ -16,7 +16,7 @@
                 <meta itemprop="telephone" content="215-284-0016">
                 <meta itemprop="email" content="eeisen11@gmail.com">
 		<link rel="stylesheet" type="text/css" href = "CSS/blog-template.css"/>
-		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="CSS/w3.css">
 		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 		
 <script>

@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html>
-        <head>
 
-		<script src="https://use.typekit.net/hsa3cub.js"></script>
-		<script>try{Typekit.load({ async: true });}catch(e){}</script>
-		<title>Ethan Eisenhard</title>
-		<meta name="description" content="Ethan is a freelance web developer who is dedicated to quality and original style. Learn more here!"/>
-		<link rel="canonical" href="https://www.ethaneisenhard.com"/>
-		<link rel="alternate" href="https://www.ethaneisenhard.com" hreflang="en-us" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href = "CSS/contact.css"/>
-		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/typeit/{VERSION}/typeit.min.js"></script>
-		
-	</head>
-	
+<head>
+
+    <script src="https://use.typekit.net/hsa3cub.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <title>Ethan Eisenhard</title>
+    <meta name="description" content="Ethan is a freelance web developer who is dedicated to quality and original style. Learn more here!" />
+    <link rel="canonical" href="https://www.ethaneisenhard.com" />
+    <link rel="alternate" href="https://www.ethaneisenhard.com" hreflang="en-us" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="js/instafeed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typeit/{VERSION}/typeit.min.js"></script>
+
+</head>
+
 <style>
-.instagram{
-	
+#instafeed{
+display: flex;
+flex-flow: row wrap;
+justify-content: center;
 }
+.instagram img{
+    width: 300px;
+    height: auto;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
 .typewrite{
 	text-decoration: none;
 }
@@ -30,227 +40,194 @@
 .w3-container{
     text-align: center;
 }
-/* Create two equal columns that floats next to each other */
-.column {
-    float: left;
-    width: 50%;
-    padding: 10px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
 .row{
-    display: block;
+    display: flex;
+    flex-flow: row wrap;
+}
+.column{
+    width: 50%;
 }
 
-.view{
-	transition-duration: 0.4s;
-	padding: 15px 25px 15px 25px;
-	cursor: pointer;
-	background-color: white; 
-	color: black; 
-	border: 2px solid #00b159;
-	border-radius: 2px;
-	font-size: 15px;
-	font-weight: 500;
-	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-	text-decoration: none;
-	text-align: center;
-}
-
-.view:hover{
-	background-color: #00b159;
-	color: white;
-	
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-
-@media (max-width: 700px) {
-    .column {
+@media only screen and (max-width: 1046px){
+    .row{
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+    .column{
         width: 100%;
+        margin-bottom: 10px;
     }
-    
-    img{
-	width: 60vw;
-	height: auto;
-    }
-}
-
-
-@media (max-width: 500px) {
-    .column {
-        width: 100%;
-    }
-    
-    img{
-	width: 250px;
-	height: auto;
-    }
-    
     .bio{
-	top: 420px;
-	padding-right: 30px;
+        width: 100%;
     }
-	
 }
-
-
-.name{
-	font-weight: bold;
-}
-
 
 </style>
-	
-	<body>
-		
-	
-	<div id = "menu"></div>
 
-	<div class="w3-main" style="margin-left:200px">
-		<div class="w3-white">
-		  <button class="w3-button w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
-		  <div class="w3-container">
-		    <h1 class = "about-header">About</h1>
-		    <hr style = "border-color: #00b159;">
-		  </div>
-	</div>
+<body>
 
-	
-	
-	<div class="w3-container">
-		
-	<h1>
-	<a href="" class="typewrite" data-period="2000" data-type='[ "Web Developer.", "Photographer.", "Entrepeneur.", "Student." ]'>
-	  <span class="wrap"></span>
-	</a>
-	</h1>
-	
-	<div class="row">
-		<div class="column" style="">
-			<img src = "WebsitesImages/EthanE1.jpg" width="330vw" height="auto" style = "border-radius: 2px;"/>
-		</div>
-		
-		<div class="column bio" style="text-align: left;">
 
-		
-			<span class = "name" style = "font-style: italic;">Ethan Eisenhard</span> is a recent graduate of a Bachelor of Science Degree in Computer Design and Development at The Pennsylvania State University.
-			His interest in web development began at his first internship creating websites for local businesses.
-			He learned to work with clients, design responsive websites, and optimize search engine results.
-			Inspired by this Eisenhard went on to learn web development on a corporate level interning at Toll Brothers. 
-			On the Penn State campus, Eisenhard learned about leadership and management roles as the President and Founder of the Photography Club and the Resident Assistant of over fifty students.
-			Using these skills, he has developed his own business designing websites and taking photos for graduating seniors.
-			</p>
-			
-			<p>
-			Ethan currently works for Toll Brothers as a Web Developer and is available as a freelance photographer in the Pennsylvanna and New York state area. 
-			</p>
-			
-            <br>
-            
-            <div id = "footer"></div>
+    <div id="menu"></div>
 
-            <br>
-            <br>
-			
+    <div class="w3-main" style="margin-left:200px">
+        <div class="w3-white">
+            <button class="w3-button w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
+            <div class="w3-container">
+                <h1 class="about-header">About</h1>
+                <hr style="border-color: #00b159;">
+            </div>
         </div>
-        
-        
-	
-		
+
+
+
+        <div class="w3-container">
+
+            <h1>
+                <a href="" class="typewrite" data-period="2000" data-type='[ "Web Developer.", "Photographer.", "Entrepreneur.", "Teacher." ]'>
+                    <span class="wrap"></span>
+                </a>
+            </h1>
+
+            <div class="row">
+                <div class="column">
+                    <img class = "bio" src="WebsitesImages/EthanE1.jpg" width="330vw" height="auto" style="border-radius: 2px;" />
+                </div>
+
+                <div class="column bio" style="text-align: left;">
+
+
+                    <span class="name" style="font-style: italic;">Ethan Eisenhard</span> is a graduate of a
+                    Bachelor of Science Degree in Computer Design and Development at The Pennsylvania State University.
+                    His interest in web development began at his first job creating websites for local
+                    businesses.
+                    He learned to work with clients, design responsive websites, and optimize search engine results.
+                    Inspired by this Eisenhard went on to learn web development on a corporate level interning at Toll
+                    Brothers.
+                    On the Penn State campus, Eisenhard learned about leadership and management roles as the President
+                    and Founder of the Photography Club and the Resident Assistant of over fifty students.
+                    Using these skills, he has developed his own business designing websites and taking photos for
+                    graduating seniors.
+                    </p>
+
+                    <p>
+                        Ethan currently works for Toll Brothers as a Web Developer and is available as a freelance
+                        photographer in the Pennsylvanna and New York state area.
+                    </p>
+
+                    <br>
+
+                    <div id="footer"></div>
+
+                    <br>
+                    <br>
+
+                </div>
+
+            </div>
+
+            <div id = "instafeed"></div>
+
+
+        </div>
+
+
+
+
     </div>
 
-    <script src="//www.powr.io/powr.js?external-type=html"></script> 
-    <div class="powr-social-feed" id="b9e71601_1534998361"></div>
-
-	
-	</div>
-	
 
 
-	   
-	</div>
-	
 
-	
 
-	
-<script>	
-var TxtType = function(el, toRotate, period) {
-        this.toRotate = toRotate;
-        this.el = el;
-        this.loopNum = 0;
-        this.period = parseInt(period, 10) || 2000;
-        this.txt = '';
-        this.tick();
-        this.isDeleting = false;
-    };
+    <script>
+        var TxtType = function (el, toRotate, period) {
+            this.toRotate = toRotate;
+            this.el = el;
+            this.loopNum = 0;
+            this.period = parseInt(period, 10) || 2000;
+            this.txt = '';
+            this.tick();
+            this.isDeleting = false;
+        };
 
-    TxtType.prototype.tick = function() {
-        var i = this.loopNum % this.toRotate.length;
-        var fullTxt = this.toRotate[i];
+        TxtType.prototype.tick = function () {
+            var i = this.loopNum % this.toRotate.length;
+            var fullTxt = this.toRotate[i];
 
-        if (this.isDeleting) {
-        this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
-        this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }
-
-        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-
-        var that = this;
-        var delta = 200 - Math.random() * 100;
-
-        if (this.isDeleting) { delta /= 2; }
-
-        if (!this.isDeleting && this.txt === fullTxt) {
-        delta = this.period;
-        this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === '') {
-        this.isDeleting = false;
-        this.loopNum++;
-        delta = 500;
-        }
-
-        setTimeout(function() {
-        that.tick();
-        }, delta);
-    };
-
-    window.onload = function() {
-        var elements = document.getElementsByClassName('typewrite');
-        for (var i=0; i<elements.length; i++) {
-            var toRotate = elements[i].getAttribute('data-type');
-            var period = elements[i].getAttribute('data-period');
-            if (toRotate) {
-              new TxtType(elements[i], JSON.parse(toRotate), period);
+            if (this.isDeleting) {
+                this.txt = fullTxt.substring(0, this.txt.length - 1);
+            } else {
+                this.txt = fullTxt.substring(0, this.txt.length + 1);
             }
-        }
-        // INJECT CSS
-        var css = document.createElement("style");
-        css.type = "text/css";
-        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-        document.body.appendChild(css);
-    };
-</script>
-	
-<script> 
-    $(function(){
-      $("#menu").load("menu.html"); 
-    });
 
-    $(function(){
-      $("#footer").load("footer.html"); 
-    });
-</script>
+            this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
 
-        
-	</body>
-	
+            var that = this;
+            var delta = 200 - Math.random() * 100;
+
+            if (this.isDeleting) {
+                delta /= 2;
+            }
+
+            if (!this.isDeleting && this.txt === fullTxt) {
+                delta = this.period;
+                this.isDeleting = true;
+            } else if (this.isDeleting && this.txt === '') {
+                this.isDeleting = false;
+                this.loopNum++;
+                delta = 500;
+            }
+
+            setTimeout(function () {
+                that.tick();
+            }, delta);
+        };
+
+        window.onload = function () {
+            var elements = document.getElementsByClassName('typewrite');
+            for (var i = 0; i < elements.length; i++) {
+                var toRotate = elements[i].getAttribute('data-type');
+                var period = elements[i].getAttribute('data-period');
+                if (toRotate) {
+                    new TxtType(elements[i], JSON.parse(toRotate), period);
+                }
+            }
+            // INJECT CSS
+            var css = document.createElement("style");
+            css.type = "text/css";
+            css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+            document.body.appendChild(css);
+        };
+    </script>
+
+    <script>
+        $(function () {
+            $("#menu").load("menu.html");
+        });
+
+        $(function () {
+            $("#footer").load("footer.html");
+        });
+    </script>
+
+
+    <script type="text/javascript">
+       var userFeed = new Instafeed({
+            get: 'user',
+            userId: '257172566',
+            limit: 8,
+            resolution: 'standard_resolution',
+            accessToken: '257172566.1677ed0.37414bafffdb425ca45962a479225aad',
+            sortBy: 'most-liked',
+            template: '<div class="instagram"><a href="{{link}}" title="{{caption}}" target="_blank"><img {{orientation}} src="{{image}}" alt="{{caption}}" class="img-fluid"/></a></div>',
+        });
+
+
+        userFeed.run();
+    </script>
+
+
+</body>
+
 </html>

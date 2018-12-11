@@ -19,7 +19,7 @@
 		
 	</script>
 	<script src="jquery-3.2.1.min.js"></script>
-	<script src="js/jquery.lazy.min.js"></script>
+	<script type="text/javascript" src="js/jquery.lazy.min.js"></script>
 
 </head>
 
@@ -55,7 +55,7 @@
 
 		<div class="row portrait_imgs">
 			<div class="column">
-				<img class = "lazy" alt = "ethaneisenhard" src="Images/P0.jpg">
+				<img class = "lazy" alt = "ethaneisenhard" data-src="Images/P0.jpg" src="Images/P0.jpg">
 				<img class = "lazy" alt = "ethaneisenhard"  src="Images/P16.jpg">
 				<img class = "lazy" alt = "ethaneisenhard"  src="Images/P3.jpg">
 				<img class = "lazy" alt = "ethaneisenhard"  src="Images/P5.jpg">
@@ -172,31 +172,10 @@
 			
 		</script>
 		<script>
-			$(function() {
-				$('.lazy').lazy({
-					// called before an elements gets handled
-					beforeLoad: function(element) {
-						var imageSrc = element.data('src');
-						console.log('image "' + imageSrc + '" is about to be loaded');
-					},
-					
-					// called after an element was successfully handled
-					afterLoad: function(element) {
-						var imageSrc = element.data('src');
-						console.log('image "' + imageSrc + '" was loaded successfully');
-					},
-					
-					// called whenever an element could not be handled
-					onError: function(element) {
-						var imageSrc = element.data('src');
-						console.log('image "' + imageSrc + '" could not be loaded');
-					},
-					
-					// called once all elements was handled
-					onFinishedAll: function() {
-						console.log('finished loading all images');
-					}
-				});
+			jQuery("img.lazy").lazy({
+				effect: "fadeIn",
+				effectTime: 1000,
+				bind: "event"
 			});
 		</script>
 

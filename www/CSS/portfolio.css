@@ -9,6 +9,7 @@ body{
 .lazy{
     width: 100%;
     height: auto;
+    background-color: lightgrey;
 }
 
 .content {

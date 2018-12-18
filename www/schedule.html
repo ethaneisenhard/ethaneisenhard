@@ -32,6 +32,12 @@
 
 	<style>
 
+		iframe{
+			border: 50px solid #d11141;
+			overflow: hidden;
+			-webkit-overflow-scrolling: touch
+		}
+
 		h2{
 		margin: 0 !important;
 	}
@@ -130,6 +136,42 @@
 	cursor: pointer;
 	}
 
+	@media only screen and (max-width: 1200px){
+		.container{
+			flex-flow: column;
+		}
+
+		.carousel{
+			width: 100%;
+		}
+
+		.service{
+			width: 100%;
+		}
+	}
+
+	@media only screen and (max-width: 600px){
+		.slick-next,.slick-prev{
+			top: 30%;
+		}
+
+		i.arrow {
+		padding: 10px; 
+		}
+
+		.slick-next{
+			left: calc(100% - 3.5em);
+		}
+
+		.slick-prev{
+			right: calc(100% - 3.5em);
+		}
+
+		iframe{
+			border: 30px solid #d11141;
+		}
+	}
+
 	</style>
 
 </head>
@@ -220,10 +262,10 @@
 
 			<div class = "service">
 				<h2>Professional Headshot ($160)</h2>
-				<p>60 mins</p>
-				<p>2 outfits</p>
-				<p>Any location</p>
-				<p>Owner of 10 edited photos in a Google Drive with full copyright privilege</p>
+				<h4>60 mins</h4>
+				<h4>2 outfits</h4>
+				<h4>Any location</h4>
+				<h4>Owner of 10 edited photos in a Google Drive with full copyright privilege</h4>
 				
 				<div class="allign">
 					<a href="mailto:eeisen11@gmail.com?Subject=Graduation%20Photoshoot">

@@ -57,9 +57,8 @@ justify-content: center;
 .column{
     width: 50%;
 }
-.
+
 .accordion-story {
-    max-width: 300px;
     background: #0097a7;
     border-radius: 3px;
     box-shadow: 0 10px 15px -20px rgba(0, 0, 0, 0.3), 0 30px 45px -30px rgba(0, 0, 0, 0.3), 0 80px 55px -30px rgba(0, 0, 0, 0.1);
@@ -118,14 +117,24 @@ justify-content: center;
   display: -ms-flexbox; /* IE10 */
   display: flex;
   justify-content: center;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-  padding: 0 30px;
+  flex-flow: row;
+  margin: 0 30px;
+  border: 4px solid #857ea5;
+  height: 43%;
+}
+.image_row{
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-flow: column;
 }
 
 .bio{
-    height: 10.2em;
-    }
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
 
 /* Create four equal columns that sits next to each other */
 .column-about {
@@ -185,10 +194,6 @@ justify-content: center;
     .bio{
         height: 6em;
     }
-
-    .about_collage {
-    padding: 0 10px;
-    }
 }
 
 </style>
@@ -220,19 +225,32 @@ justify-content: center;
             <div class="row">
                 <div class="column">
                     <div class="about_collage">
-                        <img class="bio" src="WebsitesImages/EthanE1.jpg">
-                        <img class="bio" src="AboutImages/ethan14.jpg">
-                        <img class="bio" src="AboutImages/ethan10.jpg">
-                        <img class="bio" src="AboutImages/ethan5.jpg">
-                        <img class="bio" src="AboutImages/ethan2.jpg">
-                        <img class="bio" src="AboutImages/ethan8.jpg">
-                        <img class="bio" src="AboutImages/ethan11.jpg">
-                        <img class="bio" src="AboutImages/ethan7.jpg">
-                        <img class="bio" src="AboutImages/ethan3.jpg">
-                        <img class="bio" src="AboutImages/ethan1.jpg">
-                        <img class="bio" src="AboutImages/ethan12.jpg">
-                        <img class="bio" src="AboutImages/ethan13.jpg">
-                        <img class="bio" src="AboutImages/ethan9.jpg"><img class="bio" src="AboutImages/ethan4.jpg"></div>
+                        <div class = "image_row">
+                            <img class="bio" src="WebsitesImages/EthanE1.jpg">
+                            <img class="bio" src="AboutImages/ethan14.jpg">
+                            <img class="bio" src="AboutImages/ethan10.jpg">
+                        </div>
+                        <div class = "image_row">
+                            <img class="bio" src="AboutImages/ethan5.jpg">
+                            <img class="bio" src="AboutImages/ethan2.jpg">
+                            <img class="bio" src="AboutImages/ethan8.jpg">
+                        </div>
+                        <div class = "image_row">
+                            <img class="bio" src="AboutImages/ethan11.jpg">
+                            <img class="bio" src="AboutImages/ethan7.jpg">
+                            <img class="bio" src="AboutImages/ethan3.jpg">
+                        </div>
+                        <div  class = "image_row">
+                            <img class="bio" src="AboutImages/ethan1.jpg">
+                            <img class="bio" src="AboutImages/ethan12.jpg">
+                            <img class="bio" src="AboutImages/ethan13.jpg">
+                        </div>
+                        <div class = "image_row">
+                            <img class="bio" src="AboutImages/ethan9.jpg">
+                            <img class="bio" src="AboutImages/ethan4.jpg">
+                        </div>
+                    
+                    </div>
                 </div>
 
                 <div class="column" style="text-align: left;">
@@ -260,7 +278,7 @@ justify-content: center;
                     </p>
 
                     <div class="accordion-story">
-                        <div class="heading">Chapter 1 - The Beginning</div>
+                        <div class="heading first">Chapter 1 - The Beginning</div>
                         <div class="contents">
                             <p>I was born in Boston, 3rd son, of 4 boys and 1 girl. We move to Philadelphia when I was
                                 6 months old and I have lived there ever since. Go Eagles!! Following preschool I went
@@ -269,7 +287,7 @@ justify-content: center;
                                 pivotal moment, I began to see the world differently. Before I didn't care about much,
                                 I saw no consequences of my actions. Now I saw what could happen to me, my family, and
                                 my friends if I didn't take my responsibilities serious. Slowly inside, I began to form
-                                ambitions that would soon form into dreams and realizations.</p>
+                                ambitions that would soon turn into dreams and realizations.</p>
                         </div>
 
                         <div class="heading">Chapter 2 - College</div>
@@ -306,7 +324,7 @@ justify-content: center;
                                 <a href="https://www.tollbrotherscityliving.com/">lifestyle sites</a>, and
                                 <a href="https://www.liveatporterranch.com/">various internal web apps</a>. As well as
                                 collaborating and participating with team members
-                                for standup, review, and concept meetings. I love working for the Toll Brothers, I walk
+                                for standup, review, and concept meetings. I love working for the Toll Brothers, I walk
                                 into the office with a smile everyday knowing I am going to laugh, learn, and love what
                                 I am doing.
                             </p>
@@ -323,18 +341,18 @@ justify-content: center;
                             </p>
                         </div>
 
-                        <div class="heading">Chapter 4 - To Be Continue...</div>
+                        <div class="heading">Chapter 4 - To Be Continued...</div>
                         <div class="contents">
                             <p>
                                 As I continue on this awesome journey of adventures and professional development, I
                                 find that the more I learn about my self the more I can help others. In the next year,
-                                my goal is to start teaching both web development courses. There is nothing more
+                                my goal is to start teaching both web development and photography courses. There is nothing more
                                 empowering than teaching others the tools you have learned.
                             </p>
-                            Have an idea, project, or just want to chat, drop me a message on my contact form.
+                            <p> Have an idea, project, or just want to chat, drop me a message on my <a href = "https://ethaneisenhard.com/contact">contact form.</a> </p>
                         </div>
                     </div>
-
+ 
                     <br>
 
                     <div id="footer"></div>
@@ -458,6 +476,10 @@ justify-content: center;
                 $(this).siblings().removeClass("active-story");
             });
         });
+
+        setTimeout(function() {
+            $(".first").trigger( "click" );
+        }, 100);
     </script>
 
 

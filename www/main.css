@@ -92,7 +92,6 @@ span::after {
     position: relative;
     justify-content: center;
     align-items: center;
-    top: 38px;
 }
 
 .h2_container .fa {
@@ -109,6 +108,7 @@ span::after {
 h2 {
     position: relative;
     text-align: center;
+    margin: 0;
     color: #cbc7e3;
     font-size: 1em;
 
@@ -136,8 +136,7 @@ h2 {
 
 #header {
     height: 56px;
-    margin-top: 24px;
-    margin-bottom: 12px;
+    margin-top: 10px;
     /*border: 3px solid #73AD21;*/
 
 }

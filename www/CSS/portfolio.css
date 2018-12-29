@@ -109,4 +109,12 @@ body{
         flex: 100%;
         max-width: 100%;
     }
+
+    #footerload{
+        margin-top: 10px;
+    }
+
+    .story-column{
+        margin-top: 15px;
+    }
 }

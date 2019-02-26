@@ -79,15 +79,10 @@ text-align: left;
     font-weight: bold;
 }
 
-.hero {
-    width: 100%;
-    min-height: 400px;
-}
-
 .hero-image {
-    margin-top: 50px;
+    margin: 20px 0px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/WebsitesImages/hero.jpg");
-    min-height: 700px;
+    min-height: 400px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -234,7 +229,6 @@ text-align: center;
         display: block;
     }
 
-
     .box {
         margin-top: 10px;
         width: 100% !important;
@@ -270,17 +264,13 @@ text-align: center;
         height: 300px;
     }
 
-    .hero-image {
-        margin-top: 0px;
-    }
-
     .tb-logo{
         width: 60vw !important;
     }
     
     
     .surge-logo{
-        width: 70vw !important;
+        width: 12vw !important;
     }
     
     
@@ -295,11 +285,6 @@ text-align: center;
     .work-text h1{
         font-size: 2em !important;
 
-    }
-
-    .bigTitle{
-        font-size: 8vw !important;
-        display: block !important;
     }
 
     .browser{
@@ -333,7 +318,7 @@ text-align: center;
 
 .work-SB {
     margin-top: 20px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/WebsitesImages/surge-background.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/WebsitesImages/residences.jpg");
     min-height: 500px;
     background-position: center;
     background-repeat: no-repeat;
@@ -343,7 +328,7 @@ text-align: center;
 
 .work-DAC {
     margin-top: 20px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/WebsitesImages/dac-background.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/WebsitesImages/amenities.jpg");
     min-height: 500px;
     background-position: center;
     background-repeat: no-repeat;
@@ -353,7 +338,7 @@ text-align: center;
 
 .work-SFA{
     margin-top: 20px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://safetyfirstaquatics.com/Images/Homepage/hero1.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/WebsitesImages/greenhills.jpg");
     min-height: 500px;
     background-position: center;
     background-repeat: no-repeat;
@@ -367,30 +352,22 @@ text-align: center;
 
 
 .surge-logo{
-    width: 40vw;
+    width: 6vw;
 }
 
 
 .dac-logo{
-    width: 40vw;
+    width: 26vw;
 }
 
 .safetyfirstaquatics{
-    top: 10em;
-    position: relative;
-}
-
-.browser{
-    display: inline-block;
-    vertical-align: middle;
+    width: 26vw;
 }
 
 .bigTitle{
-    vertical-align: middle;
-    display: inline-block;
+    margin: auto;
     font-size: 4vw;
-    font-family: "Bubblegum Sans";
-    color: #FF7058;
+    color: #00aedb;
 }
 
 .work-text {

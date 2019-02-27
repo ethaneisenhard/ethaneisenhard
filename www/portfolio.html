@@ -55,19 +55,19 @@
 
 		<div class="row portrait_imgs">
 			<div class="column">
-				<img class = "lazy" alt = "ethaneisenhard" src="Images/P0.jpg">
-				<img class = "lazy" alt = "ethaneisenhard"  src="Images/P16.jpg">
-				<img class = "lazy" alt = "ethaneisenhard"  src="Images/P3.jpg">
-				<img class = "lazy" alt = "ethaneisenhard"  src="Images/P5.jpg">
+				<img class = "lazy" alt = "ethaneisenhard" data-src="Images/P0.jpg">
+				<img class = "lazy" alt = "ethaneisenhard"  data-src="Images/P16.jpg">
+				<img class = "lazy" alt = "ethaneisenhard"  data-src="Images/P3.jpg">
+				<img class = "lazy" alt = "ethaneisenhard"  data-src="Images/P5.jpg">
 				<img class = "lazy" alt = "ethaneisenhard"  data-src="Images/P7.jpg">
 				<img class = "lazy" alt = "ethaneisenhard"  data-src="Images/P15.jpg">
 				
 			</div>
 			<div class="column">
-				<img class = "lazy" alt = "ethaneisenhard"  src="Images/P17.jpg">
-				<img class = "lazy" alt = "ethaneisenhard"  src="Images/P13.jpg">
-				<img class = "lazy" alt = "ethaneisenhard"  src="Images/P8.jpg">
-				<img class = "lazy" alt = "ethaneisenhard"  src="Images/P14.jpg">
+				<img class = "lazy" alt = "ethaneisenhard"  data-src="Images/P17.jpg">
+				<img class = "lazy" alt = "ethaneisenhard"  data-src="Images/P13.jpg">
+				<img class = "lazy" alt = "ethaneisenhard"  data-src="Images/P8.jpg">
+				<img class = "lazy" alt = "ethaneisenhard"  data-src="Images/P14.jpg">
 				<img class = "lazy" alt = "ethaneisenhard"  data-src="Images/P19.jpg">
 				<img class = "lazy" alt = "ethaneisenhard"  data-src="Images/P31.jpg">
 				<img class = "lazy" alt = "ethaneisenhard"  data-src="Images/P20.jpg">
@@ -78,9 +78,9 @@
 				<img class = "lazy" alt = "ethaneisenhard" data-src="Images/P4.jpg">
 			</div>
 			<div class="column">
-				<img class = "lazy" alt = "ethaneisenhard"  src="Images/P21.jpg">
-				<img class = "lazy" alt = "ethaneisenhard"  src="Images/P9.jpg">
-				<img class = "lazy" alt = "ethaneisenhard"  src="Images/P26.jpg">
+				<img class = "lazy" alt = "ethaneisenhard"  data-src="Images/P21.jpg">
+				<img class = "lazy" alt = "ethaneisenhard"  data-src="Images/P9.jpg">
+				<img class = "lazy" alt = "ethaneisenhard"  data-src="Images/P26.jpg">
 				<img class = "lazy" alt = "ethaneisenhard"  data-src="Images/P27.jpg">
 				<img class = "lazy" alt = "ethaneisenhard"  data-src="Images/P6.jpg">
 				<img class = "lazy" alt = "ethaneisenhard" data-src="Images/P11.jpg">
@@ -110,16 +110,16 @@
 
 		<div class="row graduation_imgs">
 				<div class="column">
-					<img class = "lazy" src="Graduation/Grad1.jpg">
-					<img class = "lazy" src="Graduation/Grad2.jpg">
-					<img class = "lazy" src="Graduation/Grad26.jpg">
+					<img class = "lazy" data-src="Graduation/Grad1.jpg">
+					<img class = "lazy" data-src="Graduation/Grad2.jpg">
+					<img class = "lazy" data-src="Graduation/Grad26.jpg">
 					<img class = "lazy" data-src="Graduation/Grad25.jpg">
 					<img class = "lazy" data-src="Graduation/Grad28.jpg">
 				</div>
 				<div class="column">
-					<img class = "lazy" src="Graduation/Grad7.jpg">
-					<img class = "lazy" src="Graduation/Grad8.jpg">
-					<img class = "lazy" src="Graduation/Grad9.jpg">
+					<img class = "lazy" data-src="Graduation/Grad7.jpg">
+					<img class = "lazy" data-src="Graduation/Grad8.jpg">
+					<img class = "lazy" data-src="Graduation/Grad9.jpg">
 					<img class = "lazy" data-src="Graduation/Grad19.jpg">
 					<img class = "lazy" data-src="Graduation/Grad21.jpg">
 					<img class = "lazy" data-src="Graduation/Grad24.jpg">
@@ -129,9 +129,9 @@
 					
 				</div>
 				<div class="column">
-					<img class = "lazy" src="Graduation/Grad11.jpg">
-					<img class = "lazy" src="Graduation/Grad6.jpg">
-					<img class = "lazy" src="Graduation/Grad5.jpg">
+					<img class = "lazy" data-src="Graduation/Grad11.jpg">
+					<img class = "lazy" data-src="Graduation/Grad6.jpg">
+					<img class = "lazy" data-src="Graduation/Grad5.jpg">
 					<img class = "lazy" data-src="Graduation/Grad22.jpg">
 					<img class = "lazy" data-src="Graduation/Grad27.jpg">
 				</div>
@@ -172,7 +172,36 @@
 			
 		</script>
 		<script>
-			 $(function() {
+		const images = document.querySelectorAll('[data-src]');
+		const config = {
+		rootMargin: '0px 0px 50px 0px',
+		threshold: 0
+		};
+		let loaded = 0;
+
+		let observer = new IntersectionObserver(function (entries, self) {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+			// console.log(`Image ${entry.target.src} is in the viewport!`);
+			preloadImage(entry.target);
+			// Stop watching and load the image
+			self.unobserve(entry.target);
+			}
+		});
+		}, config);
+
+		images.forEach(image => {
+		observer.observe(image);
+		});
+
+		function preloadImage(img) {
+		const src = img.getAttribute('data-src');
+		if (!src) { return; }
+		img.src = src;
+		_updateMonitoring();
+		}
+		
+		$(function() {
 				$('.lazy').lazy({
 
 					effect: "fadeIn"

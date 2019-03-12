@@ -60,7 +60,7 @@ body{
     border-right: 2px solid grey;
 }
 
-.row.graduation_imgs, .row.landscape_imgs{
+.row.portrait_imgs, .row.landscape_imgs{
     display:none;
 }
 

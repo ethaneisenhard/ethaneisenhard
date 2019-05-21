@@ -117,62 +117,27 @@ justify-content: center;
     line-height: 1.5;
 }
 
-.about_collage {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  justify-content: center;
-  flex-flow: row;
-  margin: 0 30px;
-  box-shadow: 10px 10px #4b86b4;
-}
-.image_row{
-    width: 100%;
-    flex: 1;
-    display: flex;
-    flex-flow: column;
-}
 
 .bio{
+    height: 11em;
+    box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
     width: 100%;
-    height: 100%;
     object-fit: cover;
     overflow: hidden;
 }
 
 /* Create four equal columns that sits next to each other */
-.column-about {
-  -ms-flex: 25%; /* IE10 */
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
+.grid { 
+    display: grid;
+    grid-template-columns: repeat(5, minmax(2em, 1fr));
+    align-items: stretch;
+    padding: 0px 2em;
+  }
+.grid img {
+  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+  max-width: 100%;
 }
 
-.column-about img {
-  margin-top: 8px;
-  vertical-align: middle;
-}
-@media only screen and (max-width: 1280px){
-.bio{
-    height:8em;
-}
-}
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-  .column-about {
-    -ms-flex: 50%;
-    flex: 50%;
-    max-width: 50%;
-  }
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column-about {
-    -ms-flex: 100%;
-    flex: 100%;
-    max-width: 100%;
-  }
-}
 @media only screen and (max-width: 1046px){
     .row{
         display: flex;
@@ -234,32 +199,32 @@ justify-content: center;
 
             <div class="row">
                 <div class="column">
-                    <div class="about_collage">
-                        <div class = "image_row">
+                    <div class="grid">
+                        
                             <img class="bio" src="WebsitesImages/EthanE1.jpg">
                             <img class="bio" src="AboutImages/ethan14.jpg">
                             <img class="bio" src="AboutImages/ethan10.jpg">
-                        </div>
-                        <div class = "image_row">
+                      
+                 
                             <img class="bio" src="AboutImages/ethan5.jpg">
                             <img class="bio" src="AboutImages/ethan2.jpg">
                             <img class="bio" src="AboutImages/ethan8.jpg">
-                        </div>
-                        <div class = "image_row">
+                       
+                       
                             <img class="bio" src="AboutImages/ethan11.jpg">
                             <img class="bio" src="AboutImages/ethan7.jpg">
                             <img class="bio" src="AboutImages/ethan3.jpg">
-                        </div>
-                        <div  class = "image_row">
+                        
+                      
                             <img class="bio" src="AboutImages/ethan1.jpg">
                             <img class="bio" src="AboutImages/ethan12.jpg">
                             <img class="bio" src="AboutImages/ethan13.jpg">
-                        </div>
-                        <div class = "image_row">
+                     
+                      
                             <img class="bio" src="AboutImages/ethan9.jpg">
                             <img class="bio" src="AboutImages/ethan4.jpg">
                             <img class="bio" src="AboutImages/ethan15.jpg">
-                        </div>
+                    
                     
                     </div>
                 </div>

@@ -111,11 +111,26 @@ header{
     }
 }
 
+@media only screen and (max-width: 600px){
+    header{
+        display: flex;
+        position: relative;
+        top: 0em;
+        margin-bottom: 0em;
+    }
+}
+
 .contact {
     position: absolute;
     top: 0;
     right: 0;
     display: block;
+}
+
+@media only screen and (max-width: 600px){
+    .contact {
+        display: none;
+    }  
 }
 
 main {
@@ -181,6 +196,16 @@ article .portrait {
 @media only screen and (max-width: 1200px){
     article{
         margin: 4em 4em; 
+    }
+}
+
+@media only screen and (max-width: 600px){
+    article{
+        margin: 1em 1em; 
+    }
+
+    article svg{
+        width: 90%;
     }
 }
 

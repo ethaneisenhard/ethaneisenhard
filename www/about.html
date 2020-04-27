@@ -12,7 +12,8 @@
         } catch (e) {}
     </script>
     <title>Ethan Eisenhard</title>
-    <meta name="description" content="Ethan is a freelance web developer who is dedicated to quality and original style. Learn more here!" />
+    <meta name="description"
+        content="Ethan is a freelance web developer who is dedicated to quality and original style. Learn more here!" />
     <link rel="canonical" href="https://www.ethaneisenhard.com" />
     <link rel="alternate" href="https://www.ethaneisenhard.com" hreflang="en-us" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,153 +25,147 @@
 </head>
 
 <style>
-
-    p{
+    p {
         font-size: 1.1em;
     }
-    #instafeed{
-display: flex;
-flex-flow: row wrap;
-justify-content: center;
-}
-.instagram img{
-    width: 300px;
-    height: auto;
-    margin-left: 10px;
-    margin-bottom: 10px;
-}
 
-.typewrite{
-	text-decoration: none;
-}
-.about-header{
-    font-weight: 300;
-    color: #00b159;
-}
-.w3-container{
-    text-align: center;
-}
-.row{
-    display: flex;
-    flex-flow: row wrap;
-}
-.column{
-    width: 50%;
-}
-
-.column p{
-    margin: 0 0 10px 0px;
-}
-
-.accordion-story {
-    background: #0097a7;
-    border-radius: 3px;
-    box-shadow: 0 10px 15px -20px rgba(0, 0, 0, 0.3), 0 30px 45px -30px rgba(0, 0, 0, 0.3), 0 80px 55px -30px rgba(0, 0, 0, 0.1);
-}
-.heading {
-    background: linear-gradient(45deg, #00b159, #00582c);
-    color: white;
-    font-size:20px;
-    border-bottom: 1px solid #010905;
-	letter-spacing: 0.8px;
-    padding: 25px;
-    cursor: pointer;  
-    font-weight: bold;
-    text-transform: uppercase;
-}
-.heading:nth-last-child(2){
-    border-bottom:0; 
-}
-.heading:hover {
-    background: linear-gradient(45deg, #857ea5, #293E6A);
-    border-radius: 0;
-}
-.heading:first-child:hover {
-    border-radius: 3px 3px 0 0;
-}
-.heading:nth-last-child(2):hover{
-    border-radius:0 0 3px 3px;
-}
-.heading::before {
-    content: '';
-    vertical-align: middle;
-    display: inline-block;
-    border-top: 7px solid #f5f5f5;
-    border-left: 7px solid transparent;
-    border-right: 7px solid transparent;
-    float: right;
-    transform: rotate(0);
-    transition: all 0.5s;
-    margin-top: 5px;
-}
-.active-story.heading::before {
-    transform: rotate(-180deg);
-}
-.not-active.heading::before {
-    transform: rotate(0deg);
-}
-.contents {
-	display: none;
-	background: white;
-	padding: 15px;
-    color: black;
-    line-height: 1.5;
-}
-
-
-.bio{
-    height: 11em;
-    box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
-    width: 100%;
-    object-fit: cover;
-    overflow: hidden;
-}
-
-/* Create four equal columns that sits next to each other */
-.grid { 
-    display: grid;
-    grid-template-columns: repeat(5, minmax(2em, 1fr));
-    align-items: stretch;
-    padding: 0px 2em;
-  }
-.grid img {
-  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
-  max-width: 100%;
-}
-
-@media only screen and (max-width: 1046px){
-    .row{
+    #instafeed {
         display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
+        flex-flow: row wrap;
+        justify-content: center;
     }
-    .column{
-        width: 100%;
+
+    .instagram img {
+        width: 300px;
+        height: auto;
+        margin-left: 10px;
         margin-bottom: 10px;
     }
-}
 
-@media only screen and (max-width: 600px){
-    .heading {
-    font-size: 13px;
+    .typewrite {
+        text-decoration: none;
     }
-    .instagram img{
+
+    .about-header {
+        font-weight: 300;
+        color: #00b159;
+    }
+
+    .w3-container {
+        text-align: center;
+    }
+
+    .row {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .column {
+        width: 50%;
+    }
+
+    .column p {
+        margin: 0 0 10px 0px;
+    }
+
+    .accordion-story {
+        border-radius: 3px;
+        box-shadow: 0 10px 15px -20px rgba(0, 0, 0, 0.3), 0 30px 45px -30px rgba(0, 0, 0, 0.3), 0 80px 55px -30px rgba(0, 0, 0, 0.1);
+    }
+
+    .heading {
+        background: linear-gradient(45deg, #00b159, #00582c);
+        color: white;
+        font-size: 20px;
+        border-bottom: 1px solid #010905;
+        letter-spacing: 0.8px;
+        padding: 25px;
+        cursor: pointer;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .heading:nth-last-child(2) {
+        border-bottom: 0;
+    }
+
+    .heading:hover {
+        background: linear-gradient(45deg, #857ea5, #293E6A);
+        border-radius: 0;
+    }
+
+    .heading:first-child:hover {
+        border-radius: 3px 3px 0 0;
+    }
+
+    .heading:nth-last-child(2):hover {
+        border-radius: 0 0 3px 3px;
+    }
+
+    .contents {
+        background: white;
+        padding: 15px;
+        color: black;
+        line-height: 1.5;
+        height: 100%;
+    }
+
+    .bio {
+        height: 11em;
+        box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+        width: 100%;
+        object-fit: cover;
+        overflow: hidden;
+    }
+
+    /* Create four equal columns that sits next to each other */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(2em, 1fr));
+        align-items: stretch;
+        padding: 0px 2em;
+    }
+
+    .grid img {
+        box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+        max-width: 100%;
+    }
+
+    @media only screen and (max-width: 1046px) {
+        .row {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+        }
+
+        .column {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        .heading {
+            font-size: 13px;
+        }
+
+        .instagram img {
             width: 100%;
             margin-left: 0px;
-    }
+        }
 
-    .bio{
-        height: 6em;
-    }
+        .bio {
+            height: 6em;
+        }
 
-    .about_collage{
-        margin: 0 0;
-    }
-    .story-column{
-        margin-top: 15px;
-    }
-}
+        .about_collage {
+            margin: 0 0;
+        }
 
+        .story-column {
+            margin-top: 15px;
+        }
+    }
 </style>
 
 <body>
@@ -192,7 +187,8 @@ justify-content: center;
         <div class="w3-container">
 
             <h1>
-                <a href="" class="typewrite" data-period="2000" data-type='[ "Web Developer.", "Photographer.", "Entrepreneur.", "Teacher." ]'>
+                <a href="" class="typewrite" data-period="2000"
+                    data-type='[ "Web Developer.", "Photographer.", "Entrepreneur.", "Teacher." ]'>
                     <span class="wrap"></span>
                 </a>
             </h1>
@@ -200,32 +196,32 @@ justify-content: center;
             <div class="row">
                 <div class="column">
                     <div class="grid">
-                        
-                            <img class="bio" src="WebsitesImages/EthanE1.jpg">
-                            <img class="bio" src="AboutImages/ethan14.jpg">
-                            <img class="bio" src="AboutImages/ethan10.jpg">
-                      
-                 
-                            <img class="bio" src="AboutImages/ethan5.jpg">
-                            <img class="bio" src="AboutImages/ethan2.jpg">
-                            <img class="bio" src="AboutImages/ethan8.jpg">
-                       
-                       
-                            <img class="bio" src="AboutImages/ethan11.jpg">
-                            <img class="bio" src="AboutImages/ethan7.jpg">
-                            <img class="bio" src="AboutImages/ethan3.jpg">
-                        
-                      
-                            <img class="bio" src="AboutImages/ethan1.jpg">
-                            <img class="bio" src="AboutImages/ethan12.jpg">
-                            <img class="bio" src="AboutImages/ethan13.jpg">
-                     
-                      
-                            <img class="bio" src="AboutImages/ethan9.jpg">
-                            <img class="bio" src="AboutImages/ethan4.jpg">
-                            <img class="bio" src="AboutImages/ethan15.jpg">
-                    
-                    
+
+                        <img class="bio" src="WebsitesImages/EthanE1.jpg">
+                        <img class="bio" src="AboutImages/ethan14.jpg">
+                        <img class="bio" src="AboutImages/ethan10.jpg">
+
+
+                        <img class="bio" src="AboutImages/ethan5.jpg">
+                        <img class="bio" src="AboutImages/ethan2.jpg">
+                        <img class="bio" src="AboutImages/ethan8.jpg">
+
+
+                        <img class="bio" src="AboutImages/ethan11.jpg">
+                        <img class="bio" src="AboutImages/ethan7.jpg">
+                        <img class="bio" src="AboutImages/ethan3.jpg">
+
+
+                        <img class="bio" src="AboutImages/ethan1.jpg">
+                        <img class="bio" src="AboutImages/ethan12.jpg">
+                        <img class="bio" src="AboutImages/ethan13.jpg">
+
+
+                        <img class="bio" src="AboutImages/ethan9.jpg">
+                        <img class="bio" src="AboutImages/ethan4.jpg">
+                        <img class="bio" src="AboutImages/ethan15.jpg">
+
+
                     </div>
                 </div>
 
@@ -254,9 +250,11 @@ justify-content: center;
                     </p>
 
                     <div class="accordion-story">
-                        <div class="heading first">Chapter 1 - The Beginning</div>
-                        <div class="contents">
-                            <p>I was born in Boston, 3rd son, of 4 boys and 1 girl. We move to Philadelphia when I was
+
+                        <details open>
+                            <summary class="heading first">Chapter 1 - The Beginning</summary>
+                            <p class="contents">I was born in Boston, 3rd son, of 4 boys and 1 girl. We move to
+                                Philadelphia when I was
                                 6 months old and I have lived there ever since. Go Eagles!! Following preschool I went
                                 to public school for elementary, middle school, and high school. At some point during
                                 my freshmen year of high school I got into trouble for skipping school. This was a
@@ -264,11 +262,12 @@ justify-content: center;
                                 I saw no consequences of my actions. Now I saw what could happen to me, my family, and
                                 my friends if I didn't take my responsibilities serious. Slowly inside, I began to form
                                 ambitions that would soon turn into dreams and realizations.</p>
-                        </div>
+                        </details>
 
-                        <div class="heading">Chapter 2 - College</div>
-                        <div class="contents">
-                            <p>In my senior year of high school, I applied to Penn State and got in. In order to go to
+                        <details>
+                            <summary class="heading">Chapter 2 - College</summary>
+                            <p class="contents">
+                                In my senior year of high school, I applied to Penn State and got in. In order to go to
                                 Main Campus I would start my college career early during the summer of 2014. Whether it
                                 was the partying, the lack of studying, or effort I failed my first semester. It was
                                 another moment that changed the way I saw education. Gaining more focus, over the next
@@ -282,29 +281,30 @@ justify-content: center;
                                 optimized search engine results, and designed responsive sites. Over the next year, I
                                 would spend hours mastering my skills. I remember on winter break I spent an entire day
                                 in the public library coding. The next summer I got another internship with the Toll
-                                Brothers. They said my code was brilliant and offered me a job right on the spot. </p>
-                        </div>
+                                Brothers. They said my code was brilliant and offered me a job right on the spot.
+                            </p>
+                        </details>
 
-                        <div class="heading">Chapter 3 - Work</div>
-                        <div class="contents">
-                            <p>
+                        <details>
+                            <summary class="heading">Chapter 3 - Work</summary>
+                            <p class="contents">
                                 During my internship with Toll Brothers I grew my web development skills further
                                 learning both front and back end code. I learned the importance of testing sites, how
                                 to increase traffic, and lead optimization. After my internship ended, I was offered
                                 the ability to work remotely at school to continue learning. In May of 2018, I
-                                graduated with a Bachelor of Science Degree in Computer Design and Development with a minor in Cyber Security at The
+                                graduated with a Bachelor of Science Degree in Computer Design and Development with a
+                                minor in Cyber Security at The
                                 Pennsylvania State University. After graduation I traveled with my girlfriend around
                                 Europe for a month, seeing Italy, Switzerland, Amsterdam, and France. When I got back I
                                 started my full time position as a Web Developer at Toll Brothers. My main role is
-                                assisting web teams on various projects on <a href="https://www.tollbrothers.com/">tollbrothers.com</a>,
+                                assisting web teams on various projects on <a
+                                    href="https://www.tollbrothers.com/">tollbrothers.com</a>,
                                 <a href="https://www.tollbrotherscityliving.com/">lifestyle sites</a>, and
                                 <a href="https://www.liveatporterranch.com/">various internal web apps</a>. As well as
                                 collaborating and participating with team members
                                 for standup, review, and concept meetings. I love working for the Toll Brothers, I walk
                                 into the office with a smile everyday knowing I am going to laugh, learn, and love what
                                 I am doing.
-                            </p>
-                            <p>
                                 In addition to working for the Toll Brothers, I have developed my own company building
                                 sites for local businesses and taking professional photos. Some of my most recent
                                 companies I have worked with are Safety First Aquatics, Charlestown Capital Partners,
@@ -315,20 +315,23 @@ justify-content: center;
                                 families, and models. I also love to collaborate with other artists in the Philadelphia
                                 area.
                             </p>
-                        </div>
+                        </details>
 
-                        <div class="heading">Chapter 4 - To Be Continued...</div>
-                        <div class="contents">
-                            <p>
+                        <details>
+                            <summary class="heading">Chapter 4 - To Be Continued...</summary>
+                            <p class="contents">
                                 As I continue on this awesome journey of adventures and professional development, I
                                 find that the more I learn about my self the more I can help others. In the next year,
-                                my goal is to start teaching both web development and photography courses. There is nothing more
+                                my goal is to start teaching both web development and photography courses. There is
+                                nothing more
                                 empowering than teaching others the tools you have learned.
+                                Have an idea, project, or just want to chat, drop me a message on my <a
+                                    href="https://ethaneisenhard.com/contact">contact form.</a>
                             </p>
-                            <p> Have an idea, project, or just want to chat, drop me a message on my <a href = "https://ethaneisenhard.com/contact">contact form.</a> </p>
-                        </div>
+                        </details>
+
                     </div>
- 
+
                     <br>
 
                     <div id="footer"></div>
@@ -424,40 +427,6 @@ justify-content: center;
             $("#footer").load("footer.html");
         });
     </script>
-
-
-    <script type="text/javascript">
-        var userFeed = new Instafeed({
-            get: 'user',
-            userId: '257172566',
-            limit: 8,
-            resolution: 'standard_resolution',
-            accessToken: '257172566.1677ed0.37414bafffdb425ca45962a479225aad',
-            sortBy: 'most-liked',
-            template: '<div class="instagram"><a href="{{link}}" title="{{caption}}" target="_blank"><img {{orientation}} src="{{image}}" alt="{{caption}}" class="img-fluid"/></a></div>',
-        });
-
-
-        userFeed.run();
-    </script>
-
-    <script>
-        $(document).ready(function () {
-            $(".accordion-story").on("click", ".heading", function () {
-
-                $(this).toggleClass("active-story").next().slideToggle();
-
-                $(".contents").not($(this).next()).slideUp(300);
-
-                $(this).siblings().removeClass("active-story");
-            });
-        });
-
-        setTimeout(function() {
-            $(".first").trigger( "click" );
-        }, 100);
-    </script>
-
 
 </body>
 

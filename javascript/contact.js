@@ -12,8 +12,12 @@ function toggleContact(){
     }, 20)
 
     setTimeout(function(){
-        contactModalWrapperEl.classList.toggle("is-open")
+        contactModalWrapperEl.classList.toggle("is-opacity-0")
     }, 50)
+
+    setTimeout(function(){
+        contactModalWrapperEl.classList.toggle("is-open")
+    }, 60)
 }
 
 contactBTN.forEach(element => element.addEventListener("click", toggleContact));

@@ -13,6 +13,10 @@
 </head>
 
 <body>
+    
+    <section class = "slide-out-menu-background js-toggle-menu js-side-bar-background is-hidden is-opacity-0">
+
+    </section>
 
     <aside class="side-bar js-side-bar">
         <a href="/" class="side-bar-logo">
@@ -27,7 +31,7 @@
                     <path
                         d="M498.699219 222.695312c-.015625-.011718-.027344-.027343-.039063-.039062L289.804688 13.808594C280.902344 4.902344 269.066406 0 256.476562 0c-12.589843 0-24.425781 4.902344-33.332031 13.808594L14.398438 222.550781c-.070313.070313-.144532.144531-.210938.214844-18.28125 18.386719-18.25 48.21875.089844 66.558594 8.378906 8.382812 19.441406 13.234375 31.273437 13.746093.484375.046876.96875.070313 1.457031.070313h8.320313v153.695313c0 30.417968 24.75 55.164062 55.167969 55.164062h81.710937c8.285157 0 15-6.71875 15-15V376.5c0-13.878906 11.292969-25.167969 25.171875-25.167969h48.195313c13.878906 0 25.167969 11.289063 25.167969 25.167969V497c0 8.28125 6.714843 15 15 15h81.710937c30.421875 0 55.167969-24.746094 55.167969-55.164062V303.140625h7.71875c12.585937 0 24.421875-4.902344 33.332031-13.8125 18.359375-18.367187 18.367187-48.253906.027344-66.632813zm-21.242188 45.421876c-3.238281 3.238281-7.542969 5.023437-12.117187 5.023437h-22.71875c-8.285156 0-15 6.714844-15 15v168.695313c0 13.875-11.289063 25.164062-25.167969 25.164062h-66.710937V376.5c0-30.417969-24.746094-55.167969-55.167969-55.167969h-48.195313c-30.421875 0-55.171875 24.75-55.171875 55.167969V482h-66.710937c-13.875 0-25.167969-11.289062-25.167969-25.164062V288.140625c0-8.285156-6.714844-15-15-15H48c-.234375-.015625-.464844-.027344-.703125-.03125-4.46875-.078125-8.660156-1.851563-11.800781-4.996094-6.679688-6.679687-6.679688-17.550781 0-24.234375.003906 0 .003906-.003906.007812-.007812l.011719-.011719L244.363281 35.019531C247.597656 31.78125 251.898438 30 256.476562 30c4.574219 0 8.875 1.78125 12.113282 5.019531l208.800781 208.796875c.03125.03125.066406.0625.097656.09375 6.644531 6.691406 6.632813 17.539063-.03125 24.207032zm0 0" />
                 </svg>
-                Overview
+                About
             </a>
             <a class="side-bar-nav-link" href="/schedule-photoshoot.html">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
@@ -76,7 +80,7 @@
                 </svg>
                 Web Portfolio</a>
         </nav>
-        <button class="side-bar-contact js-contact btn btn-reset">
+        <button class="side-bar-contact js-contact">
             <div class="side-bar-contact-container">
 
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -165,41 +169,85 @@
     <main class="main-grid">
 
         <section class="overview-greeting">
-            <section class="overview-text">
-                <h1>Welcome!</h1>
-                <p>How would you like to be greeted?</p>
-                <form id="greetingForm">
-                    <label for="First Name" hidden>First Name</label>
-                    <input type="text" name="First Name">
-                    <button type="submit" class="btn btn-submit">Submit</button>
-                </form>
+            <section class="overview-text js-overview-text is-hidden">
+                <div class="overview-text-wrapper">
+                    <h1>Welcome!</h1>
+                    <p>How would you like to be greeted?</p>
+                    <form id="greetingForm">
+                        <label for="First Name" hidden>First Name</label>
+                        <input type="text" name="First Name">
+                        <button type="submit" class="btn btn-submit">Submit</button>
+                    </form>
+                </div>
             </section>
+
+            <section class="overview-welcome-message js-overview-welcome-message is-hidden">
+                <div class="overview-welcome-message-wrapper">
+                    <h1>Hi <span class="js-user-name"></span> 👋</h1>
+                    <p>Thanks for visiting my site!</p>
+                    <p>I hope you are having a wonderful day</p>
+                    <div class="welcome-message-cta-container">
+                        <a class="btn btn-purple is-hidden" href="#about">Learn About My Services</a>
+                        <button class="btn btn-white js-contact">Send Me A Message</button>
+                    </div>
+                </div>
+            </section>
+
             <section class="overview-photo">
-                <div class="hexagon -big">
-                    <img src="/Images/overview/EthanEisenhard1.jpg" alt="">
-                </div>
-                <div class="hexagon -big">
-                    <img src="/Images/overview/EthanEisenhard2.jpg" alt="">
-                </div>
-                <div class="hexagon -normal">
-                    <img src="/Images/overview/EthanEisenhard3.jpg" alt="">
-                </div>
-                <div class="hexagon -normal">
-                    <img src="/Images/overview/EthanEisenhard9.jpg" alt="">
-                </div>
-                <div class="hexagon -normal">
-                    <img src="/Images/overview/EthanEisenhard7.jpg" alt="">
-                </div>
-                <div class="hexagon -small">
-                    <img src="/Images/overview/EthanEisenhardLandscape1.jpg" alt="">
-                </div>
-                <div class="hexagon -small">
-                    <img src="/Images/overview/EthanEisenhardLandscape2.jpg" alt="">
-                </div>
-                <div class="hexagon -small">
-                    <img src="/Images/overview/EthanEisenhardLandscape7.jpg" alt="">
+                <div class="overview-photo-wrapper">
+                    <div class="hexagon -big is-opacity-0 animate-1">
+                        <img src="/Images/overview/EthanEisenhard1.jpg" alt="">
+                    </div>
+                    <div class="hexagon -big is-opacity-0 animate-2">
+                        <img src="/Images/overview/EthanEisenhard2.jpg" alt="">
+                    </div>
+                    <div class="hexagon -normal is-opacity-0 animate-3">
+                        <img src="/Images/overview/EthanEisenhard3.jpg" alt="">
+                    </div>
+                    <div class="hexagon -normal is-opacity-0 animate-4">
+                        <img src="/Images/overview/EthanEisenhard9.jpg" alt="">
+                    </div>
+                    <div class="hexagon -normal is-opacity-0 animate-5">
+                        <img src="/Images/overview/EthanEisenhard7.jpg" alt="">
+                    </div>
+                    <div class="hexagon -small is-opacity-0 animate-6">
+                        <img src="/Images/overview/EthanEisenhardLandscape1.jpg" alt="">
+                    </div>
+                    <div class="hexagon -small is-opacity-0 animate-7">
+                        <img src="/Images/overview/EthanEisenhardLandscape2.jpg" alt="">
+                    </div>
+                    <div class="hexagon -small is-opacity-0 animate-8">
+                        <img src="/Images/overview/EthanEisenhardLandscape7.jpg" alt="">
+                    </div>
                 </div>
             </section>
+        </section>
+
+        <section class="overview-about">
+            <div class="overview-about-wrapper">
+                <div class = "overview-about-image">
+                    <img src="/Images/overview/EthanEisenhard10.jpg">
+                </div>
+                <div class="overview-about-text">
+                    <p>I am passionate person with a variety of interests that include web development, music, and
+                        photography. I grew up in Philadelphia where I live today. Currently my full time job is
+                        working at <a class="inline-btn" href="https://www.tollbrothers.com/">Toll Brothers</a> where
+                        I have
+                        helped grow leads by 50% over the last three years with A/B testing and new feature builds.
+                        When I am not working, I like to go to concerts, hike, and hang with friends. <a
+                            class="inline-btn"
+                            href="https://drive.google.com/open?id=12-hUCUA2wu5M2fijaUI61tZZfi9VFoD-">Check out some
+                            of my pictures from my last trip to Alaska</a> or <a class="inline-btn"
+                            href="https://github.com/ethaneisenhard/gatsby-airtable-100">a cool side project using
+                            Airtable, Algolia, and Gatsby.</a></p>
+                    <div class="socialLinks">
+                        <a class="inline-btn" href="https://www.linkedin.com/in/ethan-eisenhard-6b50a8121/">LinkedIn</a>
+                        <a class="inline-btn" href="https://www.instagram.com/ethan.eisenhard/">Instagram</a>
+                        <a class="inline-btn" href="https://twitter.com/ethaneisenhard">Twitter</a>
+                        <a class="inline-btn" href="https://drive.google.com/open?id=1O9kd82g6tFEil1Dfhsn3RFfatvmUdt4w">Resume</a>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="overview-content">
@@ -268,7 +316,8 @@
                     </div>
                 </div>
                 <footer>
-                    <a class="btn btn-submit" href="https://www.youtube.com/user/EEisen111/">Check out more videos</a>
+                    <a class="btn btn-submit" href="https://www.youtube.com/user/EEisen111/">Check out more
+                        videos</a>
                 </footer>
             </section>
 
@@ -288,7 +337,8 @@
                         height="102px" width="100%" frameborder="0" scrolling="no"></iframe>
                 </div>
                 <footer>
-                    <a class="btn btn-submit" href="https://anchor.fm/outside-the-box-model/">Hear more episodes</a>
+                    <a class="btn btn-submit" href="https://anchor.fm/outside-the-box-model/">Hear more
+                        episodes</a>
                 </footer>
             </section>
 
@@ -297,12 +347,12 @@
     </main>
 
     <section class="contact-modal js-contact-modal is-hidden">
-        <section class="contact-modal-wrapper js-contact-modal-wrapper">
+        <section class="contact-modal-wrapper js-contact-modal-wrapper is-opacity-0">
             <section class="contact-modal-text">
-                <button class="js-contact close-contact-modal btn btn-black">CLOSE</button>
+                <button class="js-contact close-contact-modal btn btn-close">CLOSE</button>
                 <h3>Have a question?</h3>
                 <p>Send me a message and I will get back you within 48 business hours.</p>
-                <section class="contact-modal-image">
+                <!-- <section class="contact-modal-image">
                     <img src="/images/overview/EthanEisenhard2.jpg" alt="">
                     <div>
                         <ul>
@@ -332,7 +382,7 @@
                                 <div>
                                     <a class="contact-bullet-prop" href="/schedule-website.html"
                                         target="_blank">Schedule a website review:</a> Check out my <a
-                                        href="/photography.html">portfolio</a>, I build fast, secure, elegant, and
+                                        href="/photography.html">portfolio</a>, I  and
                                     accessible website inside and outside the studio.
                                 </div>
 
@@ -353,7 +403,7 @@
                             </li>
                         </ul>
                     </div>
-                </section>
+                </section> -->
                 <section class="contact-modal-form">
                     <form id=" contact-form">
                         <div class="input-wrap">
@@ -376,7 +426,7 @@
                             </select>
                         </div>
 
-                        <textarea name="contact-message" id="" rows="10"></textarea>
+                        <textarea name="contact-message" id="" rows="6"></textarea>
                         <button type="submit" class="btn btn-contact-submit">Send</button>
                     </form>
                 </section>
@@ -396,7 +446,7 @@
                     <path
                         d="M498.699219 222.695312c-.015625-.011718-.027344-.027343-.039063-.039062L289.804688 13.808594C280.902344 4.902344 269.066406 0 256.476562 0c-12.589843 0-24.425781 4.902344-33.332031 13.808594L14.398438 222.550781c-.070313.070313-.144532.144531-.210938.214844-18.28125 18.386719-18.25 48.21875.089844 66.558594 8.378906 8.382812 19.441406 13.234375 31.273437 13.746093.484375.046876.96875.070313 1.457031.070313h8.320313v153.695313c0 30.417968 24.75 55.164062 55.167969 55.164062h81.710937c8.285157 0 15-6.71875 15-15V376.5c0-13.878906 11.292969-25.167969 25.171875-25.167969h48.195313c13.878906 0 25.167969 11.289063 25.167969 25.167969V497c0 8.28125 6.714843 15 15 15h81.710937c30.421875 0 55.167969-24.746094 55.167969-55.164062V303.140625h7.71875c12.585937 0 24.421875-4.902344 33.332031-13.8125 18.359375-18.367187 18.367187-48.253906.027344-66.632813zm-21.242188 45.421876c-3.238281 3.238281-7.542969 5.023437-12.117187 5.023437h-22.71875c-8.285156 0-15 6.714844-15 15v168.695313c0 13.875-11.289063 25.164062-25.167969 25.164062h-66.710937V376.5c0-30.417969-24.746094-55.167969-55.167969-55.167969h-48.195313c-30.421875 0-55.171875 24.75-55.171875 55.167969V482h-66.710937c-13.875 0-25.167969-11.289062-25.167969-25.164062V288.140625c0-8.285156-6.714844-15-15-15H48c-.234375-.015625-.464844-.027344-.703125-.03125-4.46875-.078125-8.660156-1.851563-11.800781-4.996094-6.679688-6.679687-6.679688-17.550781 0-24.234375.003906 0 .003906-.003906.007812-.007812l.011719-.011719L244.363281 35.019531C247.597656 31.78125 251.898438 30 256.476562 30c4.574219 0 8.875 1.78125 12.113282 5.019531l208.800781 208.796875c.03125.03125.066406.0625.097656.09375 6.644531 6.691406 6.632813 17.539063-.03125 24.207032zm0 0" />
                 </svg>
-                Overview
+                About
             </a>
             <a href="/schedule-photoshoot.html">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
@@ -521,8 +571,10 @@
 
 </body>
 
+<script src="javascript/overview-animation.js"></script>
 <script src="javascript/menu.js"></script>
 <script src="javascript/contact.js"></script>
 <script src="javascript/forms.js"></script>
+<script src="javascript/greeting.js"></script>
 
 </html>

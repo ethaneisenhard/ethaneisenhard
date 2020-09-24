@@ -1,9 +1,14 @@
 html {
     font-family: Futura;
+    scroll-behavior: smooth;
 }
 
 body {
     display: flex;
+}
+
+.is-opacity-0{
+    opacity: 0 !important;
 }
 
 .is-hidden {
@@ -45,7 +50,7 @@ body {
     position: absolute;
     height: 100%;
     width: 100%;
-    z-index: 1;
+    z-index: 4;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,17 +63,12 @@ body {
     }  
 }
 
-/* @media only screen and (max-width: 1200px){
-    .contact-modal {
-        display: flex;
-    }  
-} */
-
 .contact-modal-wrapper {
     position: relative;
     z-index: 2;
-    transform: translateY(-120%);
-    transition: transform 500ms ease-out;
+    transform: translateY(40%);
+    transition: transform 500ms ease-out, opacity 500ms ease-out;
+    opacity: 1;
 }
 
 .contact-modal-wrapper.is-open {
@@ -91,22 +91,24 @@ body {
 
 @media only screen and (max-height: 840px){
     .contact-modal-wrapper {
-        display: block;
+        display: flex;
         height: 100%;
         margin: 0em;
+        overflow: auto;
     }
 }
 
 .contact-modal-text {
     position: relative;
     background-color: #E2EFF9;
-    padding: 40px;
+    padding: 1em;
     border-radius: 4px;
 }
 
 @media only screen and (max-height: 840px){
     .contact-modal-text {
-        width: 100%;
+        width: 50%;
+        margin: auto;
     }
 }
 
@@ -116,6 +118,15 @@ body {
         flex-flow: column;
         justify-content: center;
         width: 100%;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .contact-modal-text {
+        height: 100%;
+        width: 100%;
+        display: block;
+        overflow: auto;
     }
 }
 
@@ -210,12 +221,11 @@ body {
         position: absolute;
         top: 0px;
         right: 0px;
-    }
-      
+    }   
 }
 
 .contact-modal form{
-    width: 50%;
+    width: 100%;
 }
 
 @media only screen and (max-width: 1200px){
@@ -225,7 +235,7 @@ body {
 }  
 
 .contact-modal-background {
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
     height: 100%;
@@ -233,6 +243,7 @@ body {
     background-color: rgba(41, 62, 106, 0.8);
     opacity: 0;
     transition: opacity 500ms ease-out;
+
 }
 
 .contact-modal-background.is-active {

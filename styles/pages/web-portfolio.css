@@ -1,0 +1,121 @@
+.web-portfolio-text{
+    margin-bottom: 50px;
+}
+
+.web-portfolio-text h1{
+    text-align: center;
+    color: #293e6a;
+    margin: 12px;
+    margin-bottom: 24px;
+}
+
+.web-portfolio-text p{
+    text-align: center;
+    margin: auto;
+    color: #293e6a;
+    line-height: 24px;
+    width: 80%;
+}
+
+.web-portfolio-grid{
+    display: grid;
+    grid-gap: 4em 2em;
+    grid-template-columns: 1fr 1fr;
+    padding: 1em;
+}
+
+.web-portfolio-site{
+    display: flex;
+    flex-flow: column;
+    border-radius: 4px;
+    border: 4px solid #dad8e4;
+    background-color: #dad8e4;
+}
+
+.web-portfolio-site-img-container{
+    padding: 0em 1em;
+    background-color: #dad8e4;
+}
+
+.web-portfolio-site-img{
+    position: relative;
+    overflow: hidden;
+    height: 350px;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    background-size: contain;
+}
+
+.web-portfolio-site-img.tollbrothers{
+    background-image: url("/Images/web-portfolio/tollbrothers.jpg");
+}
+
+.web-portfolio-site-img.TassajaraHills{
+    background-image: url("/Images/web-portfolio/TassajaraHills.png");
+}
+
+.web-portfolio-site-img.HampdenRow{
+    background-image: url("/Images/web-portfolio/HampdenRow.png");
+}
+
+.web-portfolio-site-img.tb121e22nd{
+    background-image: url("/Images/web-portfolio/121e22nd.png");
+}
+
+.web-portfolio-site h3{
+    position: relative;
+    top: -30px;
+    text-align: center;
+    margin-bottom: 0px;
+    background-color: white;
+    padding: 10px;
+    border: 4px solid #dad8e4;
+    border-radius: 4px;
+    width: 50%;
+    margin: auto;
+}
+
+.web-portfolio-site-details{
+    position: relative;
+    top: -15px;
+}
+
+.web-portfolio-site-text{
+    padding: 1em;
+    background-color: white;
+}
+
+.web-portfolio-site-text a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-top: 1px solid #dad8e4;
+    width: 100%;
+    padding-top: 1em;
+}
+
+.web-portfolio-site-text p{
+    padding-bottom: 1em;
+    text-align: center;
+    line-height: 24px;
+}
+
+.web-portfolio-site-text{
+    position: relative;
+    top: 15px;
+}
+
+.web-portfolio-site-text svg{
+    color: #293e6a;
+    height: 24px;
+    width: 24px;
+    padding-left: 5px;
+}
+
+@media only screen and (max-width: 900px){
+    .web-portfolio-grid{
+        grid-template-columns: 1fr;
+    }
+}

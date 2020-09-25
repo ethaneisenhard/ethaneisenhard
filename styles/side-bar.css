@@ -1,8 +1,6 @@
 .side-bar{
-    position: absolute;
+    position: fixed;
     top: 0;
-    transform: translateX(-100%);
-    transition:  transform 100ms ease-out;
     width: 46vw;
     display: flex;
     justify-content: space-between;
@@ -14,6 +12,7 @@
     color: #293e6a;
     background: white;
     z-index: 3;
+    transform: translateX(-100%);
 }
 
 .side-bar.is-open{
@@ -37,7 +36,7 @@
         position: relative;
         transform: translateX(0);
         width: 22vw;
-        transition: transform 500ms ease-out;
+        /* transition: transform 500ms ease-out; */
     }
 }
 

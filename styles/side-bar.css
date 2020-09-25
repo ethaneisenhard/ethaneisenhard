@@ -62,9 +62,10 @@
     }
 }
 
-.side-bar-nav{
+.side-bar-nav {
     display: flex;
     flex-flow: column;
+    justify-content: center;
 }
 
 .side-bar-nav-link{
@@ -106,13 +107,6 @@
 
 .side-bar-nav-link svg path{
     transition: fill 80ms ease-in;
-}
-
-.side-bar-nav {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    height: 100%;
 }
 
 .side-bar-contact{
@@ -161,9 +155,11 @@
 }
 
 .side-bar-contact svg{
-    position: relative;
-    height: auto;
+    /* position: relative; */
+    fill: #293e6a;
     width: 100px;
+    height: 100px;
+    overflow: visible;
 }
 
 /* @media only screen and (max-width: 1200px){

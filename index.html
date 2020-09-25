@@ -352,60 +352,11 @@
                 <button class="js-contact close-contact-modal btn btn-close">CLOSE</button>
                 <h3>Have a question?</h3>
                 <p>Send me a message and I will get back you within 48 business hours.</p>
-                <!-- <section class="contact-modal-image">
-                    <img src="/images/overview/EthanEisenhard2.jpg" alt="">
-                    <div>
-                        <ul>
-                            <li>
-
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                        clip-rule="evenodd" />
-                                </svg>
-
-                                <div>
-                                    <a class="contact-bullet-prop" href="/schedule-photoshoot.html"
-                                        target="_blank">Schedule a photoshoot:</a> Check out my <a
-                                        href="/photography.html">work</a>, I create beautiful photos inside and outside
-                                    the studio.
-                                </div>
-
-                            </li>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                        clip-rule="evenodd" />
-                                </svg>
-
-                                <div>
-                                    <a class="contact-bullet-prop" href="/schedule-website.html"
-                                        target="_blank">Schedule a website review:</a> Check out my <a
-                                        href="/photography.html">portfolio</a>, I  and
-                                    accessible website inside and outside the studio.
-                                </div>
-
-                            </li>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                        clip-rule="evenodd" />
-                                </svg>
-
-                                <div>
-                                    <a class="contact-bullet-prop" href="https://www.tollbrotherscityliving.com/"
-                                        target="_blank">See a website in action:</a> Request a customized product
-                                    demonstration and discover how you can take your business to the next level.
-                                </div>
-
-                            </li>
-                        </ul>
-                    </div>
-                </section> -->
                 <section class="contact-modal-form">
-                    <form id=" contact-form">
+                    <form id=" contact-form" name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+                        <p class="is-hidden">
+                            <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                          </p>
                         <div class="input-wrap">
                             <label for="">Name</label>
                             <input type="text">

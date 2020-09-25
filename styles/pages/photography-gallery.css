@@ -1,3 +1,7 @@
+.is-opacity-0{
+    opacity: 1 !important;
+}
+
 .photography-gallery h1{
     text-align: center;
     color: #293e6a;
@@ -71,18 +75,19 @@
     padding: 0 4px;
 }
 
-.column img {
+.column img  {
     margin-top: 8px;
     vertical-align: middle;
     width: 100%;
-    background: white; 
-    color: white;
+    width: 100%;
+    height: auto;
+    transform: scale(1);
+    transition: opacity 800ms ease-out, transform 500ms ease-out;
 }
- 
- #photos img {
-   width: 100%;
-   height: auto;
- }
+
+.column img.animate-1{
+    transform: scale(.8);
+}
 
 
 /* @media screen and (max-width: 800px) {

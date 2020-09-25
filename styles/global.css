@@ -40,12 +40,6 @@ body {
     overflow-x: hidden;
 }
 
-@media only screen and (max-width: 800px){
-    .main-grid {
-        height: calc(100vh - 60px);
-    }
-}
-
 @media only screen and (max-width: 500px){
     .main-grid {
         padding-bottom: 60px;

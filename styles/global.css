@@ -46,6 +46,12 @@ body {
     }
 }
 
+@media only screen and (max-width: 500px){
+    .main-grid {
+        padding-bottom: 60px;
+    }
+}
+
 .contact-modal {
     position: absolute;
     height: 100%;

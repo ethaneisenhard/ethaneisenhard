@@ -42,7 +42,7 @@ body {
     overscroll-behavior-y: contain;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 800px) {
 
     body {
         display: block;
@@ -77,14 +77,14 @@ body {
     }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 800px) {
     .contact-modal {
        top:0;
     }
 }
 
 .contact-modal-wrapper {
-    position: relative;
+    position: fixed;
     z-index: 2;
     transform: translateY(40%);
     transition: transform 500ms ease-out, opacity 500ms ease-out;

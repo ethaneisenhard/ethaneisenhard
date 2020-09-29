@@ -1,3 +1,7 @@
+button{
+    font-family: Futura;
+}
+
 .btn{
     display: flex;
     align-items: center;
@@ -5,7 +9,6 @@
     margin: 0;
     padding: 10px 20px;
     cursor: pointer;
-    font-family: Futura;
     font-size: 16px;
     transform:scale(1);
     transition: transform 500ms ease-out;

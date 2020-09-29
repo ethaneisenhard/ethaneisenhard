@@ -8,7 +8,11 @@ function toggleMenu(){
     setTimeout(() => {
       sideBarBackground.classList.toggle("is-opacity-0")
     },10);
-   
 }
 
 menuBTN.forEach(element => element.addEventListener("click", toggleMenu));
+
+window.onload = function () {
+  sideBarEl.classList.add("animate-transform");
+};
+

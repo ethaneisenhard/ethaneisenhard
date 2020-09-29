@@ -19,6 +19,10 @@
     transform: translateX(0%);
 }
 
+.side-bar.animate-transform{
+    transition: transform 500ms ease-out;
+}
+
 .side-bar.is-open .side-bar-nav-link{
     flex-flow:row;
 }

@@ -38,6 +38,8 @@ body {
     height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
 }
 
 @media only screen and (max-width: 800px){

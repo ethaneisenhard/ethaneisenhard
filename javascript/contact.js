@@ -28,21 +28,21 @@ contactBTN.forEach((element) =>
 
 console.log(
   `%c
-|    _________________________________________     |
-|   |                                         |    |
-|   |                                         |    |
-|   |   Site Created by Ethan Eisenhard       |    |
-|   |   Built With                            |    |
-|   |   Host: https://www.netlify.com/        |    |
-|   |   HTML, CSS, JS                         |    |
-|   |   No Frameworks                         |    |
-|   |   https://www.svgbackgrounds.com/       |    |
-|   |   All pictures taken by Ethan Eisenhard |    |
-|   |                                         |    |
-|   |                                         |    |
-|   |                                         |    |
-|   |                                         |    |
-|   |_________________________________________|    |
+|    ____________________________________________________     |
+|   |                                                    |    |
+|   |                                                    |    |
+|   |   Site Created by Ethan Eisenhard                  |    |
+|   |   Built With                                       |    |
+|   |   Host: https://www.netlify.com/                   |    |
+|   |   HTML, CSS, JS                                    |    |
+|   |   No Frameworks                                    |    |
+|   |   https://www.svgbackgrounds.com/                  |    |
+|   |   All pictures taken by Ethan Eisenhard            |    |
+|   |   https://github.com/ethaneisenhard/ethaneisenhard |    |
+|   |                                                    |    |
+|   |                                                    |    |
+|   |                                                    |    |
+|   |____________________________________________________|    |
     ___________________________________________
  _-'    .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.  --- -_
 _-.-.-. .---.-.-.-.-.-.-.-.-.-.-.-.-.-.-.--.  .-.-.-_

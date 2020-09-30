@@ -202,8 +202,10 @@
                     <h1>Welcome!</h1>
                     <p>How would you like to be greeted?</p>
                     <form id="greetingForm">
-                        <input id="greetingName" type="text" placeholder="Name">
-                        <label for="greetingName" hidden>Name</label>
+                        <div class="input-wrap">
+                            <label for="greetingName">Greeting Name</label>
+                            <input id="greetingName" type="text">
+                        </div>
                         <button type="submit" class="btn btn-submit">Submit</button>
                     </form>
                 </div>

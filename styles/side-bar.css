@@ -111,15 +111,6 @@
     transition: transform 500ms ease-out;
 }
 
-.side-bar-nav-link.is-active{
-    background-color: #293e6a;
-    color: white;
-}
-
-.side-bar-nav-link.is-active svg{
-    fill: white;
-}
-
 .side-bar-nav-link:hover{
     transform: scale(1.06);
 }
@@ -137,6 +128,16 @@
     overflow: visible;
 }
 
+
+.side-bar .side-bar-nav-link.is-active{
+    background-color: #293e6a;
+    color: white;
+}
+
+.side-bar .side-bar-nav-link.is-active svg{
+    fill: white;
+}
+
 .side-bar-nav-link svg path{
     transition: fill 80ms ease-in;
 }
@@ -147,7 +148,7 @@
     align-items: center;
     font-size: 18px;
     border-radius: 8px 8px 0px 0px;
-    background-color:#dad8e4;
+    background-color:#E2EFF9;
     padding: 0px 16px 10px 16px;
     margin: 0px 16px;
     border: none;

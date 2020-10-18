@@ -61,7 +61,7 @@ body {
 }
 
 .contact-modal {
-    position: absolute;
+    position: fixed;
     height: 100%;
     width: 100%;
     z-index: 4;
@@ -84,7 +84,7 @@ body {
 }
 
 .contact-modal-wrapper {
-    position: fixed;
+    position: relative;
     z-index: 2;
     transform: translateY(40%);
     transition: transform 500ms ease-out, opacity 500ms ease-out;

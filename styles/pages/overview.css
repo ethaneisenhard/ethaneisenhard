@@ -450,6 +450,7 @@
 
 .overview-social header {
     display: flex;
+    flex-flow: column;
     padding: 1em;
 }
 
@@ -466,7 +467,13 @@
 .overview-social header img {
     display: block;
     height: 30px;
+    width: 100px;
     margin: auto;
+    margin-bottom: 1em;
+}
+
+.overview-social header p{
+    line-height: 24px;
 }
 
 .overview-social-middle {

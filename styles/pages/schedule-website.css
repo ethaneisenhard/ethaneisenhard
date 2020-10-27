@@ -5,13 +5,13 @@
 .schedule-text h1{
     text-align: center;
     margin: 12px;
-    color: var(--green);
+    color: #293e6a;
 }
 
 .schedule-text p{
     text-align: center;
     margin: 24px;
-    color: var(--green);
+    color: #293e6a;
 }
 
 iframe{

@@ -31,10 +31,6 @@
     margin-bottom: 0em;
 }
 
-.side-bar-nav-link{
-    padding: 10px 1em;
-}
-
 @media only screen and (min-width: 1220px){
     .side-bar{
         position: relative;
@@ -72,9 +68,17 @@
 
 .side-bar-logo span{
    font-size: 32px;
-   margin-left: 10px;
+   margin-left: 2px;
    line-height: 36px;
 }
+
+.side-bar-logo span:first-child{
+    margin-left: 0px;
+ }
+
+.side-bar-logo .js-split-firstName span:nth-child(5){
+    margin-right: 10px;
+ }
 
 .side-bar-logo svg{
     height: auto;
@@ -104,15 +108,15 @@
     display: flex;
     align-items: center;
     margin: 14px 0px;
-    padding: 12px 3px 12px 16px;
+    padding: 13px 3px 12px 16px;
     line-height: 22px;
     font-size: 16px;
     color:rgba(41,62,106, 1);
-    transition: transform 500ms ease-out;
+    transition: background 500ms ease-out;
 }
 
 .side-bar-nav-link:hover{
-    transform: scale(1.06);
+    background-color: var(--light-blue);
 }
 
 .side-bar-nav-link img{
@@ -153,6 +157,25 @@
     margin: 0px 16px;
     border: none;
     cursor: pointer;
+}
+
+.side-bar-contact:hover svg{
+    animation-name: toggle-animation;  /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s;        /* Change to speed up or slow down */
+    animation-iteration-count: 2;  /* Never stop waving :) */
+    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+    display: inline-block;
+}
+
+@keyframes toggle-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg) }
 }
 
 .side-bar-contact-container{

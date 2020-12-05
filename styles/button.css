@@ -1,5 +1,5 @@
 button{
-    font-family: Futura;
+    font-family: inherit;
 }
 
 .btn{
@@ -101,7 +101,7 @@ button{
 .inline-btn{
     border:none;
     display: inline;
-    font-family: Futura;
+    font-family: inherit;
     font-size: inherit;
     border-bottom: 2px solid #293e6a;
     background: transparent;

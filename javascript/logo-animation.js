@@ -1,7 +1,17 @@
+function rgb2hex(rgb) {
+  if(rgb === undefined){
+    return;
+  }
+  rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+  function hex(x) {
+    return ("0" + parseInt(x).toString(16)).slice(-2);
+  }
+  return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
+}
+
 var firstName = document.querySelector(".js-split-firstName");
 var splitFirstName = firstName.getAttribute("aria-label").split("");
 splitFirstName.forEach((letter, index) => {
-
   var colorArrays = [
     "#da4066",
     "#32c07a",
@@ -14,13 +24,23 @@ splitFirstName.forEach((letter, index) => {
   createSpan.innerHTML = letter;
   createSpan.classList.add("random-color");
   var randomColor;
-  if(index === 0){
-    colorArrays.pop()
+  if (index === 0) {
+    colorArrays.pop();
     randomColor = colorArrays[Math.floor(Math.random() * colorArrays.length)];
     createSpan.style.color = randomColor;
-  }else{
+  } else {
+    var lastElement = document.querySelectorAll(".js-split-firstName span")[
+      index - 1
+    ];
     randomColor = colorArrays[Math.floor(Math.random() * colorArrays.length)];
-    createSpan.style.color = randomColor;
+    if (rgb2hex(lastElement.style.color) !== randomColor) {
+      createSpan.style.color = randomColor;
+    } else {
+      var indexOfRandomColor = colorArrays.indexOf(randomColor);
+      colorArrays.splice(indexOfRandomColor, 1);
+      randomColor = colorArrays[Math.floor(Math.random() * colorArrays.length)];
+      createSpan.style.color = randomColor;
+    }
   }
   firstName.appendChild(createSpan);
 });
@@ -39,24 +59,27 @@ splitLastName.forEach((letter, index) => {
   var createSpan = document.createElement("span");
   createSpan.innerHTML = letter;
   createSpan.classList.add("random-color");
-  if(index === 0){
-    colorArrays.pop()
-    var randomColor = colorArrays[Math.floor(Math.random() * colorArrays.length)];
+  if (index === 0) {
+    colorArrays.pop();
+    var randomColor =
+      colorArrays[Math.floor(Math.random() * colorArrays.length)];
     createSpan.style.color = randomColor;
-  }else{
-    var randomColor = colorArrays[Math.floor(Math.random() * colorArrays.length)];
-    createSpan.style.color = randomColor;
+  } else {
+    var lastElement = document.querySelectorAll(".js-split-lastName span")[
+      index - 1
+    ];
+    randomColor = colorArrays[Math.floor(Math.random() * colorArrays.length)];
+    if (rgb2hex(lastElement.style.color) !== randomColor) {
+      createSpan.style.color = randomColor;
+    } else {
+      var indexOfRandomColor = colorArrays.indexOf(randomColor);
+      colorArrays.splice(indexOfRandomColor, 1);
+      randomColor = colorArrays[Math.floor(Math.random() * colorArrays.length)];
+      createSpan.style.color = randomColor;
+    }
   }
   lastName.appendChild(createSpan);
 });
-
-function rgb2hex(rgb) {
-  rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
-  function hex(x) {
-    return ("0" + parseInt(x).toString(16)).slice(-2);
-  }
-  return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
-}
 
 var changeColor = function (element) {
   var colorArrays = [
@@ -68,16 +91,40 @@ var changeColor = function (element) {
     "#ffcf50",
   ];
   var randomColor = colorArrays[Math.floor(Math.random() * colorArrays.length)];
-  if (rgb2hex(element.target.style.color) !== randomColor) {
+  var currentElement = element.target;
+  var nextElement = element.target.nextSibling;
+  var prevElement = element.target.previousSibling;
+  
+  if (
+    randomColor !== rgb2hex(prevElement?.style.color) &&
+    randomColor !== rgb2hex(nextElement?.style.color) &&
+    randomColor !== currentElement.style.color
+  ) {
     element.target.style.color = randomColor;
   } else {
-    var indexOfRandomColor = colorArrays.indexOf(randomColor);
-    colorArrays.splice(indexOfRandomColor, 1)
+
+    var indexOfRandomColorCurrent = colorArrays.indexOf(
+      element.target.style.color
+    );
+
+    if (prevElement !== null) {
+      var indexOfRandomColorPrevCurrent = colorArrays.indexOf(
+        rgb2hex(prevElement.style.color)
+      );
+      colorArrays.splice(indexOfRandomColorPrevCurrent, 1);
+    }
+
+    if (nextElement !== null) {
+      var indexOfRandomColorNextCurrent = colorArrays.indexOf(
+        rgb2hex(nextElement.style.color)
+      );
+      colorArrays.splice(indexOfRandomColorNextCurrent, 1);
+    }
+    colorArrays.splice(indexOfRandomColorCurrent, 1);
     randomColor = colorArrays[Math.floor(Math.random() * colorArrays.length)];
     element.target.style.color = randomColor;
   }
 };
-
 document.querySelectorAll(".random-color").forEach((element) => {
   element.addEventListener("mouseover", changeColor);
 });

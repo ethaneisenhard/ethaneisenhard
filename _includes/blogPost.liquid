@@ -1,0 +1,19 @@
+---
+    layout: blogMainLayout.liquid
+---
+ 
+ <section class="blog-greeting">
+    <h1>Blog</h1>
+    <section class="blog-articles">
+        <article class="blog-article">
+            <div class="blog-content">
+                {%- if heroImage %}
+                    <img src="{{heroImage}}" alt= {{heroImageAlt}} />
+                {%- endif %}
+                <h2>{% if title %}<h1>{{title}}</h1>{% endif %}</h2>
+                <p>{{content}}</p>
+            </div>
+        </article>
+
+    </section>
+</section>

@@ -1,0 +1,46 @@
+<section class="contact-modal js-contact-modal is-hidden">
+  <section class="contact-modal-wrapper js-contact-modal-wrapper is-opacity-0">
+    <section class="contact-modal-text">
+      <button class="js-contact close-contact-modal btn btn-close">
+        CLOSE
+      </button>
+      <h3>Have a question?</h3>
+      <p>Send me a message and I will get back you within 48 business hours.</p>
+      <section class="contact-modal-form">
+        <form
+          id=" contact-form"
+          name="contact"
+          method="POST"
+          netlify-honeypot="bot-field"
+          data-netlify="true"
+        >
+          <p class="is-hidden">
+            <label
+              >Don’t fill this out if you're human: <input name="bot-field"
+            /></label>
+          </p>
+          <div class="input-wrap">
+            <label for="name">Name</label>
+            <input type="text" id="name" />
+          </div>
+          <div class="input-wrap">
+            <label for="email">Email</label>
+            <input type="text" id="email" />
+          </div>
+
+          <textarea
+            name="contact-message"
+            id=""
+            rows="10"
+            placeholder="Hi Ethan! I need your help with a marketing website."
+          ></textarea>
+          <button type="submit" class="btn btn-contact-submit">Send</button>
+        </form>
+      </section>
+    </section>
+  </section>
+
+  <section
+    class="contact-modal-background js-contact js-contact-modal-background is-hidden"
+  ></section>
+</section>

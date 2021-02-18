@@ -42,11 +42,11 @@
 
 <body>
 
-    {% include "modules/slide-out-menu-background.html" %}
+    {% include modules/slide-out-menu-background.html %}
     
-    {% include "modules/sidebar.html" %}
+    {% include modules/sidebar.liquid, activePhotography: 'is-active' %}
 
-    {% include "modules/menu-button.html" %}
+    {% include modules/menu-button.html %}
 
     <main class="main-grid">
 
@@ -226,13 +226,13 @@
             </section>
         </section>
 
-        {% include "modules/mobile-nav.html" %}
+        {% include modules/mobile-nav.html %}
 
-        {% include "modules/mobile-nav-small.html" %}
+        {% include modules/mobile-nav-small.html %}
 
     </main>
 
-    {% include "modules/contact-modal.html" %}
+    {% include modules/contact-modal.html %}
 
 </body>
 

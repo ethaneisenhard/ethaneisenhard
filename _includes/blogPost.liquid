@@ -3,15 +3,14 @@
 ---
  
  <section class="blog-greeting">
-    <h1>Blog</h1>
+
     <section class="blog-articles">
         <article class="blog-article">
             <div class="blog-content">
-                {%- if heroImage %}
-                    <img src="{{heroImage}}" alt= {{heroImageAlt}} />
-                {%- endif %}
-                <h2>{% if title %}<h1>{{title}}</h1>{% endif %}</h2>
-                <p>{{content}}</p>
+                {% if title %}<h2 class = "blog-title">{{title}}</h2>{% endif %}
+                <div class = "blog-hero-img" style ="background-image:url({{heroImage}})"></div>
+                <p class = "blog-excerpt">{{excerpt}}</p>
+                <div>{{content}}</div>   
             </div>
         </article>
 

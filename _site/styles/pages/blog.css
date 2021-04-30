@@ -9,6 +9,7 @@
   flex-flow: column;
   max-width: 900px;
   margin: auto;
+  padding: 0px 16px;
 }
 
 h1{
@@ -25,6 +26,19 @@ h2{
 
 .blog-content{
     padding: 40px;
+}
+
+.blog-content p{
+    line-height: 24px;
+}
+
+.blog-content header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog-content .blog-date{
+    color: var(--med-purple);
 }
 
 .blog-content .blog-title{
@@ -60,9 +74,7 @@ h2{
 .blog-item{
     margin:  40px auto;
     border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(255, 255, 255, 0.901), 0 1px 2px rgba(255,255,255,0.901);
     background-color: white;
-    min-width: 400px;
 }
 
 .blog-item .blog-item-image{
@@ -95,6 +107,14 @@ h2{
 .blog-link-hover{
     display: block;
     margin: auto;
+    min-width: 600px;
+}
+
+@media (max-width: 416px){
+    .blog-link-hover{
+        width: 95%;
+        min-width: auto;
+    }
 }
 
 .read-more{

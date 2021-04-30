@@ -45,7 +45,8 @@
 
     {% include modules/slide-out-menu-background.html %}
 
-    {% include modules/sidebar.liquid, activeBlog: 'is-active' %}
+    {%  assign activeBlog = 'is-active' %}
+    {% include modules/sidebar.liquid %}
 
     {% include modules/menu-button.html %}
 
@@ -55,7 +56,7 @@
             {{content}}
         </section>
 
-        {% include modules/mobile-nav.html %}
+        {% include modules/mobile-nav.liquid %}
     
         {% include modules/mobile-nav-small.html %}
 

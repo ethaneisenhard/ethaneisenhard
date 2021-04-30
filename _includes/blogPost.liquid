@@ -7,7 +7,9 @@
     <section class="blog-articles">
         <article class="blog-article">
             <div class="blog-content">
-                {% if title %}<h2 class = "blog-title">{{title}}</h2>{% endif %}
+                <header>
+                    <h2 class = "blog-title">{{title}}</h2> <p class ="blog-date">{{blogDate}}</p>
+                </header>
                 <div class = "blog-hero-img" style ="background-image:url({{heroImage}})"></div>
                 <p class = "blog-excerpt">{{excerpt}}</p>
                 <div>{{content}}</div>   

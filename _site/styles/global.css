@@ -351,10 +351,9 @@ textarea {
 .mobile-nav {
     position: fixed;
     width: 100%;
-    bottom: -1px;
-    background-color: white;
+    bottom: 20px;
+    background-color: transparent;
     height: 61px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 
@@ -363,11 +362,16 @@ textarea {
     justify-content: space-between;
     font-size: 11px;
     height: 100%;
+    width: 340px;
+    margin: auto;
+    background-color: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .mobile-nav a {
     display: flex;
     flex-flow: column;
+    align-items: center;
     justify-content: center;
     font-size: 11px;
     text-align: center;
@@ -383,7 +387,7 @@ textarea {
     color: white;
 }
 
-.mobile-nav a.is-active svg {
+.mobile-nav a.is-active svg,  .mobile-nav a.is-active svg path{
     fill: white;
 }
 
@@ -394,35 +398,30 @@ textarea {
 
 .mobile-nav nav svg {
     height: 16px;
-    ;
     overflow: hidden;
     margin-bottom: 3px;
     fill: #293e6a;
 }
 
 .mobile-nav nav svg.contact {
-    height: auto;
+    height: 16px;
     width: auto;
     margin: auto;
     overflow: hidden;
     margin-bottom: 3px;
+    transform: scale(1.5);
 }
 
 .mobile-contact {
-    display: flex;
-    align-items: center;
     border: none;
     background-color: none;
-    position: absolute;
     bottom: 66px;
     right: 5px;
     font-size: 11px;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #293e6a;
-    background-color: #E2EFF9;
+    background-color: transparent;
     color: #293e6a;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    padding: 0px 8px;
+    width: 85px;
 }
 
 .mobile-contact svg {

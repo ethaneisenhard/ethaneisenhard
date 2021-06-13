@@ -100,6 +100,7 @@ h2{
 }
 
 .blog-item-details-excerpt{
+    line-height: 24px;
     padding-bottom: 16px;
     font-size: 20px;
 }
@@ -110,7 +111,7 @@ h2{
     min-width: 600px;
 }
 
-@media (max-width: 416px){
+@media (max-width: 768px){
     .blog-link-hover{
         width: 95%;
         min-width: auto;

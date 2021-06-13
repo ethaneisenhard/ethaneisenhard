@@ -2,7 +2,7 @@
 title: The Endless Pursuit
 blogDate: March 15th, 2021
 excerpt: Not sure why I ever convinced my self this journey had an ending 
-heroImage: /Images/blog/never-again.jpg
+heroImage: /Images/blog/endless.jpg
 ---
 
 If you ask any of my friends or family, they will tell you I love to start things. From writing a book, to hosting a podcast, to making hiking videos, to taking photos, to building a company, to traveling the country, to teaching web development, to learning the piano, to even starting a blog. Lets just say, I am a man who loves ideas but lacks the determination to focus on one thing. 

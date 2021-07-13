@@ -50,20 +50,13 @@ h2{
 }
 
 .blog-content .blog-hero-img{
+    position: relative;
     display: block;
     height: 500px;
     border: 1px solid var(--purple);
     background-position: center;
     background-repeat: no-repeat; 
     background-size: cover;
-}
-
-.blog-content span{
-    display: block;
-    color: var(--blue);
-    color: #536487;
-    margin-bottom: 16px;
-    font-size: 14px;
 }
 
 .blog-content p{
@@ -86,6 +79,15 @@ h2{
     background-position: center;
     background-repeat: no-repeat; 
     background-size: cover;
+}
+
+.blog-photo-cred{
+    position: absolute;
+    bottom: 0px;
+    right:0px;
+    background-color: white;
+    padding: 4px 8px;
+    opacity: .66;
 }
 
 .blog-item-details{

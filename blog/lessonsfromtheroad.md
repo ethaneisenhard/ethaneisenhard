@@ -64,9 +64,7 @@ The third lesson is that Maine is beautiful, the bugs are tough, the people have
 <span class = "blog-inline-gallery-caption"> *Baxter State Park / Maine* </span> 
 
 
-
-
-The fourth lesson is that family problems are sometimes impossible to solve. Not solving problems, and living with the difficulties of that, can be a lifetime of stress. I do think that the best way to prevent family issues is with constant , honest, open communication. Still there are issues we can’t predict/solve. 
+The fourth lesson is that family problems are sometimes impossible to solve. Not solving problems, and living with the difficulties of that, can be a lifetime of stress. I do think that the best way to prevent family issues is with transparent, honest, and open communication. Still there are issues we can’t predict/solve. 
 
 The fifth lesson I learned was the power of passion, persistence, and timing. Last month I received and accepted an offer to work at Buffer. I’m stoked to work with such talented people and a company that values transparency. My role will be Marketing Engineer, developing pages, content, and campaigns on Buffer.com. I look forward to sharing my experience at Buffer with everyone. I am so thankful for my time at Toll Brothers. I have learned website optimization, A/B testing, code documenting, and marketing strategies. I wanna give out a special shout-out to Vince Suriani, my manager at Toll Brothers, for the mentorship and guidance over the last four years. I wanna also shout out Justin Escalante, for the advice, feedback, and friendship. My family, thank you for the support and confidence. My friends, I am fulfilled by your love and positivity. To my readers, I appreciate your time, thoughts, and brain power. 
 

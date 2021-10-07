@@ -1,0 +1,480 @@
+:root {
+    --red: #da4066;
+    --green: #32c07a;
+    --blue: #32bee2;
+    --orange: #f5925d;
+    --yellow: #F5B400;
+    --light-purple: #dad8e4;
+    --med-purple: #475266;
+    --purple: #293e6a;
+    --light-blue: #e2eff9;
+    --light-blue-dark: #b4bfc7;
+}
+
+html {
+    font-family: "futura-pt", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    height: 100%;
+}
+
+.is-opacity-0 {
+    opacity: 0 !important;
+}
+
+.is-hidden {
+    display: none !important;
+}
+
+.iframe-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+    /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.main-grid {
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
+}
+
+@media only screen and (max-width: 800px) {
+
+    body {
+        display: block;
+        height: 100%;
+    }
+
+    .main-grid {
+        width: initial;
+        height: initial;
+        overflow-y: initial;
+        overflow-x: initial;
+        -webkit-overflow-scrolling: initial;
+        overscroll-behavior-y: initial;
+        padding-bottom: 60px;
+    }
+}
+
+.contact-modal {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+}
+
+@media only screen and (max-height: 840px) {
+    .contact-modal {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .contact-modal {
+        top: 0;
+    }
+}
+
+.contact-modal-wrapper {
+    position: relative;
+    z-index: 2;
+    transform: translateY(40%);
+    transition: transform 500ms ease-out, opacity 500ms ease-out;
+    opacity: 1;
+}
+
+.contact-modal-wrapper.is-open {
+    transform: translateY(0%);
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .contact-modal-wrapper {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .contact-modal-wrapper {
+        width: 100%;
+        margin: 1em;
+    }
+}
+
+@media only screen and (max-height: 840px) {
+    .contact-modal-wrapper {
+        display: flex;
+        height: 100%;
+        margin: 0em;
+        overflow: auto;
+    }
+}
+
+.contact-modal-text {
+    position: relative;
+    background-color: #E2EFF9;
+    padding: 1em;
+    border-radius: 4px;
+}
+
+@media only screen and (max-height: 840px) {
+    .contact-modal-text {
+        width: 50%;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .contact-modal-text {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .contact-modal-text {
+        height: 100%;
+        width: 100%;
+        display: block;
+        overflow: auto;
+        padding-top: 3em;
+    }
+}
+
+.contact-modal-text img {
+    height: 100px;
+    border-radius: 4px;
+}
+
+.contact-modal-text h3 {
+    margin-bottom: 5px;
+}
+
+.contact-modal-text p {
+    margin-bottom: 1em;
+}
+
+
+.contact-modal-text ul {
+    margin-left: 1em;
+}
+
+@media only screen and (max-width: 1200px) {
+    .contact-modal-text ul {
+        margin-top: 1em;
+        margin-left: 0em;
+        display: none;
+    }
+}
+
+.contact-modal-text li {
+    display: flex;
+    align-items: center;
+    line-height: 36px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .contact-modal-text li {
+        flex-flow: column;
+        align-items: flex-start;
+        margin-bottom: 10px;
+    }
+}
+
+.contact-modal-text svg {
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+    fill: #2080c0;
+    overflow: visible;
+}
+
+.contact-modal-text a {
+    border-bottom: 2px solid rgba(41, 62, 106, 0.9);
+}
+
+.contact-modal-image {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+@media only screen and (max-width: 1200px) {
+    .contact-modal-image {
+        display: flex;
+        flex-flow: column;
+        align-items: start;
+        margin-bottom: 1em;
+    }
+}
+
+.contact-modal-image p {
+    margin-left: 1em;
+}
+
+
+.close-contact-modal {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+}
+
+@media only screen and (max-height: 840px) {
+    .close-contact-modal {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .close-contact-modal {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+}
+
+.contact-modal form {
+    width: 100%;
+}
+
+@media only screen and (max-width: 1200px) {
+    .contact-modal form {
+        width: 100%;
+    }
+}
+
+.contact-modal-background {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(41, 62, 106, 0.8);
+    opacity: 0;
+    transition: opacity 500ms ease-out;
+
+}
+
+.contact-modal-background.is-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+}
+
+.input-wrap {
+    display: inline-block;
+    position: relative;
+    height: 60px;
+    width: 100%;
+    border-bottom: 2px solid rgba(41, 62, 106, 0.9);
+}
+
+.input-wrap.is-focused label {
+    top: 16px;
+    margin-top: 0;
+    font-size: 0.72em;
+}
+
+.input-wrap label {
+    position: absolute;
+    top: 50%;
+    display: block;
+    margin-top: -0.45em;
+    padding-left: 14px;
+    line-height: 1;
+    transition-property: top;
+    transition-duration: 0.1s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.input-wrap input {
+    width: 100%;
+    height: 100%;
+    font-size: 1em;
+    padding: 14px;
+    padding-top: 33px;
+    color: #000;
+    background-color: #fff;
+    border: none;
+}
+
+.select-wrap {
+    margin: 1em 0px;
+}
+
+.select-wrap label {
+    display: block;
+    margin: .5em 0px;
+}
+
+.select-wrap select {
+    height: 60px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid rgba(41, 62, 106, 0.9);
+}
+
+textarea {
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+    font-family: Futura;
+    border: none;
+    border-bottom: 2px solid rgba(41, 62, 106, 0.9);
+}
+
+.mobile-nav {
+    position: fixed;
+    width: 100%;
+    bottom: 20px;
+    background-color: transparent;
+    height: 61px;
+}
+
+
+.mobile-nav nav {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    height: 100%;
+    width: 340px;
+    margin: auto;
+    background-color: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.mobile-nav a {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    text-align: center;
+    height: 100%;
+    color: #293e6a;
+    padding: 0px 8px;
+    width: 85px;
+}
+
+
+.mobile-nav a.is-active {
+    background-color: #293e6a;
+    color: white;
+}
+
+.mobile-nav a.is-active svg,  .mobile-nav a.is-active svg path{
+    fill: white;
+}
+
+.mobile-nav a span {
+    margin: 1px;
+}
+
+
+.mobile-nav nav svg {
+    height: 16px;
+    overflow: hidden;
+    margin-bottom: 3px;
+    fill: #293e6a;
+}
+
+.mobile-nav nav svg.contact {
+    height: 16px;
+    width: auto;
+    margin: auto;
+    overflow: hidden;
+    margin-bottom: 3px;
+    transform: scale(1.5);
+}
+
+.mobile-contact {
+    border: none;
+    background-color: none;
+    bottom: 66px;
+    right: 5px;
+    font-size: 11px;
+    background-color: transparent;
+    color: #293e6a;
+    padding: 0px 8px;
+    width: 85px;
+}
+
+.mobile-contact svg {
+    width: 25px;
+    margin-right: 3px;
+}
+
+@media only screen and (min-width: 800px) {
+    .mobile-nav {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 374px) {
+    .mobile-nav {
+        display: none;
+    }
+}
+
+.mobile-nav-small {
+    position: fixed;
+    width: 100%;
+    bottom: -1px;
+    background-color: white;
+    height: 61px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.mobile-nav-small nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    height: 100%;
+}
+
+.mobile-nav-small button {
+    display: inline-block;
+    border-radius: 4px;
+    border: none;
+    width: 50%;
+    margin: 0px 6px;
+    height: auto;
+}
+
+.mobile-nav-small button:first-child {
+    background-color: white;
+    color: #293e6a;
+    border: 1px solid #293e6a;
+}
+
+@media only screen and (min-width: 374px) {
+    .mobile-nav-small {
+        display: none;
+    }
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Portfolio</title>
+    <meta name="description"
+        content="For 6 years I have been developing web applications and marketing sites. Come take a look at my work!" />
+    <meta name="author" content="Ethan Eisenhard" />
+    <link rel="canonical" href="https://www.ethaneisenhard.com" />
+    <link rel="alternate" href="https://www.ethaneisenhard.com" hreflang="en-us" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+        <meta itemprop="addressLocality" content="Philadelphia">
+        <meta itemprop="addressRegion" content="Pennsylvania">
+        <meta itemprop="addressCountry" content="United States">
+    </span>
+    <meta itemprop="url" content="http://ethaneisenhard.com/">
+    <meta itemprop="email" content="eeisen11@gmail.com">
+    <meta property="og:site_name" content="Ethan Eisenhard" />
+    <meta prefix="og: http://ogp.me/ns#" property="og:title"
+        content="For 6 years I have been developing web applications and marketing sites. Come take a look at my work! " />
+    <meta prefix="og: http://ogp.me/ns#" property="og:description"
+        content="Ethan is a freelance web developer and photographer who is dedicated to quality and original style. Learn more here!" />
+    <meta prefix="og: http://ogp.me/ns#" property="og:image" style="height: auto; width: 1230px;">
+    <meta prefix="og: http://ogp.me/ns#" property="og:url" content="http://ethaneisenhard.com/">
+    <meta property="og:image"
+        content="http://ethaneisenhard.com/Images/photography-gallery/landscape/EthanEisenhardLandscape25.jpg" />
+    <meta prefix="og: http://ogp.me/ns#" property="og:type" content="business" />
+    <meta property="og:image" content="http://example.com/ogp.jpg" />
+    <meta property="og:image:secure_url"
+        content="http://ethaneisenhard.com/Images/photography-gallery/landscape/EthanEisenhardLandscape25.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1230" />
+    <meta property="og:image:height" content="400" />
+    <link rel="stylesheet" href="https://use.typekit.net/anv0thn.css">
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/button.css">
+    <link rel="stylesheet" href="/styles/side-bar.css">
+    <link rel="stylesheet" href="/styles/pages/web-portfolio.css">
+    <link rel="stylesheet" href="styles/3rd-party/glide.css">
+</head>
+
+<body>
+
+
+    {% include modules/slide-out-menu-background.html %}
+
+    {% assign activeProjects = 'is-active' %}
+    {% include modules/sidebar.liquid %}
+
+    {% include modules/menu-button.html %}
+
+    <main class="main-grid">
+
+        <section class="web-portfolio-text">
+            <h1>Web Portfolio</h1>
+            <p>For 6 years I have been developing web applications and marketing sites. Currently working at <a class = "inline-btn" href="https://buffer.com/" rel="noopener" target="_blank">Buffer</a>, I work with a talented group of people dedicated to providing essential tools to help small businesses get off the ground and grow.
+                Before Buffer, I worked at Toll
+                Brothers, where I developed web sites like <a class="inline-btn" rel="noopener" target="_blank"
+                    href="https://www.tollbrothers.com/">tollbrothers.com</a> and various internal web applications. I
+                believe all projects start with
+                communication. These days the internet is full of voices. Ads, content, social media, and
+                everything
+                between makes its competitive. I believe in making websites that stand out, make a statement
+                and drive more business. Your website is the portal to your audience, it should tell your story in a way
+                that reflects your brand and helps users find what they are looking for. Below you can find my work.</p>
+        </section>
+
+        <section class="web-portfolio-grid">
+            <div class="web-portfolio-site">
+                <h3>Buffer</h3>
+                <div class="web-portfolio-site-details ">
+                    <div class="web-portfolio-site-img-container">
+                        <div class="web-portfolio-site-img buffer">
+                        </div>
+                    </div>
+                    <div class="web-portfolio-site-text">
+                        <p>"Tell your brand’s story and grow your audience with a publishing, analytics, and engagement platform you can trust."</p>
+                        <a href="https://www.buffer.com/" target="_blank" rel="noopener">Visit Website
+
+                            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="external-link w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                </path>
+                            </svg>
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="web-portfolio-site">
+                <h3>Toll Brothers</h3>
+                <div class="web-portfolio-site-details">
+                    <div class="web-portfolio-site-img-container">
+                        <div class="web-portfolio-site-img tollbrothers">
+
+                        </div>
+                    </div>
+                    <div class="web-portfolio-site-text">
+                        <p>"You can see it in the details and feel it in the craftsmanship from the moment you walk into
+                            a Toll Brothers home: this is where form meets function in exquisite fashion."</p>
+                        <a href="https://www.tollbrothers.com/" target="_blank" rel="noopener">Visit Website
+
+                            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="external-link w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                </path>
+                            </svg>
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {% include modules/mobile-nav.liquid %}
+
+        {% include modules/mobile-nav-small.html %}
+
+    </main>
+
+    {% include modules/contact-modal.html %}
+
+</body>
+
+<script src="/javascript/logo-animation.js"></script>
+<script src="/javascript/menu.js"></script>
+<script src="/javascript/contact.js"></script>
+<script src="/javascript/forms.js"></script>
+
+</html>

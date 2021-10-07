@@ -1,0 +1,23 @@
+---
+layout: blogMainLayout.liquid
+---
+
+<section class="blog-greeting">
+
+    <section class="blog-articles">
+        <article class="blog-article">
+            <div class="blog-content">
+                <header>
+                    <h2 class="blog-title">{{title}}</h2>
+                    <p class="blog-date">{{blogDate}}</p>
+                </header>
+                <div class="blog-hero-img" style="background-image:url({{heroImage}})">
+                    <span class="blog-photo-cred" aria-title="Photo by {{photographerName}}">📷 {{photographerName}}</span>
+                </div>
+                <p class="blog-excerpt">{{excerpt}}</p>
+                <div>{{content}}</div>
+            </div>
+        </article>
+
+    </section>
+</section>

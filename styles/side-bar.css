@@ -1,4 +1,4 @@
-.side-bar{
+.side-bar {
     position: fixed;
     top: 0;
     width: 46vw;
@@ -15,24 +15,24 @@
     transform: translateX(-100%);
 }
 
-.side-bar.is-open{
+.side-bar.is-open {
     transform: translateX(0%);
 }
 
-.side-bar.animate-transform{
+.side-bar.animate-transform {
     transition: transform 500ms ease-out;
 }
 
-.side-bar.is-open .side-bar-nav-link{
-    flex-flow:row;
+.side-bar.is-open .side-bar-nav-link {
+    flex-flow: row;
 }
 
-.side-bar.is-open .side-bar-nav-link svg{
+.side-bar.is-open .side-bar-nav-link svg {
     margin-bottom: 0em;
 }
 
-@media only screen and (min-width: 1220px){
-    .side-bar{
+@media only screen and (min-width: 1220px) {
+    .side-bar {
         position: relative;
         transform: translateX(0);
         width: 22vw;
@@ -40,61 +40,62 @@
     }
 }
 
-@media only screen and (max-width: 900px){
-    .side-bar{
+@media only screen and (max-width: 900px) {
+    .side-bar {
         width: 56vw;
     }
 }
 
-@media only screen and (max-width: 700px){
-    .side-bar{
+@media only screen and (max-width: 700px) {
+    .side-bar {
         width: 100vw;
     }
 }
 
-.side-bar-logo{
+.side-bar-logo {
     display: flex;
     align-items: center;
     margin: 0px 16px;
- }
- 
- @media only screen and (max-width: 374px){
-    .side-bar-logo{
-        flex-flow:column;
-        align-items: flex-start;
-     }
-      
- }
-
-.side-bar-logo span{
-   font-size: 32px;
-   margin-left: 2px;
-   line-height: 36px;
 }
 
-.side-bar-logo span:first-child{
-    margin-left: 0px;
- }
+@media only screen and (max-width: 374px) {
+    .side-bar-logo {
+        flex-flow: column;
+        align-items: flex-start;
+    }
 
-.side-bar-logo .js-split-firstName span:nth-child(5){
+}
+
+.firstName-logo {
     margin-right: 10px;
- }
+}
 
-.side-bar-logo svg{
+.side-bar-logo span {
+    display: inline-flex;
+    font-size: 32px;
+    line-height: 36px;
+    transition: color 200ms ease-out;
+}
+
+.side-bar-logo span:first-child {
+    margin-left: 0px;
+}
+
+.side-bar-logo svg {
     height: auto;
     width: 40px;
     display: none;
 }
 
-.side-bar-close-menu{
+.side-bar-close-menu {
     position: absolute;
     top: 0;
     right: 0;
 }
 
-@media only screen and (min-width: 374px){
-    .side-bar-close-menu{
-        display:none;
+@media only screen and (min-width: 374px) {
+    .side-bar-close-menu {
+        display: none;
     }
 }
 
@@ -104,27 +105,27 @@
     justify-content: center;
 }
 
-.side-bar-nav-link{
+.side-bar-nav-link {
     display: flex;
     align-items: center;
     margin: 14px 0px;
     padding: 13px 3px 12px 16px;
     line-height: 22px;
     font-size: 16px;
-    color:rgba(41,62,106, 1);
+    color: rgba(41, 62, 106, 1);
     transition: background 500ms ease-out;
 }
 
-.side-bar-nav-link:hover{
+.side-bar-nav-link:hover {
     background-color: var(--light-blue);
 }
 
-.side-bar-nav-link img{
+.side-bar-nav-link img {
     width: 20px;
     margin: 0px 16px 0px 8px;
 }
 
-.side-bar-nav-link svg{
+.side-bar-nav-link svg {
     fill: #293e6a;
     width: 20px;
     margin: 0px 16px 0px 8px;
@@ -133,52 +134,82 @@
 }
 
 
-.side-bar .side-bar-nav-link.is-active{
+.side-bar .side-bar-nav-link.is-active {
     background-color: #293e6a;
     color: white;
 }
 
-.side-bar .side-bar-nav-link.is-active svg{
+.side-bar .side-bar-nav-link.is-active svg,
+.side-bar .side-bar-nav-link.is-active path {
     fill: white;
 }
 
-.side-bar-nav-link svg path{
+.side-bar-nav-link svg path {
     transition: fill 80ms ease-in;
 }
 
-.side-bar-contact{
+.side-bar-contact {
     display: flex;
     flex-flow: column;
     align-items: center;
     font-size: 18px;
     border-radius: 8px 8px 0px 0px;
-    background-color:#E2EFF9;
+    background-color: #E2EFF9;
     padding: 0px 16px 10px 16px;
     margin: 0px 16px;
     border: none;
     cursor: pointer;
 }
 
-.side-bar-contact:hover svg{
-    animation-name: toggle-animation;  /* Refers to the name of your @keyframes element below */
-    animation-duration: 2.5s;        /* Change to speed up or slow down */
-    animation-iteration-count: 2;  /* Never stop waving :) */
-    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+.side-bar-contact:hover svg {
+    animation-name: toggle-animation;
+    /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s;
+    /* Change to speed up or slow down */
+    animation-iteration-count: 2;
+    /* Never stop waving :) */
+    transform-origin: 70% 70%;
+    /* Pivot around the bottom-left palm */
     display: inline-block;
 }
 
 @keyframes toggle-animation {
-    0% { transform: rotate( 0.0deg) }
-   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
-   20% { transform: rotate(-8.0deg) }
-   30% { transform: rotate(14.0deg) }
-   40% { transform: rotate(-4.0deg) }
-   50% { transform: rotate(10.0deg) }
-   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
-  100% { transform: rotate( 0.0deg) }
+    0% {
+        transform: rotate(0.0deg)
+    }
+
+    10% {
+        transform: rotate(14.0deg)
+    }
+
+    /* The following five values can be played with to make the waving more or less extreme */
+    20% {
+        transform: rotate(-8.0deg)
+    }
+
+    30% {
+        transform: rotate(14.0deg)
+    }
+
+    40% {
+        transform: rotate(-4.0deg)
+    }
+
+    50% {
+        transform: rotate(10.0deg)
+    }
+
+    60% {
+        transform: rotate(0.0deg)
+    }
+
+    /* Reset for the last half to pause */
+    100% {
+        transform: rotate(0.0deg)
+    }
 }
 
-.side-bar-contact-container{
+.side-bar-contact-container {
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -186,13 +217,13 @@
     top: -35px;
 }
 
-@media only screen and (max-width: 374px){
-    .side-bar-contact-container{
+@media only screen and (max-width: 374px) {
+    .side-bar-contact-container {
         top: 0px;
-    }  
+    }
 }
 
-.side-bar-contact-text p{
+.side-bar-contact-text p {
     display: block;
     font-size: 18px;
     margin-bottom: 10px;
@@ -201,16 +232,16 @@
     font-weight: 600;
 }
 
-.side-bar-contact-text span{
+.side-bar-contact-text span {
     display: block;
     font-size: 16px;
 }
 
-.side-bar-contact-text span:nth-child(2){
+.side-bar-contact-text span:nth-child(2) {
     margin-bottom: 20px;
 }
 
-.side-bar-contact svg{
+.side-bar-contact svg {
     /* position: relative; */
     fill: #293e6a;
     width: 100px;
@@ -230,15 +261,15 @@
     }
 } */
 
-@media only screen and (max-width: 374px){  
-    .side-bar-nav-link{
+@media only screen and (max-width: 374px) {
+    .side-bar-nav-link {
         font-size: 16px;
         padding: 3px 1em 3px 0px;
         margin: 10px 0px;
     }
 }
 
-.slide-out-menu-background{
+.slide-out-menu-background {
     position: absolute;
     height: 100%;
     width: 100%;

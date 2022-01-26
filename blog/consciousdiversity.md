@@ -1,6 +1,6 @@
 ---
 title: Conscious Diversity
-blogDate: January 25, 2022
+blogDate: January 26, 2022
 excerpt: In my observation, the most rewarding, interesting, and fulfilling days are ones with a multitude of different activities and thoughts. 
 heroImage: /Images/blog/ConsciousDiversity/HiddenValleyJoshuaTree.jpg
 photographerName: Ethan Eisenhard

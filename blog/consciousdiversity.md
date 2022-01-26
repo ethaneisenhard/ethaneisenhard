@@ -8,14 +8,14 @@ slug: /consciousdiversity
 altImgDesc: Boulder field in Hidden Valley Joshua Tree National Park
 ---
 
-An ideal day in my world incorporates physical challenge, intriguing thoughts, creative work, and engaging/meaningful conversations. I like to call this conscious diversity. 
+An ideal day in my world incorporates a physical challenge, intriguing thoughts, creative work, and engaging/meaningful conversations. I like to call this conscious diversity. 
 
-Achieving this will be different for everyone. I’ll give an example for myself to see if that helps. 
+Achieving this will be different for everyone.
 
-Below you find a list of activities for each of these categories: 
+Below you find a list of activities I like for each of these categories: 
 
 ### Physical Challenge 
-A type of physical activity that gets your heart beat up to the point of exhaustion. This is possible in numerous ways. My favorite is running hills. 
+A type of physical activity that gets your heart beat up to the point of exhaustion. Get out there and sweat! My favorite is running hills. 
 
 Other examples of physical challenges
 * High intensity work out
@@ -26,16 +26,16 @@ Other examples of physical challenges
 ### Intriguing thoughts
 Genuine and curious thoughts that keep you motivated and excited. My favorite are philosophical and deep thinking questions like how we make decisions everyday. 
 
-Other examples of stimulating intriguing thoughts
+Other ways to stimulate intriguing thoughts
 * Reflection cards
 * Writing 
 * Reading 
-* Listening to music, podcast, story, or book
+* Listening to music or podcast
 
 ### Creative work
 To be creative one must try to create. There are many different ways to build what you envision. Choose one and try to master it. 
 
-Other examples of creative work
+Examples of creative work
 * Photography
 * Drawing
 * Woodworking
@@ -49,12 +49,12 @@ There are so many ways to create!!!
 ### Engaging/meaningful conversations
 Life is better shared. Talk with your family, friends, and neighbors. Observe and listen. Apply what you see fits best for you. 
 
-Other ways to have engaging/meaningful conversations
+Ways to have engaging/meaningful conversations
 * Talk about your passions 
 * Learn about family history with family members
 * Ask your friends about how there lives are going 
 
-This a lifestyle choice I have made for myself. You can decide what conscious diversity is for you and how it can benefit you. 
+Conscious diversity is a way to embrace variety in a positive manner. Find your conscious diversity by finding passions and filling your day with everything that makes you smile.
 
 Song of The Month - Don't Let Me Be Misunderstood by Santa Esmeralda
 

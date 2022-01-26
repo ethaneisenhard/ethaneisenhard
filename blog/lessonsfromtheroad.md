@@ -5,6 +5,7 @@ excerpt: 5 lessons I learned while traveling the United States 🚌 🏔 ⛺️
 heroImage: /Images/blog/LessonsFromTheRoad/Virginia.jpg
 photographerName: Ethan Eisenhard
 slug: /consciousdiversity
+altImgDesc: Car on top of the highway during sunset
 ---
 
 For the past four months I have been working from the road. I started in the Delaware Water Gap then the White Mountains of New Hampshire then Millinocket Maine, the base camp for Baxter State Park. Now I’m in the Colorado mountains. 

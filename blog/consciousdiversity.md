@@ -5,6 +5,7 @@ excerpt: In my observation, the most rewarding, interesting, and fulfilling days
 heroImage: /Images/blog/ConsciousDiversity/HiddenValleyJoshuaTree.jpg
 photographerName: Ethan Eisenhard
 slug: /consciousdiversity
+altImgDesc: Boulder field in Hidden Valley Joshua Tree National Park
 ---
 
 An ideal day in my world incorporates physical challenge, intriguing thoughts, creative work, and engaging/meaningful conversations. I like to call this conscious diversity. 

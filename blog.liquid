@@ -12,7 +12,7 @@ pagination:
     <p></p>
     <section class="blog-articles">
 
-{% for blog in blogs %}
+{% for blog in blogs reversed %}
 <a href="{{blog.url}}" class ="blog-link-hover">
   <section  class="blog-item">
         <div class = "blog-item-image" style ="background-image:url({{blog.data.heroImage}})">

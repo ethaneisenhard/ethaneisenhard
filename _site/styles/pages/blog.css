@@ -201,6 +201,13 @@ h2{
     box-shadow: 0 1px 3px rgba(255, 255, 255, 0.901), 0 1px 2px rgba(255,255,255,0.901);
 }
 
+ol{
+    list-style: decimal;
+    margin-left: 2em;
+    margin-bottom: 2em;
+}
+
+
 ul{
     list-style: unset;
     margin-left: 2em;

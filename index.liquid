@@ -38,12 +38,12 @@
 <body>
 
         
-    {% include modules/slide-out-menu-background.html %}
+    {% include 'modules/slide-out-menu-background.html' %}
     
-    {%  assign activeHome = 'is-active' %}
-    {% include modules/sidebar.liquid%}
+    {% assign activeHome = 'is-active' %}
+    {% include 'modules/sidebar.liquid' %}
 
-    {% include modules/menu-button.html %}
+    {% include 'modules/menu-button.html' %}
 
     <main class="main-grid">
 
@@ -221,13 +221,13 @@
 
         </section>
 
-        {% include modules/mobile-nav.liquid %}
+        {% include 'modules/mobile-nav.liquid' %}
 
-        {% include modules/mobile-nav-small.html %}
+        {% include 'modules/mobile-nav-small.html' %}
 
     </main>
 
-    {% include modules/contact-modal.html %}
+    {% include 'modules/contact-modal.html' %}
 
 </body>
 

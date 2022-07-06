@@ -24,7 +24,7 @@ I think I’m attracted to the heat, even when it zaps and dehydrates my body, t
 
 </div>
 
-<span class = "blog-inline-gallery-caption"> *Millinocket & Baxter State Park / Maine* </span> 
+<span class = "blog-inline-gallery-caption"> *Saguaro Lake / Toms Thumb Trailhead* </span> 
 
 ![Mountain Biking in Hawes Arizona!](/Images/blog/Arizona/Bike_At_Hawes.jpg "Mountain Biking in Hawes Arizona")
 

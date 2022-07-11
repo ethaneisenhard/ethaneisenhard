@@ -1,14 +1,14 @@
 ---
 title: Arizona
 blogDate: June 27, 2022
-excerpt: "You don’t sweat out here, we’ll you do, but it’s hot enough to dry it up before it hits the ground."
+excerpt: "You don’t sweat out here, we’ll you do, but it’s hot enough to dry it up before it hits the ground. Ethan"
 heroImage: /Images/blog/Arizona/Saguaro_Moon.jpg
 photographerName: Ethan Eisenhard
 slug: /arizona
 altImgDesc: Me (Ethan Eisenhard) in front of my Tacoma truck in Sedona
 ---
 
-The state of red rocks, dry desert, the Grand canyon, rattlesnakes, and enough water make it work. I’ve been coming out here since I was about 10 years old. I wrote a book about it when I was in Elementary school called “My trip to AZ”. I guess I always had a little publishing in me 😂 
+The state of red rocks, dry desert, the Grand canyon, rattlesnakes, and enough water make it work. I’ve been coming out here since I was about 10 years old. I wrote a book about it when I was in Elementary school called “My trip to AZ”. I guess I always had a little publishing in me 😂
 
 I think I’m attracted to the heat, even when it zaps and dehydrates my body, theres an addiction to get back out into the hot air. You don’t sweat out here, we’ll you do, but it’s hot enough to dry it up before it hits the ground. 
 

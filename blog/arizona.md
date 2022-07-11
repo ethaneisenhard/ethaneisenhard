@@ -1,7 +1,7 @@
 ---
 title: Arizona
 blogDate: June 27, 2022
-excerpt: "You don’t sweat out here, we’ll you do, but it’s hot enough to dry it up before it hits the ground. Ethan"
+excerpt: "You don’t sweat out here, we’ll you do, but it’s hot enough to dry it up before it hits the ground."
 heroImage: /Images/blog/Arizona/Saguaro_Moon.jpg
 photographerName: Ethan Eisenhard
 slug: /arizona

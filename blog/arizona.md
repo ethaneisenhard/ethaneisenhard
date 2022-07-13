@@ -31,7 +31,7 @@ I think I’m attracted to the heat, even when it zaps and dehydrates my body, t
 <span class = "blog-inline-gallery-caption"> *Mountain Biking in Hawes Arizona* </span> 
 
 
-I love to lift weights in the sun. Anywhere, anytime, and in Arizona it becomes tougher. I like it. I am embrace the dry heat. It’s challenges, pushes me away, but I fight back and push through it. 
+I love to lift weights in the sun. Anywhere, anytime, and in Arizona it becomes tougher. I like it. I embrace the dry heat. It’s challenges, pushes me away, but I fight back and push through it. 
 
 My favorite spot in Arizona is Flagstaff. I like the community, location, and culture. Its surrounded by pine mountains, gives you all four seasons, and fun people to meet. 
 
@@ -55,7 +55,7 @@ My feet could use more sun 🤣🤣
 
 It was an emotional ride. My car broke down on my way to New Mexico. I was towed from the Mongolian Rim to Payson then down to PHX. The dealership told me it would require a lot of work to fix, more than it was worth. I felt stranded and saw two options. 
 
-1. First item
+1. Fix car
 2. Trade in car for a new one 
 
 

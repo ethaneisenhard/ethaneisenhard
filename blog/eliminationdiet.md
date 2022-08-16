@@ -22,7 +22,7 @@ The next elimination was alcohol which came after a fun night out drinking at th
 
 My latest elimination is seed oils and sugar. I watched a video online and read articles about the negative effects of seed oil and sugar. I decided it would be interesting to try since I had great success with dairy and alcohol. And it has been incredible!!
 
-I have seen amazing results!! I feel great, I got leaner, stronger, skin cleared up, and my favorite, tan! Seed oils have been linked to cause sunburn 🥵. I haven’t had a burn or pealing all summer!! I have spent as much time in the sun as possible!! My energy is high!!
+I have seen amazing results!! I feel great, I got leaner, stronger, skin cleared up, and my favorite, tan! Seed oils have been linked to cause sunburn 🥵. I haven’t had a burn or pealing all summer without applying sunscreen!! I have spent as much time in the sun as possible!! My energy is high!!
 
 Now you know what I don’t eat, here is my list of what I do!! As much as possible I like to cook my food so I can ensure quality control.
 

@@ -34,7 +34,7 @@ Fruit with any meal or in between meal, great substitute if you are skipping a f
 
 Snacks: RX bar, Larabar
 
-I have started to try two meal per day, but only if I am not hungry in the morning or I’m not going to be outside working all day. I do try not to eat three hours before I go to bed but if I am hungry at night I will eat fruit or vegetables.
+I am trying two meals per day, but only if I am not hungry in the morning or I’m not going to be outside working all day. I do try not to eat three hours before I go to bed but if I am hungry at night I will eat fruit or vegetables.
 
 Today, I feel like I am in the best shape of my life!! Last weekend, I ran 10 miles, biked 6 miles, then paddle boarded in the ocean!!
 

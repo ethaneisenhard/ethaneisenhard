@@ -35,7 +35,7 @@ console.log(
 |   |   Built With                                       |    |
 |   |   Host: https://www.netlify.com/                   |    |
 |   |   HTML, CSS, JS                                    |    |
-|   |   No Frameworks                                    |    |
+|   |   Built with Eleventy                              |    |
 |   |   https://www.svgbackgrounds.com/                  |    |
 |   |   All pictures taken by Ethan Eisenhard            |    |
 |   |   https://github.com/ethaneisenhard/ethaneisenhard |    |

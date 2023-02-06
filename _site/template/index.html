@@ -384,45 +384,28 @@
       <h3>Hope you are having a great day!</h3>
       <p>Send me a message and I will get back you.</p>
       <section class="contact-modal-form">
-        <form
-          id=" contact-form"
-          name="contact"
-          method="POST"
-          netlify-honeypot="bot-field"
-          data-netlify="true"
-        >
+        <form id=" contact-form" name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
           <p class="is-hidden">
-            <label
-              >Don’t fill this out if you're human: <input name="bot-field"
-            /></label>
+            <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
           </p>
           <div class="input-wrap">
             <label for="name">Name</label>
-            <input type="text" id="name" required/>
+            <input type="text" id="name" required />
           </div>
           <div class="input-wrap">
             <label for="email">Email</label>
-            <input type="text" id="email" required/>
+            <input type="email" id="email" required />
           </div>
 
-          <textarea
-            name="contact-message"
-            id=""
-            rows="10"
-            placeholder=""
-            required
-          ></textarea>
+          <textarea name="contact-message" id="" rows="10" placeholder="" required></textarea>
           <button type="submit" class="btn btn-contact-submit">Send</button>
         </form>
       </section>
     </section>
   </section>
 
-  <section
-    class="contact-modal-background js-contact js-contact-modal-background is-hidden"
-  ></section>
+  <section class="contact-modal-background js-contact js-contact-modal-background is-hidden"></section>
 </section>
-
 
 </body>
 

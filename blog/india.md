@@ -24,7 +24,7 @@ We then went to Hyderabad, a ten hour drive from Bangalore. We invited our other
 
 ![Holiday Art](/Images/blog/India/holiday-art.jpg "Holiday Art")
 
-Akhil’s family has a farm and I have enjoyed learning more about the agriculture here in india. Palm oil trees create a wonderful canopy where cocoa leaves grow. In the fields, rows of dragon fruit wrapped themselves around concrete slabs where they will bloom in the summer. We ate a cocoa plant right from the tree and drank fresh coconuts.
+Akhil’s family has a farm and I have enjoyed learning more about the agriculture here in india. Palm oil trees create a wonderful canopy where cocoa leaves grow. In the fields, rows of dragon fruit wrapped themselves around concrete slabs where they will bloom in the summer. We ate a cocoa plant right from the tree and drank fresh coconuts. We met a group of farmers who were preparing tobacco leaves for flue curing.
 
 ![Lake view](/Images/blog/India/lake-view.jpg "Lake view")
 

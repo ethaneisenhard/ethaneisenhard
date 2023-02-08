@@ -16,7 +16,7 @@ A place of gracious hosts, warm weather, chaotic driving, spicy food, sweet suga
 
 ![Street art in India](/Images/blog/India/street-art.jpg "Street art in India")
 
-We then went to Hyderabad, a ten hour drive from Bangalore. We invited our other college friend, Shreyash, and off we went north. Compared to Bangalore, the highways were newer due to a stronger economy. Tucked below the tech and corporate sky rises, the beautiful mess remained. Pick your choice of dirty food cart corners serving hot kebab and lentil rice. We celebrated a holiday and flew kites to celebrate. Feelings of reading the Kite Runner in 9th grade came flooding back in mind. We explored the old city of Hyderabad where sidewalks covered in trash and shopping carts overwhelm the center. We waited in a line and drank chai with the locals. Then it was time to head east to the village.
+We then went to Hyderabad, a ten hour drive from Bangalore. We invited our other college friend, Shreyash, and off we went north. Compared to Bangalore, the highways were newer due to a stronger economy. Tucked below the tech and corporate sky rises, the beautiful mess remained. Pick your choice of dirty food cart corners serving hot kebab and lentil rice. We celebrated a Sankranti, flew kites, and listened to Indian music. We explored the old city of Hyderabad where sidewalks covered in trash and shopping carts overwhelm the center. We waited in a line and drank chai with the locals. Then it was time to head east to the village.
 
 ![Old city Hyderabad](/Images/blog/India/downtown-oldcity-hyderabad.jpg "Old city Hyderabad")
 
@@ -46,17 +46,15 @@ I find myself connected to the temples, praying for peace and love, plus learnin
 
 Now we are preparing to leave the village back to Hyderabad before heading into the mountains. There we seek the great valley of Parvati. We are taking an overnight bus to Kullu, where we are staying two nights then heading into the higher regions.
 
-The 22 hours train ride from Hyderabad to New Delhi was long, tough, and restless but I enjoyed the experience. Watch a video about it here!
+The 22 hours train ride from Hyderabad to New Delhi was long, tough, and restless but I enjoyed the experience. I will share a video soon documenting the train ride.
 
 With two quick days in Kullu, filled with delicious food and long hikes, getting used to the mountains air temperatures, we are on a bus to Jarri then a cab to Malana.
 
 ![Kullu pano shot from above](/Images/blog/India/Kullu-pano.jpg "Kullu pano shot from above")
 
-Malana has a beautiful valley and a sacred village untouchable to any outsiders. A man shared a story behind these rules. “A man fell in love with his woman in the mountains. They lived happily off the land and had a family. The husband began to feel his wife was committing adultery without any proof. The husband then sent his son to chop off the wife’s head. The son returned with her head and said, “why did you send me to chop off my mother heads?”, the father answered, “she had commit sin against him and the family, she was untouchable”, the son answered, “without proof, you are the sinner here”, then he chopped the fathers head off.
+Malana has a beautiful valley and a sacred village untouchable any outsiders. When you walk through the village you will have kids telling you not to touch the temples and men trying to sell you hash. Malana is now known for its Malana cream (hash). We spent the day hiking, hanging out with our hosts, and learning about hash culture.
 
-Now I think that’s more of a legendary tale but it’s fun to share these stories. Malana is now known for its Malana cream (hash). We spent the day hiking, hanging out with our hosts, and learning about hash culture.
-
-![Malana Village](/Images/blog/India/malana-village.jpg "Malana village")
+![Malana Village](/Images/blog/India/malana-village-1.jpg "Malana village")
 
 ![Malana Village](/Images/blog/India/malana-village-2.jpg "Malana village")
 

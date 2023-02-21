@@ -553,14 +553,10 @@
       <p>Send me a message and I will get back you.</p>
 
       <form name="test" method="POST" data-netlify="true">
-        <div class="input-wrap">
-          <label for="name">Name</label>
-          <input type="text" id="name" required />
-        </div>
-        <div class="input-wrap">
-          <label for="email">Email</label>
-          <input type="email" id="email" required />
-        </div>
+        <label for="name">Name</label>
+        <input type="text" id="name" required />
+        <label for="email">Email</label>
+        <input type="email" id="email" required />
         <p>
           <label>Message: <textarea name="message"></textarea></label>
         </p>
@@ -581,6 +577,7 @@
             <input type="email" id="email" required />
           </div>
 
+          <label for="contact-message"></label>
           <textarea name="contact-message" rows="10" placeholder="" required></textarea>
           <button type="submit" class="btn btn-contact-submit">Send</button>
         </form>

@@ -7,11 +7,13 @@
       <h3>Hope you are having a great day!</h3>
       <p>Send me a message and I will get back you.</p>
 
-      <form name="test" method="POST" data-netlify="true">
-        <label for="name">Name</label>
-        <input type="text" id="name" required />
-        <label for="email">Email</label>
-        <input type="email" id="email" required />
+      <form name="new-contact" method="POST" data-netlify="true">
+        <p>
+          <label>Your Name: <input type="text" name="name" /></label>
+        </p>
+        <p>
+          <label>Your Email: <input type="email" name="email" /></label>
+        </p>
         <p>
           <label>Message: <textarea name="message"></textarea></label>
         </p>
@@ -20,8 +22,7 @@
         </p>
       </form>
 
-
-      <section class="contact-modal-form">
+      <!-- <section class="contact-modal-form">
         <form id="contact-form" name="contact" method="POST" data-netlify="true">
           <div class="input-wrap">
             <label for="name">Name</label>
@@ -36,7 +37,7 @@
           <textarea name="contact-message" rows="10" placeholder="" required></textarea>
           <button type="submit" class="btn btn-contact-submit">Send</button>
         </form>
-      </section>
+      </section> -->
     </section>
   </section>
 

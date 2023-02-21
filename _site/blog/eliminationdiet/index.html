@@ -419,6 +419,11 @@
       <p>Send me a message and I will get back you.</p>
 
       <form name="new-contact" method="POST" data-netlify="true">
+        <p class="is-hidden">
+          <label>
+            Don’t fill this out if you’re human: <input name="bot-field" />
+          </label>
+        </p>
         <p>
           <label>Your Name: <input type="text" name="name" /></label>
         </p>

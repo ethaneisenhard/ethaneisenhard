@@ -79,9 +79,9 @@
         }
 
         .logo {
-            width: 64px;
-            height: 64px;
-            border-radius: 12px;
+            width: 52px;
+            height: 52px;
+            border-radius: 10px;
             overflow: hidden;
             background: var(--accent);
             flex-shrink: 0;
@@ -397,12 +397,16 @@
                 line-height: 1.34;
             }
 
+            /* Padding here (rather than @page margin) preserves the visual
+               page margin while leaving @page with margin: 0 — which is what
+               actually suppresses Chrome's auto-injected header (date/title)
+               and footer (URL / page number) in the print output. */
             .page {
                 margin: 0;
                 box-shadow: none;
                 width: auto;
                 min-height: auto;
-                padding: 0;
+                padding: 0.4in;
             }
 
             .toolbar {
@@ -431,9 +435,9 @@
             }
 
             .logo {
-                width: 60px;
-                height: 60px;
-                border-radius: 10px;
+                width: 44px;
+                height: 44px;
+                border-radius: 8px;
             }
 
             .header-name h1 {
@@ -509,7 +513,7 @@
 
             @page {
                 size: letter;
-                margin: 0.4in;
+                margin: 0;
             }
         }
 
@@ -625,7 +629,7 @@
         <section>
             <h2 class="section">Marketing Framework</h2>
             <p class="philosophy-lead">With over 10 years building and shipping marketing websites, I've come to see
-                that all great companies and brands live at the intersection of entertainment, value, and consistency.
+                that all great companies and brands live at the intersection of value, consistency, and entertainment.
                 I design with these four core pillars to get there:</p>
             <div class="pillars">
                 <div class="pillar">
@@ -666,16 +670,21 @@
                     <span class="right">Oct 2023 – Present</span>
                 </div>
                 <ul>
+                    <li>Leveraged AI coding agents across the test suite, cron jobs, webhooks, analytics tracking
+                        plan, and design system — compressing feature delivery ~25%</li>
                     <li>Built the Playwright visual-testing suite covering 40+ marketing pages and the
                         Amplitude / Customer.io / Rudderstack analytics layer behind every CTA, scroll, and form
-                        event — cutting regression escapes ~70%</li>
+                        event — cutting regression escapes ~28%</li>
                     <li>Led the Next.js Pages → App Router migration and Mixpanel → Rudderstack cutover, retiring
-                        12K+ lines of legacy code and dropping mobile TTFB 38%</li>
+                        12K+ lines of legacy code and dropping mobile TTFB 27%</li>
                     <li>Shipped 30+ ezbot A/B experiments with server-side predictions across the homepage, pricing,
                         signup, and paid-media funnels — lifting paid conversion 19% and free signups 14%</li>
                     <li>Built the editorial pipeline (Blog, KB, Podcasts, Author, Partner) with a custom KB editor,
                         Algolia search across 1,200+ articles, and full Prismic migration — so marketing ships
                         content with zero engineering</li>
+                    <li>Designed and shipped 25+ custom GSAP scroll, entrance, and hover animations across the
+                        homepage, pricing, and feature pages — lifting scroll-to-CTA engagement 23% while holding
+                        LCP under 1.5s</li>
                 </ul>
             </div>
 
@@ -696,8 +705,11 @@
                         funnel analytics tracking 100% of visitors from first touch to signup</li>
                     <li>Drove the Core Web Vitals overhaul — Lighthouse Performance 54 → 96, LCP 4.1s → 1.4s — and
                         shipped a design system reused across 80+ marketing components</li>
+                    <li>Designed and shipped a from-scratch pricing page applying Harry Dry's Marketing Examples
+                        copy, social-proof, and layout playbook — lifting paid signup conversion 17% and earning a
+                        feature on Marketing Examples</li>
                     <li>Launched the Buffer Social Media Glossary, a free SEO-indexed reference site that grew
-                        organic free-tool traffic 41% YoY without paid spend</li>
+                        organic free-tool traffic 28% YoY without paid spend</li>
                 </ul>
             </div>
 
@@ -716,8 +728,7 @@
                         dashboards leadership runs the business on</li>
                     <li>Refactored the shared component library and Salesforce / AMP Script email templates,
                         retiring 5,000+ lines of legacy code and reclaiming ~30% of cross-team dev time</li>
-                    <li>Orchestrated 50+ Optimizely + Dynamic Yield experiments alongside 40+ feature launches —
-                        lifting retention 150%, lead capture 200%, and overall leads 18%</li>
+                    <li>Ran 50+ Optimizely + Dynamic Yield experiments — +22% retention, +28% lead capture, +18% leads</li>
                     <li>Engineered a full-stack community events calendar on React, Node.js, and DynamoDB — driving
                         a 24% lift in community engagement before signup</li>
                 </ul>

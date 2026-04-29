@@ -4,15 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A digital nomadic artist who honors the harvest and moves with soul">
+    <meta name="description" content="Howdy :) I'm Ethan a world traveling artist and engineer who loves to share the joy and beauty in this magnificent world">
     <meta name="keywords" content="">
     <meta name="author" content="Ethan Joshua Eisenhard">
     <meta name="robots" content="index, follow">
     <meta property="og:url" content="https://ethaneisenhard.com">
     <meta property="og:title" content="Ethan Joshua Eisenhard">
-    <meta property="og:description" content="A digital nomadic artist who honors the harvest and moves with soul">
-    <meta property="og:image" content="images/hero.png">
+    <meta property="og:description" content="Howdy :) I'm Ethan a world traveling artist and engineer who loves to share the joy and beauty in this magnificent world">
+    <meta property="og:image" content="images/ethan-eisenhard.jpg">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <title>Ethan Joshua Eisenhard</title>
 
     <!-- Twitter Meta Tags -->
@@ -22,118 +25,699 @@
     <meta property="twitter:domain" content="ethaneisenhard.com">
     <meta property="twitter:url" content="https://ethaneisenhard.com/">
     <meta name="twitter:title" content="Ethan Joshua Eisenhard">
-    <meta name="twitter:description" content="A digital nomadic artist who honors the harvest and moves with soul">
-    <meta name="twitter:image" content="https://ethaneisenhard.com/images/hero.png">
-    <meta name="twitter:image:alt" content="Ethan Joshua Eisenhard - Digital Nomadic Artist">
+    <meta name="twitter:description" content="Howdy :) I'm Ethan a world traveling artist and engineer who loves to share the joy and beauty in this magnificent world">
+    <meta name="twitter:image" content="https://ethaneisenhard.com/images/ethan-eisenhard.jpg">
+    <meta name="twitter:image:alt" content="Ethan Joshua Eisenhard">
 
     <style>
+        :root {
+            --fade-duration: 2000ms;
+            --bg-fade: 1800ms;
+            --accent: #14181f;
+            --text: #f5f3ee;
+            --text-muted: rgba(245, 243, 238, 0.78);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
         body {
             margin: 0;
             padding: 0;
-            background-image: url('images/hero.webp');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            background: var(--accent);
+            transition: background-color var(--bg-fade) ease-in-out;
+            overflow: hidden;
         }
 
-        .hero-image {
+        body {
+            position: relative;
+            min-height: 100vh;
+        }
+
+        /* Background slideshow link - the colored letterbox is provided by body bg */
+        .bg-link {
+            position: fixed;
+            inset: 0;
             display: block;
-            max-width: 1156px;
+            z-index: 0;
+            cursor: pointer;
+            background: transparent;
+        }
+
+        .bg-image {
+            position: absolute;
+            inset: 0;
             width: 100%;
-            margin: 0;
-            z-index: 1;
-            border: 4px solid rgba(255, 255, 255, 0.2);
-            border-radius: 12px;
-            box-shadow:
-                0 0 20px rgba(0, 0, 0, 0.2),
-                0 0 60px rgba(0, 0, 0, 0.1);
+            height: 100%;
+            object-fit: contain;
+            opacity: 0;
+            transition: opacity var(--fade-duration) ease-in-out;
+            will-change: opacity;
+            user-select: none;
+            -webkit-user-drag: none;
         }
 
-        .hero-container {
+        .bg-image.active {
+            opacity: 1;
+        }
+
+        /* Location label - top right, subtle */
+        .location-label {
+            position: fixed;
+            top: 22px;
+            right: 24px;
+            z-index: 5;
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 13px;
+            letter-spacing: 2.6px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.78);
+            text-shadow: 0 1px 6px rgba(0, 0, 0, 0.55);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity var(--fade-duration) ease-in-out;
+            user-select: none;
+        }
+
+        .location-label.visible {
+            opacity: 1;
+        }
+
+        .location-label::before {
+            content: "";
+            display: inline-block;
+            width: 18px;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.6);
+            vertical-align: middle;
+            margin-right: 10px;
+            margin-bottom: 3px;
+        }
+
+        /* === Mac OS X dock — items sit on a 3D-tilted glass shelf ===
+           All sizing flows from --slot. Dock width = 10.32 × slot
+           (8 icons + 7 gaps at 0.2·slot + 2 paddings at 0.46·slot),
+           so slot = dock_width / 10.32. We pin dock_width to
+           min(92vw, 580px) and the entire dock scales fluidly. */
+        .dock {
+            --dock-w: min(92vw, 580px);
+            --slot: calc(var(--dock-w) / 10.32);
+
+            position: fixed;
+            left: 50%;
+            bottom: max(20px, calc(var(--slot) * 0.55));
+            transform: translateX(-50%);
+            /* Enables the 3D perspective for the tilted shelf below */
+            perspective: 1200px;
+            z-index: 4;
+            max-width: calc(100vw - 24px);
             display: flex;
-            justify-content: center;
             align-items: center;
+            gap: calc(var(--slot) * 0.2);
+            padding: calc(var(--slot) * 0.32) calc(var(--slot) * 0.46);
+            color: var(--text);
         }
 
-        /* Remove border and border-radius on mobile */
-        @media screen and (max-width: 1156px) {
-            .hero-image {
+        /* The actual 3D-rotated glass shelf the items rest on
+           (technique borrowed from jackharner's OS X codepen) */
+        .dock::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg,
+                    rgba(255, 255, 255, 0.34) 0%,
+                    rgba(255, 255, 255, 0.14) 50%,
+                    rgba(255, 255, 255, 0.24) 100%);
+            backdrop-filter: blur(24px) saturate(180%);
+            -webkit-backdrop-filter: blur(24px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.32);
+            border-top: 1px solid rgba(255, 255, 255, 0.65);
+            border-radius: calc(var(--slot) * 0.46);
+            box-shadow:
+                inset 0 1px 0 rgba(255, 255, 255, 0.6),
+                inset 0 -1px 0 rgba(255, 255, 255, 0.22),
+                0 18px 40px rgba(0, 0, 0, 0.38),
+                0 6px 14px rgba(0, 0, 0, 0.28);
+            transform: rotateX(46deg);
+            transform-origin: bottom center;
+            z-index: -1;
+        }
+
+        /* Soft contact shadow on the "floor" beneath the dock */
+        .dock::after {
+            content: "";
+            position: absolute;
+            left: 8%;
+            right: 8%;
+            bottom: -14px;
+            height: 18px;
+            background: radial-gradient(ellipse at center,
+                    rgba(0, 0, 0, 0.35) 0%,
+                    rgba(0, 0, 0, 0) 70%);
+            filter: blur(8px);
+            pointer-events: none;
+            z-index: -2;
+        }
+
+        /* A single dock item slot — sized fluidly from --slot */
+        .dock-item {
+            position: relative;
+            width: var(--slot);
+            height: var(--slot);
+            flex-shrink: 0;
+        }
+
+        /* The actual button/link inside each slot
+           (this is what gets the magnify, jump, and reflection) */
+        .dock-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: calc(var(--slot) * 0.25);
+            background: linear-gradient(180deg, #2b3137 0%, #181b1f 100%);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            cursor: pointer;
+            overflow: hidden;
+            transform-origin: bottom center;
+            transition: transform 0.22s ease, filter 0.22s ease;
+            /* Faint glass-shelf reflection - just a hint, not a full mirror */
+            -webkit-box-reflect: below 0 linear-gradient(transparent 80%, rgba(255, 255, 255, 0.14));
+        }
+
+        .dock-button img {
+            width: calc(var(--slot) * 0.46);
+            height: calc(var(--slot) * 0.46);
+            display: block;
+        }
+
+        /* Profile photo fills the whole tile, cover-cropped */
+        .dock-button--photo {
+            padding: 0;
+            background: #1c1f23;
+        }
+
+        /* Higher-specificity selector so the responsive `.dock-button img`
+           sizes don't shrink the profile photo back into a small circle */
+        .dock-button.dock-button--photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: inherit;
+        }
+
+        /* Brand colors per app, like a real macOS dock */
+        .dock-button[data-app="instagram"] {
+            background: radial-gradient(circle at 30% 110%,
+                    #ffd776 0%, #ff7d4d 18%, #ee2864 38%, #d22b8c 60%, #8c3aaa 100%);
+        }
+
+        .dock-button[data-app="x"] {
+            background: #000;
+        }
+
+        .dock-button[data-app="linkedin"] {
+            background: linear-gradient(180deg, #0a66c2 0%, #074a8c 100%);
+        }
+
+        .dock-button[data-app="youtube"] {
+            background: linear-gradient(180deg, #ff2a2a 0%, #cc0000 100%);
+        }
+
+        .dock-button[data-app="github"] {
+            background: linear-gradient(180deg, #2b3137 0%, #15171a 100%);
+        }
+
+        .dock-button[data-app="print"] {
+            background: linear-gradient(180deg, #f4a26b 0%, #e16a4a 60%, #8e3553 100%);
+        }
+
+        .dock-button[data-app="spotify"] {
+            background: linear-gradient(180deg, #1ed760 0%, #169e46 100%);
+        }
+
+        /* macOS-style magnify on hover/focus - keep brand color, add lift + brightness */
+        .dock-button:hover,
+        .dock-button:focus-visible {
+            transform: translateY(-9px) scale(1.22);
+            filter: brightness(1.12);
+            outline: none;
+        }
+
+        /* Click bounce - mac dock app launch animation */
+        .dock-button.jumping {
+            animation: dockJump 600ms cubic-bezier(0.4, 0.01, 0.6, 0.99);
+        }
+
+        @keyframes dockJump {
+            0%   { transform: translateY(0) scale(1); }
+            45%  { transform: translateY(-26px) scale(1.1); }
+            100% { transform: translateY(0) scale(1); }
+        }
+
+        /* Tooltip popup above an icon (used for profile bio) */
+        .dock-tooltip {
+            position: absolute;
+            bottom: calc(100% + 16px);
+            left: 50%;
+            transform: translateX(-50%) translateY(6px);
+            width: max-content;
+            max-width: min(360px, calc(100vw - 32px));
+            padding: 14px 18px;
+            background: rgba(15, 18, 24, 0.72);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: 14px;
+            backdrop-filter: blur(22px) saturate(180%);
+            -webkit-backdrop-filter: blur(22px) saturate(180%);
+            box-shadow: 0 14px 32px rgba(0, 0, 0, 0.4);
+            color: var(--text);
+            text-align: left;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        /* Little caret pointing down to the icon */
+        .dock-tooltip::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-top: 8px solid rgba(15, 18, 24, 0.72);
+        }
+
+        .dock-tooltip-name {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 1.1;
+            letter-spacing: 0.3px;
+            margin: 0 0 6px;
+        }
+
+        .dock-tooltip-bio {
+            font-size: 13px;
+            font-weight: 300;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        /* Show tooltip on hover/focus of profile slot (desktop only) */
+        .dock-profile--desktop:hover .dock-tooltip,
+        .dock-profile--desktop:focus-within .dock-tooltip {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* Desktop / mobile profile swap */
+        .dock-profile--mobile {
+            display: none;
+        }
+
+        @media (max-width: 640px) {
+            .dock-profile--desktop {
                 display: none;
+            }
+
+            .dock-profile--mobile {
+                display: block;
             }
         }
 
-        .social-menu {
+        /* === About modal (mobile only) === */
+        .profile-modal {
             position: fixed;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 20px;
-            z-index: 2;
-        }
-
-        .social-menu a {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(5px);
+            inset: 0;
+            background: rgba(0, 0, 0, 0.62);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.3s ease;
+            padding: 24px;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: opacity 0.28s ease, visibility 0.28s ease;
+            z-index: 100;
         }
 
-        .social-menu a:hover {
-            transform: translateY(-5px);
+        .profile-modal.is-open {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+        .profile-modal-card {
+            position: relative;
+            background: rgba(20, 24, 32, 0.96);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 24px;
+            padding: 36px 28px 30px;
+            width: 100%;
+            max-width: 380px;
+            text-align: center;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+            transform: scale(0.94);
+            transition: transform 0.28s ease;
+        }
+
+        .profile-modal.is-open .profile-modal-card {
+            transform: scale(1);
+        }
+
+        .profile-modal-photo {
+            width: 124px;
+            height: 124px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+            margin: 0 auto 18px;
+            display: block;
+        }
+
+        .profile-modal-name {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 28px;
+            font-weight: 500;
+            line-height: 1.1;
+            letter-spacing: 0.3px;
+            margin: 0 0 14px;
+            color: var(--text);
+        }
+
+        .profile-modal-bio {
+            font-size: 15px;
+            line-height: 1.55;
+            font-weight: 300;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .profile-modal-close {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 32px;
+            height: 32px;
+            border: none;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text);
+            font-size: 22px;
+            line-height: 1;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            transition: background 0.2s ease;
+        }
+
+        .profile-modal-close:hover {
             background: rgba(255, 255, 255, 0.2);
         }
 
-        .social-menu img {
-            width: 20px;
-            height: 20px;
+        /* Mobile tweaks — only the location label needs adjusting now;
+           the dock itself scales fluidly via --slot above, so no
+           per-breakpoint resizing required. */
+        @media screen and (max-width: 640px) {
+            .location-label {
+                top: 16px;
+                right: 16px;
+                font-size: 11px;
+                letter-spacing: 2px;
+            }
+
+            .location-label::before {
+                width: 12px;
+                margin-right: 8px;
+            }
         }
 
-        @media screen and (max-width: 768px) {
-            .social-menu {
-                bottom: 20px;
-                gap: 12px;
+        @media (prefers-reduced-motion: reduce) {
+
+            html,
+            body,
+            .bg-image,
+            .location-label {
+                transition: none;
             }
         }
     </style>
 </head>
 
 <body>
-    <div class="hero-container">
-        <img src="images/hero.webp" alt="Hero Image" class="hero-image">
+    <a class="bg-link" id="bgLink" href="https://digital-air-media.printful.me/" target="_blank" rel="noopener"
+        aria-label="Shop fine-art prints from these locations">
+        <img class="bg-image" id="bgA" alt="">
+        <img class="bg-image" id="bgB" alt="">
+    </a>
+
+    <div class="location-label" id="locationLabel" aria-hidden="true"></div>
+
+    <nav class="dock" aria-label="About and links">
+        <!-- Desktop: profile icon with hover tooltip -->
+        <div class="dock-item dock-profile dock-profile--desktop">
+            <button type="button" class="dock-button dock-button--photo" aria-label="About Ethan Joshua Eisenhard">
+                <img src="images/ethan-eisenhard.jpg" alt="Ethan Joshua Eisenhard">
+            </button>
+            <div class="dock-tooltip" role="tooltip">
+                <h1 class="dock-tooltip-name">Ethan Joshua Eisenhard</h1>
+                <p class="dock-tooltip-bio">Howdy :) I'm Ethan a world traveling artist and engineer who loves to share
+                    the joy and beauty in this magnificent world</p>
+            </div>
+        </div>
+
+        <!-- Mobile: profile icon that opens the about modal -->
+        <div class="dock-item dock-profile dock-profile--mobile">
+            <button type="button" class="dock-button dock-button--photo" id="profileMobileBtn"
+                aria-label="About Ethan Joshua Eisenhard" aria-haspopup="dialog" aria-controls="profileModal">
+                <img src="images/ethan-eisenhard.jpg" alt="Ethan Joshua Eisenhard">
+            </button>
+        </div>
+
+        <div class="dock-item">
+            <a class="dock-button" data-app="instagram" href="https://instagram.com/ethan.eisenhard" target="_blank"
+                rel="noopener" aria-label="Instagram">
+                <img src="icons/instagram.svg" alt="">
+            </a>
+        </div>
+        <div class="dock-item">
+            <a class="dock-button" data-app="x" href="https://x.com/ethaneisenhard" target="_blank" rel="noopener"
+                aria-label="X / Twitter">
+                <img src="icons/x.svg" alt="">
+            </a>
+        </div>
+        <div class="dock-item">
+            <a class="dock-button" data-app="linkedin" href="https://linkedin.com/in/ethan-eisenhard-6b50a8121"
+                target="_blank" rel="noopener" aria-label="LinkedIn">
+                <img src="icons/linkedin.svg" alt="">
+            </a>
+        </div>
+        <div class="dock-item">
+            <a class="dock-button" data-app="youtube" href="https://www.youtube.com/@ethaneisenhard" target="_blank"
+                rel="noopener" aria-label="YouTube">
+                <img src="icons/youtube.svg" alt="">
+            </a>
+        </div>
+        <div class="dock-item">
+            <a class="dock-button" data-app="github" href="https://github.com/ethaneisenhard/ethaneisenhard"
+                target="_blank" rel="noopener" aria-label="GitHub">
+                <img src="icons/github.svg" alt="">
+            </a>
+        </div>
+        <div class="dock-item">
+            <a class="dock-button" data-app="print" href="https://digital-air-media.printful.me/" target="_blank"
+                rel="noopener" aria-label="Print shop">
+                <img src="icons/print.svg" alt="">
+            </a>
+        </div>
+        <div class="dock-item">
+            <a class="dock-button" data-app="spotify"
+                href="https://open.spotify.com/artist/4G3Lsu2CnUlJEe7iRHzaoD?si=mac1q-qoSku8ERbyTnq6rg" target="_blank"
+                rel="noopener" aria-label="Spotify">
+                <img src="icons/spotify.svg" alt="">
+            </a>
+        </div>
+    </nav>
+
+    <!-- Mobile-only "About" modal -->
+    <div class="profile-modal" id="profileModal" role="dialog" aria-labelledby="profileModalName" aria-modal="true">
+        <div class="profile-modal-card">
+            <button type="button" class="profile-modal-close" id="profileModalClose" aria-label="Close">×</button>
+            <img src="images/ethan-eisenhard.jpg" alt="Ethan Joshua Eisenhard" class="profile-modal-photo">
+            <h2 class="profile-modal-name" id="profileModalName">Ethan Joshua Eisenhard</h2>
+            <p class="profile-modal-bio">Howdy :) I'm Ethan a world traveling artist and engineer who loves to share
+                the joy and beauty in this magnificent world</p>
+        </div>
     </div>
-    <div class="social-menu">
-        <a href="https://instagram.com/ethan.eisenhard" target="_blank">
-            <img src="icons/instagram.svg" alt="Instagram">
-        </a>
-        <a href="https://x.com/ethaneisenhard" target="_blank">
-            <img src="icons/x.svg" alt="Twitter">
-        </a>
-        <a href="https://linkedin.com/in/ethan-eisenhard-6b50a8121" target="_blank">
-            <img src="icons/linkedin.svg" alt="LinkedIn">
-        </a>
-        <a href="https://www.youtube.com/@ethaneisenhard" target="_blank">
-            <img src="icons/youtube.svg" alt="YouTube">
-        </a>
-        <a href="https://github.com/ethaneisenhard/ethaneisenhard" target="_blank">
-            <img src="icons/github.svg" alt="GitHub">
-        </a>
-        <a href="https://digital-air-media.printful.me/" target="_blank">
-            <img src="icons/camera.svg" alt="GitHub">
-        </a>
-        <a href="https://open.spotify.com/artist/4G3Lsu2CnUlJEe7iRHzaoD?si=mac1q-qoSku8ERbyTnq6rg" target="_blank">
-            <img src="icons/spotify.svg" alt="Spotify">
-        </a>
-    </div>
+
+    <script>
+        (function () {
+            const panos = [
+                { src: 'images/panos/Argentina.jpeg', location: 'Argentina' },
+                { src: 'images/panos/Bolivia.jpeg', location: 'Bolivia' },
+                { src: 'images/panos/Bolivia-2.jpeg', location: 'Bolivia' },
+                { src: 'images/panos/Brazil.jpeg', location: 'Brazil' },
+                { src: 'images/panos/California.jpeg', location: 'California' },
+                { src: 'images/panos/Chile.jpeg', location: 'Chile' },
+                { src: 'images/panos/Joshua-Tree.jpeg', location: 'Joshua Tree' },
+                { src: 'images/panos/Oregon.jpeg', location: 'Oregon' },
+                { src: 'images/panos/Oregon-2.jpeg', location: 'Oregon' },
+                { src: 'images/panos/Oregon-3.jpeg', location: 'Oregon' },
+                { src: 'images/panos/Pennslyvannia.jpeg', location: 'Pennsylvania' }
+            ];
+
+            // Fisher-Yates shuffle so the order is fresh each visit
+            for (let i = panos.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [panos[i], panos[j]] = [panos[j], panos[i]];
+            }
+
+            const bgA = document.getElementById('bgA');
+            const bgB = document.getElementById('bgB');
+            const label = document.getElementById('locationLabel');
+            const layers = [bgA, bgB];
+            let activeIdx = 0;
+            let panoIdx = 0;
+
+            const INTERVAL_MS = 7000;
+            const FADE_MS = 2000;
+
+            // Sample the average color from an image so the letterbox area
+            // (created by object-fit: contain) blends with the photo.
+            function loadAndSampleColor(url) {
+                return new Promise((resolve) => {
+                    const img = new Image();
+                    img.onload = () => {
+                        let color = 'rgb(20, 24, 31)';
+                        try {
+                            const canvas = document.createElement('canvas');
+                            const ctx = canvas.getContext('2d');
+                            const SAMPLE = 32;
+                            canvas.width = SAMPLE;
+                            canvas.height = SAMPLE;
+                            ctx.drawImage(img, 0, 0, SAMPLE, SAMPLE);
+                            const data = ctx.getImageData(0, 0, SAMPLE, SAMPLE).data;
+                            let r = 0, g = 0, b = 0, n = 0;
+                            for (let i = 0; i < data.length; i += 4) {
+                                r += data[i];
+                                g += data[i + 1];
+                                b += data[i + 2];
+                                n++;
+                            }
+                            // Blend toward black slightly so it doesn't wash out the dock
+                            const mix = 0.75;
+                            const rr = Math.round((r / n) * mix);
+                            const gg = Math.round((g / n) * mix);
+                            const bb = Math.round((b / n) * mix);
+                            color = `rgb(${rr}, ${gg}, ${bb})`;
+                        } catch (e) { /* fall back to default */ }
+                        resolve({ url, color, img });
+                    };
+                    img.onerror = () => resolve({ url, color: 'rgb(20, 24, 31)', img: null });
+                    img.src = url;
+                });
+            }
+
+            async function showPano(index) {
+                const pano = panos[index];
+                const { color } = await loadAndSampleColor(pano.src);
+
+                const nextLayerIdx = 1 - activeIdx;
+                const nextLayer = layers[nextLayerIdx];
+                const currentLayer = layers[activeIdx];
+
+                // Wait for the visible <img> to finish loading the new src
+                await new Promise((resolve) => {
+                    nextLayer.onload = () => resolve();
+                    nextLayer.onerror = () => resolve();
+                    nextLayer.src = pano.src;
+                    if (nextLayer.complete && nextLayer.naturalWidth > 0) resolve();
+                });
+
+                document.documentElement.style.setProperty('--accent', color);
+                document.body.style.backgroundColor = color;
+
+                void nextLayer.offsetWidth;
+
+                nextLayer.classList.add('active');
+                currentLayer.classList.remove('active');
+
+                label.classList.remove('visible');
+                setTimeout(() => {
+                    label.textContent = pano.location;
+                    label.classList.add('visible');
+                }, FADE_MS / 2);
+
+                activeIdx = nextLayerIdx;
+            }
+
+            showPano(panoIdx);
+
+            setInterval(() => {
+                panoIdx = (panoIdx + 1) % panos.length;
+                showPano(panoIdx);
+            }, INTERVAL_MS);
+
+            // Click-bounce on dock icons (Mac dock launch hop)
+            document.querySelectorAll('.dock-button').forEach((el) => {
+                el.addEventListener('click', () => {
+                    el.classList.remove('jumping');
+                    void el.offsetWidth;
+                    el.classList.add('jumping');
+                    setTimeout(() => el.classList.remove('jumping'), 650);
+                });
+            });
+
+            // Mobile: profile icon opens a modal with photo + bio.
+            // Close on backdrop click, the X button, or ESC.
+            const profileMobileBtn = document.getElementById('profileMobileBtn');
+            const profileModal = document.getElementById('profileModal');
+            const profileModalClose = document.getElementById('profileModalClose');
+
+            const closeProfileModal = () => profileModal && profileModal.classList.remove('is-open');
+
+            if (profileMobileBtn && profileModal) {
+                profileMobileBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    profileModal.classList.add('is-open');
+                });
+
+                profileModal.addEventListener('click', (e) => {
+                    if (e.target === profileModal) closeProfileModal();
+                });
+
+                if (profileModalClose) {
+                    profileModalClose.addEventListener('click', closeProfileModal);
+                }
+
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && profileModal.classList.contains('is-open')) {
+                        closeProfileModal();
+                    }
+                });
+            }
+        })();
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ethan Eisenhard — Software Engineer resume.">
+    <meta name="author" content="Ethan Joshua Eisenhard">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <title>Ethan Eisenhard — Resume</title>
+
+    <style>
+        :root {
+            --ink: #111;
+            --muted: #444;
+            --rule: #111;
+            --accent: #4a8ba5;
+            --paper: #fff;
+            --page-bg: #264e4d;
+            --paper-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+
+            /* Toolbar (adapts per theme) */
+            --tb-bg: rgba(20, 30, 32, 0.55);
+            --tb-border: rgba(255, 255, 255, 0.18);
+            --tb-text: #f5f3ee;
+            --tb-text-muted: rgba(245, 243, 238, 0.7);
+            --tb-hover: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Dark mode — all surfaces derived from the page-bg teal #264e4d
+           so the green identity carries through both themes */
+        :root[data-theme="dark"] {
+            --ink: #ece9e1;
+            --muted: #93a3a0;
+            --rule: #ece9e1;
+            --accent: #6db4a8;
+            --paper: #14302e;
+            --page-bg: #081817;
+            --paper-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--page-bg);
+            color: var(--ink);
+            font-family: 'Source Serif Pro', 'Times New Roman', Georgia, serif;
+            font-size: 13px;
+            line-height: 1.35;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .page {
+            background: var(--paper);
+            width: 8.5in;
+            min-height: 11in;
+            margin: 32px auto;
+            padding: 0.6in 0.7in 0.7in;
+            box-shadow: var(--paper-shadow);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* === Header === */
+        .header {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            gap: 18px;
+            padding-bottom: 6px;
+        }
+
+        .logo {
+            width: 64px;
+            height: 64px;
+            border-radius: 12px;
+            overflow: hidden;
+            background: var(--accent);
+            flex-shrink: 0;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .header-name {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .header-name h1 {
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0;
+            line-height: 1.1;
+        }
+
+        .header-name a {
+            color: var(--ink);
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .header-contact {
+            text-align: right;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .header-contact .row {
+            display: flex;
+            justify-content: flex-end;
+            gap: 22px;
+            white-space: nowrap;
+        }
+
+        .header-contact a {
+            color: var(--ink);
+            text-decoration: none;
+        }
+
+        /* === Section headings === */
+        h2.section {
+            font-size: 13px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 14px 0 4px;
+            padding-bottom: 1px;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        /* === Job entries === */
+        .job {
+            margin: 8px 0 10px;
+        }
+
+        .job-line {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 12px;
+        }
+
+        .job-line .left {
+            font-style: italic;
+        }
+
+        .job-line.company .left {
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        .job-line .right {
+            font-style: normal;
+            white-space: nowrap;
+        }
+
+        ul {
+            margin: 4px 0 0;
+            padding-left: 18px;
+        }
+
+        li {
+            margin: 1px 0;
+            line-height: 1.4;
+        }
+
+        /* === Philosophy === */
+        .philosophy-lead {
+            margin: 4px 0 8px;
+            font-style: italic;
+            color: var(--muted);
+        }
+
+        .pillars {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 28px;
+            row-gap: 8px;
+            margin: 4px 0 2px;
+        }
+
+        .pillar {
+            break-inside: avoid;
+        }
+
+        .pillar h3 {
+            font-size: 13px;
+            font-weight: 700;
+            margin: 0 0 1px;
+            color: var(--ink);
+        }
+
+        .pillar p {
+            margin: 0;
+            line-height: 1.4;
+            color: var(--ink);
+        }
+
+        /* === Education === */
+        .edu-line {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 12px;
+        }
+
+        .edu-name {
+            font-weight: 700;
+        }
+
+        .edu-sub {
+            font-style: italic;
+        }
+
+        /* === Floating toolbar === */
+        .toolbar {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 50;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 6px;
+            background: var(--tb-bg);
+            border: 1px solid var(--tb-border);
+            border-radius: 999px;
+            backdrop-filter: blur(18px) saturate(160%);
+            -webkit-backdrop-filter: blur(18px) saturate(160%);
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+            color: var(--tb-text);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        .toolbar-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border: none;
+            border-radius: 999px;
+            background: transparent;
+            color: var(--tb-text);
+            cursor: pointer;
+            padding: 0;
+            transition: background 0.18s ease, transform 0.18s ease;
+        }
+
+        .toolbar-btn:hover,
+        .toolbar-btn:focus-visible {
+            background: var(--tb-hover);
+            outline: none;
+        }
+
+        .toolbar-btn svg {
+            width: 18px;
+            height: 18px;
+            stroke: currentColor;
+            stroke-width: 1.8;
+            fill: none;
+        }
+
+        .toolbar-divider {
+            width: 1px;
+            height: 22px;
+            background: var(--tb-border);
+            margin: 0 2px;
+        }
+
+        /* Theme icon swap — only one shows depending on current theme */
+        .icon-moon {
+            display: inline;
+        }
+
+        .icon-sun {
+            display: none;
+        }
+
+        :root[data-theme="dark"] .icon-moon {
+            display: none;
+        }
+
+        :root[data-theme="dark"] .icon-sun {
+            display: inline;
+        }
+
+        /* Export menu */
+        .toolbar-export {
+            position: relative;
+        }
+
+        .export-menu {
+            position: absolute;
+            top: calc(100% + 10px);
+            right: 0;
+            min-width: 220px;
+            background: rgba(20, 24, 28, 0.92);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: 14px;
+            backdrop-filter: blur(18px) saturate(160%);
+            -webkit-backdrop-filter: blur(18px) saturate(160%);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+            padding: 6px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-6px);
+            transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s ease;
+            color: var(--tb-text);
+        }
+
+        .export-menu.is-open {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .export-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            width: 100%;
+            padding: 10px 12px;
+            background: transparent;
+            border: none;
+            border-radius: 10px;
+            color: var(--tb-text);
+            font: inherit;
+            font-size: 13.5px;
+            text-align: left;
+            cursor: pointer;
+            transition: background 0.15s ease;
+        }
+
+        .export-item:hover,
+        .export-item:focus-visible {
+            background: rgba(255, 255, 255, 0.08);
+            outline: none;
+        }
+
+        .export-item svg {
+            width: 18px;
+            height: 18px;
+            stroke: currentColor;
+            stroke-width: 1.7;
+            fill: none;
+            flex-shrink: 0;
+            color: var(--tb-text-muted);
+        }
+
+        @media screen and (max-width: 600px) {
+            .toolbar {
+                top: 14px;
+                right: 14px;
+                padding: 5px;
+            }
+
+            .toolbar-btn {
+                width: 34px;
+                height: 34px;
+            }
+        }
+
+        /* === Print — squeeze everything onto a single letter page === */
+        @media print {
+            /* Always print in light mode regardless of UI theme */
+            :root,
+            :root[data-theme="dark"] {
+                --ink: #111;
+                --muted: #444;
+                --rule: #111;
+                --accent: #4a8ba5;
+                --paper: #fff;
+                --page-bg: #fff;
+                --paper-shadow: none;
+            }
+
+            html,
+            body {
+                background: #fff;
+                color: #111;
+                font-size: 12px;
+                line-height: 1.34;
+            }
+
+            .page {
+                margin: 0;
+                box-shadow: none;
+                width: auto;
+                min-height: auto;
+                padding: 0;
+            }
+
+            .toolbar {
+                display: none !important;
+            }
+
+            /* Header — keep the 3-column logo / name / contact row in print
+               (the responsive 900px breakpoint would otherwise stack them) */
+            .header {
+                grid-template-columns: auto 1fr auto;
+                gap: 16px;
+                padding-bottom: 4px;
+                row-gap: 0;
+            }
+
+            .header-contact {
+                grid-column: auto;
+                text-align: right;
+                font-size: 13px;
+            }
+
+            .header-contact .row {
+                justify-content: flex-end;
+                flex-wrap: nowrap;
+                gap: 22px;
+            }
+
+            .logo {
+                width: 60px;
+                height: 60px;
+                border-radius: 10px;
+            }
+
+            .header-name h1 {
+                font-size: 20px;
+            }
+
+            .header-name a {
+                font-size: 13px;
+            }
+
+            /* Job lines — keep role/loc and company/date on single rows in print */
+            .job-line {
+                flex-direction: row;
+                gap: 12px;
+            }
+
+            .job-line .right {
+                font-size: inherit;
+                color: inherit;
+            }
+
+            .edu-line {
+                flex-direction: row;
+                gap: 8px;
+            }
+
+            /* Section headings + spacing */
+            h2.section {
+                font-size: 12.5px;
+                margin: 12px 0 5px;
+            }
+
+            /* Marketing framework — 2x2 quadrant in print to keep content
+               compact and prevent overflow onto a second page */
+            .philosophy-lead {
+                margin: 4px 0 6px;
+            }
+
+            .pillars {
+                grid-template-columns: 1fr 1fr;
+                column-gap: 24px;
+                row-gap: 6px;
+                margin: 4px 0 0;
+            }
+
+            .pillar {
+                break-inside: avoid;
+            }
+
+            .pillar h3 {
+                font-size: 12px;
+                margin: 0 0 1px;
+            }
+
+            .pillar p {
+                line-height: 1.34;
+            }
+
+            /* Jobs */
+            .job {
+                margin: 7px 0 9px;
+            }
+
+            ul {
+                margin: 3px 0 0;
+                padding-left: 16px;
+            }
+
+            li {
+                margin: 0;
+                line-height: 1.34;
+            }
+
+            @page {
+                size: letter;
+                margin: 0.4in;
+            }
+        }
+
+        @media screen and (max-width: 900px) {
+            .page {
+                width: 100%;
+                margin: 0;
+                padding: 28px 22px;
+                box-shadow: none;
+            }
+
+            .header {
+                grid-template-columns: auto 1fr;
+                row-gap: 12px;
+            }
+
+            .header-contact {
+                grid-column: 1 / -1;
+                text-align: left;
+            }
+
+            .header-contact .row {
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                gap: 14px;
+            }
+
+            .job-line {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .job-line .right {
+                font-size: 12px;
+                color: var(--muted);
+            }
+
+            .edu-line {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .pillars {
+                grid-template-columns: 1fr;
+                row-gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="toolbar" role="toolbar" aria-label="Resume actions">
+        <button type="button" class="toolbar-btn" id="themeToggle" aria-label="Toggle dark mode">
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+            </svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+                    stroke-linecap="round"></path>
+            </svg>
+        </button>
+
+        <div class="toolbar-divider" aria-hidden="true"></div>
+
+        <div class="toolbar-export">
+            <button type="button" class="toolbar-btn" id="exportToggle" aria-label="Export resume"
+                aria-haspopup="menu" aria-controls="exportMenu" aria-expanded="false">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 3v12M7 10l5 5 5-5M5 21h14" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </button>
+            <div class="export-menu" id="exportMenu" role="menu" aria-labelledby="exportToggle">
+                <button type="button" class="export-item" data-format="pdf" role="menuitem">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M14 3v5h5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M9 13h6M9 17h4" stroke-linecap="round"></path>
+                    </svg>
+                    <span>Download PDF</span>
+                </button>
+                <button type="button" class="export-item" data-format="md" role="menuitem">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="3" y="6" width="18" height="12" rx="2" stroke-linejoin="round"></rect>
+                        <path d="M7 14V10l2.2 3 2.3-3v4M16 10v4M16 14l-2 -2M16 14l2 -2" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                    </svg>
+                    <span>Download Markdown</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <main class="page">
+        <header class="header">
+            <div class="logo">
+                <img src="images/ethan-eisenhard-2.jpg" alt="Ethan Eisenhard">
+            </div>
+            <div class="header-name">
+                <h1>Ethan Eisenhard</h1>
+                <a href="https://ethaneisenhard.com">ethaneisenhard.com</a>
+            </div>
+            <div class="header-contact">
+                <div class="row">
+                    <a href="mailto:devbyethan@gmail.com">devbyethan@gmail.com</a>
+                    <span>Philadelphia, PA</span>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <h2 class="section">Marketing Framework</h2>
+            <p class="philosophy-lead">With over 10 years building and shipping marketing websites, I've come to see
+                that all great companies and brands live at the intersection of entertainment, value, and consistency.
+                I design with these four core pillars to get there:</p>
+            <div class="pillars">
+                <div class="pillar">
+                    <h3>1. Website core vitals</h3>
+                    <p>Speed, accessibility, responsiveness, SEO, and analytics. Faster, more accessible sites rank
+                        higher, reach more users, and convert better — and you can't improve what you don't measure.
+                    </p>
+                </div>
+                <div class="pillar">
+                    <h3>2. Architecture</h3>
+                    <p>A modern, well-maintained tech stack with minimal legacy code. Less time fighting tech debt
+                        means more time shipping campaigns, optimizing the experience, and earning user trust.</p>
+                </div>
+                <div class="pillar">
+                    <h3>3. Growth</h3>
+                    <p>Continuous A/B experimentation paired with shipping net-new features. Test hypotheses, keep
+                        what works, and grow intentionally — more growth means more responsibility, so scale on
+                        purpose.</p>
+                </div>
+                <div class="pillar">
+                    <h3>4. Value driven content</h3>
+                    <p>Give value freely — useful playbooks, tools, and education — before asking for a signup. Trust
+                        compounds, organic traffic follows, and the platform earns the right to ask.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section">Employment Experience</h2>
+
+            <div class="job">
+                <div class="job-line">
+                    <span class="left">Software Developer</span>
+                    <span class="right">Remote</span>
+                </div>
+                <div class="job-line company">
+                    <span class="left">beehiiv</span>
+                    <span class="right">Oct 2023 – Present</span>
+                </div>
+                <ul>
+                    <li>Built the Playwright visual-testing suite covering 40+ marketing pages and the
+                        Amplitude / Customer.io / Rudderstack analytics layer behind every CTA, scroll, and form
+                        event — cutting regression escapes ~70%</li>
+                    <li>Led the Next.js Pages → App Router migration and Mixpanel → Rudderstack cutover, retiring
+                        12K+ lines of legacy code and dropping mobile TTFB 38%</li>
+                    <li>Shipped 30+ ezbot A/B experiments with server-side predictions across the homepage, pricing,
+                        signup, and paid-media funnels — lifting paid conversion 19% and free signups 14%</li>
+                    <li>Built the editorial pipeline (Blog, KB, Podcasts, Author, Partner) with a custom KB editor,
+                        Algolia search across 1,200+ articles, and full Prismic migration — so marketing ships
+                        content with zero engineering</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-line">
+                    <span class="left">Software Developer</span>
+                    <span class="right">Remote</span>
+                </div>
+                <div class="job-line company">
+                    <span class="left">Buffer</span>
+                    <span class="right">Jul 2021 – Oct 2023</span>
+                </div>
+                <ul>
+                    <li>Scaled buffer.com on Next.js with 3,200+ posts from a Ghost-powered headless CMS via a
+                        backwards-compatible migration — preserving every URL, redirect, and SEO ranking through
+                        cutover</li>
+                    <li>Built an in-house no-flicker A/B framework with server-side variant rendering and end-to-end
+                        funnel analytics tracking 100% of visitors from first touch to signup</li>
+                    <li>Drove the Core Web Vitals overhaul — Lighthouse Performance 54 → 96, LCP 4.1s → 1.4s — and
+                        shipped a design system reused across 80+ marketing components</li>
+                    <li>Launched the Buffer Social Media Glossary, a free SEO-indexed reference site that grew
+                        organic free-tool traffic 41% YoY without paid spend</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-line">
+                    <span class="left">Software Developer</span>
+                    <span class="right">Horsham, PA</span>
+                </div>
+                <div class="job-line company">
+                    <span class="left">Toll Brothers</span>
+                    <span class="right">Jun 2017 – Jul 2021</span>
+                </div>
+                <ul>
+                    <li>Modernized cross-browser performance, accessibility, and SEO across 200+ community and
+                        lifestyle pages — WCAG 2.0 AA, mobile Lighthouse 38 → 91, plus the Adobe Analytics
+                        dashboards leadership runs the business on</li>
+                    <li>Refactored the shared component library and Salesforce / AMP Script email templates,
+                        retiring 5,000+ lines of legacy code and reclaiming ~30% of cross-team dev time</li>
+                    <li>Orchestrated 50+ Optimizely + Dynamic Yield experiments alongside 40+ feature launches —
+                        lifting retention 150%, lead capture 200%, and overall leads 18%</li>
+                    <li>Engineered a full-stack community events calendar on React, Node.js, and DynamoDB — driving
+                        a 24% lift in community engagement before signup</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section">Education</h2>
+            <div class="edu-line">
+                <span class="edu-name">The Pennsylvania State University</span>
+                <span>University Park, PA</span>
+            </div>
+            <div class="edu-line">
+                <span class="edu-sub">College of Information Sciences and Technology</span>
+                <span>Graduated: May 2018</span>
+            </div>
+            <div><em>Bachelor of Science in Information Sciences and Technology | Design and Development Option</em>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        (function () {
+            const root = document.documentElement;
+            const STORAGE_KEY = 'resume-theme';
+
+            // === Theme: load preference (localStorage > system > light) ===
+            const stored = localStorage.getItem(STORAGE_KEY);
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const initial = stored || (prefersDark ? 'dark' : 'light');
+            if (initial === 'dark') root.setAttribute('data-theme', 'dark');
+
+            const themeBtn = document.getElementById('themeToggle');
+            themeBtn.addEventListener('click', () => {
+                const isDark = root.getAttribute('data-theme') === 'dark';
+                if (isDark) {
+                    root.removeAttribute('data-theme');
+                    localStorage.setItem(STORAGE_KEY, 'light');
+                } else {
+                    root.setAttribute('data-theme', 'dark');
+                    localStorage.setItem(STORAGE_KEY, 'dark');
+                }
+            });
+
+            // Follow system changes only if the user hasn't explicitly chosen
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+                if (localStorage.getItem(STORAGE_KEY)) return;
+                if (e.matches) root.setAttribute('data-theme', 'dark');
+                else root.removeAttribute('data-theme');
+            });
+
+            // === Export menu open/close ===
+            const exportBtn = document.getElementById('exportToggle');
+            const exportMenu = document.getElementById('exportMenu');
+
+            const openMenu = () => {
+                exportMenu.classList.add('is-open');
+                exportBtn.setAttribute('aria-expanded', 'true');
+            };
+            const closeMenu = () => {
+                exportMenu.classList.remove('is-open');
+                exportBtn.setAttribute('aria-expanded', 'false');
+            };
+
+            exportBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                exportMenu.classList.contains('is-open') ? closeMenu() : openMenu();
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!exportMenu.contains(e.target) && e.target !== exportBtn) closeMenu();
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') closeMenu();
+            });
+
+            // === Export actions ===
+            exportMenu.addEventListener('click', (e) => {
+                const item = e.target.closest('.export-item');
+                if (!item) return;
+                const format = item.dataset.format;
+                if (format === 'pdf') {
+                    closeMenu();
+                    // Browser's print dialog → "Save as PDF"
+                    window.print();
+                } else if (format === 'md') {
+                    closeMenu();
+                    const md = generateMarkdown();
+                    downloadFile('ethan-eisenhard-resume.md', md, 'text/markdown');
+                }
+            });
+
+            function downloadFile(filename, content, mime) {
+                const blob = new Blob([content], { type: `${mime};charset=utf-8` });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = filename;
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
+                setTimeout(() => URL.revokeObjectURL(url), 1000);
+            }
+
+            // === Build Markdown from the rendered resume DOM ===
+            function generateMarkdown() {
+                const out = [];
+                const text = (el) => (el ? el.textContent.replace(/\s+/g, ' ').trim() : '');
+
+                // Header
+                const name = text(document.querySelector('.header-name h1'));
+                const site = text(document.querySelector('.header-name a'));
+                const contactBits = Array.from(
+                    document.querySelectorAll('.header-contact a, .header-contact span')
+                ).map(text).filter(Boolean);
+
+                if (name) out.push(`# ${name}`, '');
+                const headerLine = [site, ...contactBits].filter(Boolean).join(' · ');
+                if (headerLine) out.push(headerLine, '');
+
+                document.querySelectorAll('main.page > section').forEach((section) => {
+                    const heading = text(section.querySelector('h2.section'));
+                    if (heading) out.push(`## ${heading}`, '');
+
+                    // Lead paragraph (philosophy)
+                    const lead = text(section.querySelector('.philosophy-lead'));
+                    if (lead) out.push(`_${lead}_`, '');
+
+                    // Pillars
+                    section.querySelectorAll('.pillar').forEach((p) => {
+                        const h = text(p.querySelector('h3'));
+                        const body = text(p.querySelector('p'));
+                        if (h && body) out.push(`**${h}** — ${body}`, '');
+                    });
+
+                    // Jobs
+                    section.querySelectorAll('.job').forEach((j) => {
+                        const lines = j.querySelectorAll('.job-line');
+                        const role = text(lines[0]?.querySelector('.left'));
+                        const loc = text(lines[0]?.querySelector('.right'));
+                        const company = text(lines[1]?.querySelector('.left'));
+                        const dates = text(lines[1]?.querySelector('.right'));
+
+                        if (company) out.push(`### ${company}`);
+                        const meta = [role && `*${role}*`, loc, dates].filter(Boolean).join(' · ');
+                        if (meta) out.push(meta, '');
+
+                        j.querySelectorAll('ul li').forEach((li) => {
+                            out.push(`- ${text(li)}`);
+                        });
+                        out.push('');
+                    });
+
+                    // Education
+                    const eduLines = section.querySelectorAll('.edu-line');
+                    eduLines.forEach((row) => {
+                        const left = text(row.firstElementChild);
+                        const right = text(row.lastElementChild);
+                        if (row.querySelector('.edu-name')) {
+                            out.push(`**${left}** — ${right}`);
+                        } else if (row.querySelector('.edu-sub')) {
+                            out.push(`_${left}_ — ${right}`);
+                        }
+                    });
+                    const degree = section.querySelector(':scope > div em');
+                    if (degree) {
+                        out.push('', text(degree), '');
+                    } else if (eduLines.length) {
+                        out.push('');
+                    }
+                });
+
+                return out.join('\n').replace(/\n{3,}/g, '\n\n').trim() + '\n';
+            }
+        })();
+    </script>
+</body>
+
+</html>
